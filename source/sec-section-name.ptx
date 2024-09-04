@@ -1,59 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Title</title>
+<section xml:id="sec-conjoined-comprehension1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
 
   <p> Text of section. </p>
 <activity>
   <statement>
     <p>
-      Determine which code blocks have the same functionality with the first code block(for any given input, they produce the same output)
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input).
     </p>
     <program language="java">
-
       <input>
         public static String determineEventEligibility(int personAge, int yearsInGroup) {
-          if (personAge > 60) {
-                 if (yearsInGroup >= 5) {
-                  return "Qualified";
-                 } else {
-                  return "Not qualified";
-                 }
-           }
-           return "Not qualified";
+            if (personAge > 60) {
+                if (yearsInGroup >= 5) {
+                    return "Qualified";
+                } else {
+                    return "Not qualified";
+                }
+            }
+            return "Not qualified";
         }
       </input>  
     </program>
     <p>
       Select all that apply. 
     </p>
-  </statement>
-  <hint>
     <p>
-      Here are some test cases to check the code blocks’ functionality. 
-      <ul>
-        <li>
-          <c>determineEventEligibility(62,5)</c> 
-        </li>
-        <li>
-          <c>determineEventEligibility(62,3)</c>
-        </li>
-      </ul>
-
-
+      Hint: You can use the following test cases to compare the code blocks' functionality. Notice that these test cases cover all possible senarios.
+          <ul>
+            <li>
+              <c>determineEventEligibility(62,5)</c> 
+            </li>
+            <li>
+              <c>determineEventEligibility(62,3)</c>
+            </li>
+            <li>
+              <c>determineEventEligibility(60,10)</c>
+            </li>
+            <li>
+              <c>determineEventEligibility(58,10)</c>
+            </li>
+            <li>
+              <c>determineEventEligibility(58,2)</c>
+            </li>
+            <li>
+              <c>determineEventEligibility(60,5)</c>
+            </li>
+          </ul>
     </p>
-  </hint>
+  </statement>
+  
   <choices>
     <choice>
       <statement> 
-        
-        <p>
-          Choice 1
-        </p>
+       <program language="java">
+          <input>
+            public static String determineEventEligibility(int personAge, int yearsInGroup) {
+                if (personAge > 60 &amp;&amp; yearsInGroup >= 5) {
+                    return "Qualified";
+                } 
+                return "Not qualified";
+            }  
+          </input>
+        </program>
       </statement>
       <feedback>
         <p>
-            Write some feedback
+            Correct! They do the same thing but this one is much simpler to read!
         </p>
       </feedback>
     </choice>
@@ -63,16 +77,21 @@
         <program language="java">
           <input>
             public static String determineEventEligibility(int personAge, int yearsInGroup) {
-              if (personAge > 60) {
-                      if (yearsInGroup >= 5) {
+                if (personAge > 60) {
+                    if (yearsInGroup >= 5) {
                         return "Qualified";
-                      }
-              } 
-                  return "Not qualified";
+                    }
+                } 
+                return "Not qualified";
             }  
           </input>
         </program>
       </statement>
+      <feedback>
+        <p>
+            Correct! They do the same thing but this version does not have the unnecessary else, bust still can be improved.
+        </p>
+      </feedback>
     </choice>
   </choices>
 </activity>
