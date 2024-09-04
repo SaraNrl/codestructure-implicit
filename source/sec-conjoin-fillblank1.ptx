@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-conjoin-fillblank1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Section Title</title>
+
+  <p> Text of section. </p>
+<activity>
+  <statement>
+    <p>
+      Determine which code blocks have the same functionality with the first code block(for any given input, they produce the same output)
+    </p>
+    <program language="java">
+
+      <input>
+        public static String determineEventEligibility(int personAge, int yearsInGroup) {
+          if (personAge > 60) {
+                 if (yearsInGroup >= 5) {
+                  return "Qualified";
+                 } else {
+                  return "Not qualified";
+                 }
+           }
+           return "Not qualified";
+        }
+      </input>  
+    </program>
+    <p>
+      Select all that apply. 
+    </p>
+  </statement>
+  <hint>
+    <p>
+      Here are some test cases to check the code blocks’ functionality. 
+      <ul>
+        <li>
+          <c>determineEventEligibility(62,5)</c> 
+        </li>
+        <li>
+          <c>determineEventEligibility(62,3)</c>
+        </li>
+      </ul>
+
+
+    </p>
+  </hint>
+  <choices>
+    <choice>
+      <statement> 
+        
+        <p>
+          Choice 1
+        </p>
+      </statement>
+      <feedback>
+        <p>
+            Write some feedback
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input>
+            public static String determineEventEligibility(int personAge, int yearsInGroup) {
+              if (personAge > 60) {
+                      if (yearsInGroup >= 5) {
+                        return "Qualified";
+                      }
+              } 
+                  return "Not qualified";
+            }  
+          </input>
+        </program>
+      </statement>
+    </choice>
+  </choices>
+</activity>
+</section>

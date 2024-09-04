@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-conjoin-refactoring1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Section Title</title>
+
+  <p> Text of section. </p>
+<activity>
+  <statement>
+    <p>
+      Copy and past the given code block into the box below and improve the style of the following code blocks as an expert would view it. You must not change the code behavior. 
+    </p>
+    <program language="java">
+      <input>
+        public static String EligibleForDiscount(int age, int membershipYears) {
+          if (age > 18) { 
+            if (membershipYears >= 5) {
+              return "Eligible";
+            }	
+          }  
+          return "Not eligible";
+        }
+    
+      </input>  
+    </program>
+  </statement>
+  <hint>
+    <p>
+      Write some test cases for yourself to ensure the code functionality has not changed. 
+    </p>
+  </hint>
+ 
+  <program label="conjoined-refactoring1" interactive="activecode" language="java">
+    <input>
+      public static String EligibleForDiscount(int age, int membershipYears) {
+        if (age > 18) { 
+          if (membershipYears >= 5) {
+            return "Eligible";
+          }	
+        }  
+        return "Not eligible";
+      }
+    </input>
+  </program>
+
+</activity>
+</section>
