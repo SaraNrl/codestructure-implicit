@@ -3,7 +3,6 @@
 <section xml:id="sec-conjoined-comprehension1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Code Comprehension</title>
 
-  <p> Text of section. </p>
 <activity>
   <statement>
     <p>
@@ -51,8 +50,10 @@
     </p>
   </statement>
   
+
+
   <choices>
-    <choice>
+    <choice correct="yes">
       <statement> 
        <program language="java">
           <input>
@@ -67,7 +68,7 @@
       </statement>
       <feedback>
         <p>
-            Correct! They do the same thing but this one is much simpler to read!
+            Code block in option A does the same thing as the given code block but is easier to read!
         </p>
       </feedback>
     </choice>
@@ -89,7 +90,7 @@
       </statement>
       <feedback>
         <p>
-            Correct! They do the same thing but this version does not have the unnecessary else, bust still can be improved.
+          Code block in option B does the same thing as the given code block but removes the unnecesary else.
         </p>
       </feedback>
     </choice>
