@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-conjoin-refactoring1" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Title</title>
+  <title>Code Refactoring</title>
 
-  <p> Text of section. </p>
+  
 <activity>
   <statement>
     <p>
-      Copy and past the given code block into the box below and improve the style of the following code blocks as an expert would view it. You must not change the code behavior. 
+      You will see a copy of the following code block in an interactive mode than you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. 
     </p>
     <program language="java">
       <input>
@@ -29,7 +29,7 @@
     </p>
   </hint>
  
-  <program label="conjoined-refactoring1" interactive="activecode" language="java">
+  <program label="conjoined-refactoring1" interactive="activecode" language="java" compiler-args="-g" linker-args="-s">
     <input>
       public static String EligibleForDiscount(int age, int membershipYears) {
         if (age > 18) { 
