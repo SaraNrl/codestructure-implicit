@@ -28,7 +28,7 @@
   </statement>
 
  
-  <program label="conjoined-refactoring2" interactive="activecode" language="java" compiler-args="-g" linker-args="-s">
+  <program label="conjoined-refactoring2" interactive="activecode" language="java" >
     <input>
     public class CampusHousing {
         public static String eligibleForCampusHousing(int schoolYear, double GPA) {

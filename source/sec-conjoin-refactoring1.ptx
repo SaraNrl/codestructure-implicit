@@ -29,7 +29,7 @@
       </p>
     </hint>
    
-    <program label="conjoined-refactoring1" interactive="activecode" language="java" compiler-args="-g" linker-args="-s">
+    <program label="conjoined-refactoring1" interactive="activecode" language="java" >
       <input>
         public class DiscountChecker {
           public static String eligibleForDiscount(int age, int membershipYears) {

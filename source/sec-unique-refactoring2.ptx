@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-unique-refactoring2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Refactoring</title>
+
+  <activity>
+    <statement>
+      <p>
+        You will see a copy of the following code block in an interactive mode that you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases. <term role="bold">Since this code does not return anything, we don't have test cases for it. It is your job to write test cases using the main() method and check the functionality of your refactored code.</term> 
+      </p>
+      <program language="java">
+        <input>
+        <![CDATA[
+       
+		public static class FinalPrice {
+			public void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
+				double standardDiscount = 0.15;
+				double bulkDiscount = 0.25;
+				double vipDiscount = 0.5;
+				String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+				String finalMessage = "Discounted Price: $";
+
+				if (itemType.equals("electronics") && hasSpecialOffer) {
+					   String message = introMessage;
+					   message += "Special offer applied. " + finalMessage;
+					   double discountedPrice = originalPrice * (1 - vipDiscount);
+					   message += discountedPrice;
+					   System.out.println(message);
+				} else if (originalPrice > 200) {
+					   String message = introMessage;
+					   message += "Bulk discount applied. " + finalMessage;
+					   double discountedPrice = originalPrice * (1 - bulkDiscount);
+					   message += discountedPrice;
+					   System.out.println(message);
+				} else {
+					   String message = introMessage;
+					   message += finalMessage;
+					   double discountedPrice = originalPrice * (1 - standardDiscount);
+					   message += discountedPrice;
+					   System.out.println(message);
+				}
+		 	}
+	 	}
+		
+        ]]>
+        </input>
+      </program>
+    </statement>
+    
+  
+    <program label="unique-refactoring2" interactive="activecode" language="java" >
+      <input>  <![CDATA[
+        
+		public class FinalPrice {
+			public void main(){
+				printDiscount("electronics", 300, true);
+			}
+        	public void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {
+		        double standardDiscount = 0.15;
+		        double bulkDiscount = 0.25;
+		        double vipDiscount = 0.5;
+		        String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+		        String finalMessage = "Discounted Price: $";
+
+		        if (itemType.equals("electronics") && hasSpecialOffer) {
+		            String message = introMessage + "Special offer applied. " + finalMessage;
+		            double discountedPrice = originalPrice * (1 - vipDiscount);
+		            message += discountedPrice;
+		            System.out.println(message);
+		        } else if (originalPrice > 200) {
+		            String message = introMessage + "Bulk discount applied. " + finalMessage;
+		            double discountedPrice = originalPrice * (1 - bulkDiscount);
+		            message += discountedPrice;
+		            System.out.println(message);
+		        } else {
+		            String message = introMessage + finalMessage;
+		            double discountedPrice = originalPrice * (1 - standardDiscount);
+		            message += discountedPrice;
+		            System.out.println(message);
+		        }
+        	}
+    	}
+		
+		
+         ]]>
+      </input>
+
+      <tests>
+     	<tests>
+     	import static org.junit.Assert.*;
+		import org.junit.Test;
+		import java.io.*;
+		import org.junit.Before;
+		import org.junit.After;
+		import java.io.ByteArrayOutputStream;
+		import java.io.PrintStream;
+
+		public class RunestoneTests extends CodeTestHelper {
+			
+			public RunestoneTests() {
+				super("FinalPrice");
+		  	}
+			@Test
+		  public void testMember() throws IOException {
+			Object[] args = {"electronics", 500.0, true};  
+			
+			ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+			System.setOut(new PrintStream(outContent)); 
+
+			// Run the method and get its return value
+			
+			String expectedMessage = "Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0";
+			
+			String actualMessage = outContent.toString();  // Get the printed message
+			boolean messageMatches = expectedMessage.equals(actualMessage.trim());
+
+			assertTrue(messageMatches);  
+		  }
+		
+		}
+</tests>
+
+      </tests>
+    </program>
+  </activity>
+</section>
