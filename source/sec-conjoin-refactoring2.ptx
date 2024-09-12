@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-conjoin-refactoring2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Refactoring</title>
+
+  
+<activity>
+  <statement>
+    <p>
+      You will see a copy of the following code block in an interactive mode that you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. For this you can run your code and check the test-cases.  
+    </p>
+    <program language="java">
+      <input>
+      public class CampusHousing {
+        public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+    		if (schoolYear > 3) { 
+          		return "Eligible";
+    		} if (GPA > 3.4){
+          		return "Eligible";
+     	    } else {
+         		return "Not eligible";
+     	 	}
+     	 }
+	   }
+    
+      </input>  
+    </program>
+  </statement>
+
+ 
+  <program label="conjoined-refactoring2" interactive="activecode" language="java" compiler-args="-g" linker-args="-s">
+    <input>
+    public class CampusHousing {
+        public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+    		if (schoolYear > 3) { 
+          		return "Eligible";
+    		} if (GPA > 3.4){
+          		return "Eligible";
+     	    } else {
+         		return "Not eligible";
+     	 	}
+     	 }
+	   }
+    </input>
+    <tests>
+		import static org.junit.Assert.*;
+		import org.junit.Test;
+		import java.io.*;
+
+		public class RunestoneTests extends CodeTestHelper {
+
+   			public RunestoneTests() {
+       			super("CampusHousing");
+   			}
+
+   				// Test for Eligible case
+  		 @Test
+		public void testEligible() throws IOException {
+       		Object[] args = {4, 4};  // Arguments for the method
+       		String output = getMethodOutput("eligibleForCampusHousing", args);
+       		String expect = "Eligible";
+       
+       		boolean passed = getResults(expect, output, "eligibleForCampusHousing(4, 4)");
+       		assertTrue(passed);
+   		}
+
+   		// Test for Not eligible due to age
+  	 @Test
+   		public void testNotEligibleDueToYear() throws IOException {
+      		 Object[] args = {3, 6};  // Arguments for the method
+       		 String output = getMethodOutput("eligibleForCampusHousing", args);
+       		 String expect = "Not eligible";
+       
+       		 boolean passed = getResults(expect, output, "eligibleForCampusHousing(3, 6)");
+       		 assertTrue(passed);
+   		}
+
+   		// Test for Not eligible due to membership years
+   		@Test
+   		public void testNotEligibleDueToGpa() throws IOException {
+       		Object[] args = {25, 2};  // Arguments for the method
+       		String output = getMethodOutput("eligibleForCampusHousing", args);
+       		String expect = "Not eligible";
+       
+       		boolean passed = getResults(expect, output, "eligibleForCampusHousing(25, 2)");
+       		assertTrue(passed);
+  		 }
+
+   		// Test for Not eligible due to both conditions
+   		@Test
+   		public void testNotEligibleForBoth() throws IOException {
+       		Object[] args = {2, 2};  // Arguments for the method
+       		String output = getMethodOutput("eligibleForCampusHousing", args);
+       		String expect = "Not eligible";
+       
+       		boolean passed = getResults(expect, output, "eligibleForCampusHousing(2, 2)");
+       		assertTrue(passed);
+   		}
+	}
+
+
+	</tests>
+  </program>
+
+</activity>
+</section>
