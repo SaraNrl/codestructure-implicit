@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ConjoinWithOrPart3" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 1) Conjoining Conditions </title>
+  <p>
+    Continue watching the video to learn when to conjoin conditions with || and answer the following questions.
+  </p>
+  <figure>
+    <caption>Conjoining conditions with <c>||</c> part 3</caption>
+    <video xml:id="conjoinWithOr3" youtube="hgVU3kO3hQw" width="90%" margins="5% 5%" preview="conjoinWithOr-part3"/>
+  </figure>
+ 
+ 
+ 
+ 
+<activity label="conjoinWithOr-fillin2">
+  <statement>
+    <p>
+     Consider the following two functions (guessGame1 and guessGame2). For which input(s) these code blocks show different behavior?  
+    </p>
+    <program language="java">
+      <input>
+      
+public static void guessGame1(int number) { 
+   if (number % 4 == 0) {
+      System.out.println("Good guess!");
+   }  
+   if (number % 7 == 0) {
+      System.out.println("Good guess!");
+   } 
+}
+      </input>  
+    </program>
+  </statement>
+  
+ 
+ <statement>
+    <program language="java">
+      <input>
+      
+public static void guessGame2(int number) { 
+   if (number % 4 == 0 || number % 7 == 0) {
+      System.out.println("Good guess!");
+   } 
+}
+      </input>  
+    </program>
+  </statement>
+ 
+ 
+ 
+ 
+  
+ <choices>
+    <choice correct="yes">
+      <statement> 
+       28 
+      </statement>
+      <feedback>
+        <p>
+            Correct! guessGame1(28) prints "Good guess" twice but guessGame2(28) prints "Good guess" only once. 
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="no">
+      <statement>
+        16 
+      </statement>
+      <feedback>
+		Both guessGame1(16) and guessGame2(16) print "Good guess" once. 
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        56
+      </statement>
+      <feedback>
+       Correct! guessGame1(56) prints "Good guess" twice but guessGame2(56) prints "Good guess" only once. 
+      </feedback>
+    </choice>
+    
+    
+    <choice correct="no">
+      <statement>
+        23
+      </statement>
+      <feedback>
+    Neither guessGame1(23) nor guessGame2(23) prints anything.  
+      </feedback>
+    </choice>
+    </choices>
+
+</activity>
+
+
+
+
+
+</section>
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-fillblank1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Fill-in-the-blank</title>
+     <exercise label="imp-unique-fillblank1">
+      	<title>Fill-in-the-blank</title>
+      	<statement>
+      <p>
+     Please improve the style of the first applyDiscount() function to enhance its maintainability. For this, complete the blank sections in the second applyDiscount() function. These two functions must have the same behavior by the end.
+     </p>
+    </statement>
+
+     <statement>
+		<program  language="java">
+		    <input>
+	public static double applyDiscount(double price, String coupon) {
+		double discountPrice = 0;
+	
+		if (coupon.equals("SAVE10")) {
+			discountPrice = price * 0.9;
+		} else if (coupon.equals("SAVE20")) {
+			discountPrice = price * 0.8;	 
+		} else {
+			discountPrice = price;	 
+		}
+		return discountPrice;
+	}
+
+		    </input>
+		</program>
+	</statement>
+	<statement>
+		<program  language="java">
+		    <input>
+	public static double applyDiscount(double price, String coupon) {
+		double discountRate = 0;
+		
+		if (coupon.equals("SAVE10")) {
+			discountRate = ----Blank 1----;
+		} else if (coupon.equals("SAVE20")) {
+			discountRate = ----Blank 2----;	 
+		}
+
+		double discountPrice = price * (1-  ---Blank 3---);
+		return discountPrice;
+	}
+
+		    </input>
+		</program>
+	</statement>
+	
+    <statement>
+      <p>
+       Put your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank 1: <var width="25"/></p>
+		<p>Blank 2: <var width="25"/></p>
+		<p>Blank 3: <var width="25"/></p>
+	</statement>
+
+      <setup>
+          	<var>
+		        <condition case="insensitive" string=" *0.1 *">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  <var>
+            <condition case="insensitive" string=" *0.2 *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>
+            
+          </var>
+	 <var>
+            <condition case="sensitive" string=" *discountRate *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>
+            
+          </var>
+	  
+      </setup>
+     
+     
+    
+      
+    </exercise>
+</section>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-fillblank3" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Fill-in-the-blank</title>
+
+  <exercise label="imp-return-fillblank3">
+
+    <statement>
+      <p> Fill in the blank lines of code so that the function isPositiveAndEven() takes an integer number as input and returns true <term role="bold"> if the number is positive (greater than 0) and even </term> and returns false otherwise.  
+      
+     </p>
+    </statement>
+    <statement>
+		<program language="java" >
+		  <input>
+		   
+				public static boolean isPositiveAndEven(int number) {   
+				   return ...........Blank ............. ; 
+				}
+		
+
+		  </input>
+		</program>
+   </statement>
+
+    <statement>
+		
+		<p>Blank : <var width="45"/></p>
+		<hint>
+      You can use "%" to get the remainder. For example, 23 % 2 = 1 since 23 is an odd number, its remainder to 2 would be 1. </hint>
+	</statement>
+
+      <setup>
+          	<var>
+		        <condition case="sensitive" string="\s*(number)\s*%\s*2\s*==\s*0\s*&amp;&amp;\s*\1\s*>\s*0\s*|\s*\1\s*>\s*0\s*&amp;&amp;\s*(number)\s*%\s*2\s*==\s*0\s*">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition case="sensitive" string="( *number *% *2 *== *0 *)|( *number* >* 0 *)">
+						  <feedback>
+					<p>Try again! You are missing one more condition!</p>
+						  </feedback>
+						</condition>
+					
+					
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+          
+       </setup>
+
+  </exercise>
+
+</section>
+

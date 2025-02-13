@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-identification1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity>
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one(s) of these three code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 
+    </p>
+    
+    
+  </statement>
+  
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+public static double calculatePrice(double price, boolean isHoliday, boolean isClearance) {
+   if (isHoliday) {
+      return price - (price * 0.10);
+   } else if (isClearance) {
+      return price - (price * 0.20);
+   } else {
+      return price;
+   }
+}
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved! 
+        </p>
+      </feedback>
+    </choice>
+    
+
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+            public static double calculatePrice(double price, boolean isHoliday, boolean isClearance) {
+                double discountRate = 0.0;
+                if (isHoliday) {
+                  discountRate = 0.10;
+                } else if (isClearance) {
+                  discountRate = 0.20;
+                }
+                return price * (1- discountRate);
+              }
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct!
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="no">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+            public static double calculatePrice(double price, boolean isHoliday, boolean isClearance) {
+                double finalPrice;
+                if (isHoliday) {
+                  finalPrice = price - (price * 0.10);
+                } else if (isClearance) {
+                  finalPrice = price - (price * 0.20);
+                } else {
+                  finalPrice = price;
+                }
+                return finalPrice;
+              }
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           This code can be improved! 
+        </p>
+      </feedback>
+    </choice>
+    
+    
+    
+     <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+            public static double calculatePrice(double price, boolean isHoliday, boolean isClearance) {
+                double discountRate;
+                if (isHoliday) {
+                  discountRate = 0.10;
+                } else if (isClearance) {
+                  discountRate = 0.20;
+                } else {
+                  discountRate = 0.0;
+                }
+                return price * (1- discountRate);
+              } 
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct! 
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</activity>
+</section>

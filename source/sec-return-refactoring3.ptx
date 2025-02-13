@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-refactoring3" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Code Refactoring</title>
+
+  <activity>
+    <statement>
+      <p>
+        There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases. Imagine str is not null. 
+      </p>
+      <program language="java">
+        <input>
+        <![CDATA[
+       
+		public class SWord {
+			public static boolean startsWithS(String str) {
+				if (str.isEmpty() || str.charAt(0) != 'S') {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		}
+		
+        ]]>
+        </input>
+      </program>
+    </statement>
+    
+  
+    <program label="imp-return-refactoring3" interactive="activecode" language="java" >
+      <input> 
+       <![CDATA[
+       
+		public class SWord {
+			public static boolean startsWithS(String str) {
+				if (str.isEmpty() || str.charAt(0)!='S') {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		}
+		
+		
+        ]]>
+      </input>
+
+      <tests>
+        import static org.junit.Assert.*;
+		import org.junit.Test;
+		import java.io.*;
+
+		public class RunestoneTests extends CodeTestHelper {
+
+			public RunestoneTests() {
+				super("SWord");
+			}
+
+			// Test for "sarah" lower s
+			@Test
+			public void testWithin() throws IOException {
+				Object[] args = {"sarah"};  // Arguments for the method
+				String output = getMethodOutput("startsWithS", args);
+				String expect = Boolean.toString(false);  // Convert expected boolean to String
+				
+				boolean passed = getResults(expect, output, "startsWithS(\"sarah\")");  // Fixed the quotation
+				assertTrue(passed);
+			}
+
+			// Test for empty string
+			@Test
+			public void testEmptyString() throws IOException {
+				Object[] args = {""};  // Arguments for the method
+				String output = getMethodOutput("startsWithS", args);
+				String expect = Boolean.toString(false);  // Convert expected boolean to String
+				
+				boolean passed = getResults(expect, output, "startsWithS(\"\")");  // Fixed the quotation
+				assertTrue(passed);
+			}
+
+			// Test for word with capital S
+			@Test
+			public void testWithUpperCaseS() throws IOException {
+				Object[] args = {"SOS"};  // Arguments for the method
+				String output = getMethodOutput("startsWithS", args);
+				String expect = Boolean.toString(true);  // Convert expected boolean to String
+				
+				boolean passed = getResults(expect, output, "startsWithS(\"SOS\")");  // Fixed the quotation
+				assertTrue(passed);
+			}
+
+			// Test for "abs"
+			@Test
+			public void testWithAbs() throws IOException {
+				Object[] args = {"abs"};  // Arguments for the method
+				String output = getMethodOutput("startsWithS", args);
+				String expect = Boolean.toString(false);  // Convert expected boolean to String
+				
+				boolean passed = getResults(expect, output, "startsWithS(\"abs\")");  // Fixed the quotation
+				assertTrue(passed);
+			}
+
+		}
+
+
+
+      </tests>
+    </program>
+  </activity>
+  
+  
+   <activity>
+    <statement>
+      <p>
+        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+      </p>
+    </statement>
+    
+    
+    
+    
+     <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class SWord {
+	public static boolean startsWithS(String str) {
+		if (!str.isEmpty() &amp;&amp; str.charAt(0) != 'S') {
+			return true;
+		} 
+		return false;
+	}
+}	
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can further be improved!
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class SWord {
+	public static boolean startsWithS(String str) {
+		return !str.isEmpty() &amp;&amp; str.charAt(0) == 'S';
+	}
+}	
+		</input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+   
+   
+    
+    </choices>
+  </activity>
+  
+  
+  
+</section>
+

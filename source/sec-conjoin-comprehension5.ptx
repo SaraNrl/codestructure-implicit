@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-comprehension5" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+<activity> 
+  <statement>
+    <p>
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+    </p>
+    <program language="java">
+      <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+    if (hasBuiltRobot) {
+        if (passedSafetyTest) {
+            if (registeredOnTime) {
+                System.out.println("Eligible to join the competition!");
+            } else {
+                System.out.println("Not eligible.");
+            }
+        } else {
+            System.out.println("Not eligible.");
+        }
+    } else {
+        System.out.println("Not eligible.");
+    }
+}
+
+      </input>  
+    </program>
+    
+    <p>
+      <hint>
+      Hint: You can use the following test cases to compare the functionality of the code blocks. Note that the test cases include examples across a range of different inputs. 
+        <ul>
+		  <li><c>canJoinRoboticsCompetition(true, true,true)</c></li>
+		  <li><c>canJoinRoboticsCompetition(true, true, false)</c></li>
+		  <li><c>canJoinRoboticsCompetition(true, false, true)</c></li>
+		  <li><c>canJoinRoboticsCompetition(true, false, false)</c></li>
+		  <li><c>canJoinRoboticsCompetition(false, true,true)</c></li>
+		  <li><c>canJoinRoboticsCompetition(false, true, false)</c></li>
+		  <li><c>canJoinRoboticsCompetition(false, false, true)</c></li>
+		  <li><c>canJoinRoboticsCompetition(false, false, false)</c></li>
+
+		</ul>
+      </hint>
+    </p>
+  </statement>
+  
+  <statement>
+  	<p>
+      Select all that apply. 
+    </p> 
+  </statement>
+
+
+  <choices>
+  
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+   if (!hasBuiltRobot) { 
+      System.out.println("Not eligible.");
+   } 
+   if (!passedSafetyTest) {
+      System.out.println("Not eligible.");
+   }
+   if (!registeredOnTime) {
+      System.out.println("Not eligible.");
+   } else {
+      System.out.println("Eligible to join the competition!");
+   }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Code block in option A does not do the same thing as the given code block! Compare their outputs using canJoinRoboticsCompetition(false,false,false)
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+   if (hasBuiltRobot &amp;&amp; passedSafetyTest &amp;&amp; registeredOnTime) {
+      System.out.println("Eligible to join the competition!");
+   } else {
+      System.out.println("Not eligible.");
+   }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Code block in option B does the same thing as the given code block!
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+   if (hasBuiltRobot &amp;&amp; passedSafetyTest &amp;&amp; registeredOnTime) {
+      System.out.println("Eligible to join the competition!");
+   }
+   System.out.println("Not eligible.");
+}
+
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Code block in option C does not do the same thing as the given code block! Compare the outputs using canJoinRoboticsCompetition(true,true,true)
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+       <![CDATA[
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+   if (!hasBuiltRobot) { 
+      System.out.println("Not eligible.");
+   } else if (!passedSafetyTest) {
+      System.out.println("Not eligible.");
+   } else if (!registeredOnTime) {
+      System.out.println("Not eligible.");
+   } else {
+      System.out.println("Eligible to join the competition!");
+   }
+} 
+        ]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Code block in option D does the same thing as the given code block but is is simpler to read!
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="no">
+      <statement>
+        <program language="java">
+          <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+    if (hasBuiltRobot) {
+        if (passedSafetyTest) {
+            if (registeredOnTime) {
+                System.out.println("Eligible to join the competition!");
+            }
+        }
+    } else {
+        System.out.println("Not eligible.");
+    }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+         Code block in option E does not do the same thing as the given code block! Compare the outputs using canJoinRoboticsCompetition(true,false,true)
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</activity>
+</section>

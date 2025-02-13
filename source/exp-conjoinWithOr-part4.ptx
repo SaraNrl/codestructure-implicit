@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ConjoinWithOrPart4" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 1) Conjoining Conditions </title>
+  <p>
+  Continue watching the video to learn when to conjoin conditions with ||; and answer the following questions.
+  </p>
+  <figure>
+    <caption>Conjoining conditions with <c>||</c> part 4</caption>
+    <video xml:id="conjoinWithOr4" youtube="H65ZStOGnIc" width="90%" margins="5% 5%" preview="conjoinWithOr-part4"/>
+  </figure>
+ 
+ <activity>
+  <statement>
+    <p>
+      There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
+    </p>
+    <program language="java">
+      <input>
+public class Internship 
+	public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
+		if (schoolYear >= 4) {
+			if (GPA >= 3.5) {
+		    	if (hasWorkExperience) {
+		        	return "Eligible for Internship";
+		    	} else {
+		        	return "You only need some work experience!";
+		    	}
+			}
+		}
+		return "Not eligible for Internship";
+	}
+}
+
+      </input>
+    </program>
+  </statement>
+
+  <program label="exp-conjoinOr-refactoring1" interactive="activecode" language="java" >
+    <input>
+public class Internship {
+	public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
+		if (schoolYear >= 4) {
+			if (GPA >= 3.5) {
+		    	if (hasWorkExperience) {
+		        	return "Eligible for Internship";
+		    	} else {
+		        	return "You only need some work experience!";
+		    	}
+			}
+		}
+		return "Not eligible for Internship";
+	}
+}
+    </input>
+    <tests> 
+    import static org.junit.Assert.*;
+    import org.junit.Test;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper {
+
+      public RunestoneTests() {
+          super("Internship");
+      }
+
+      // Test for eligibility based on everything
+      @Test
+      public void testEligibleBySchoolYear() throws IOException {
+          Object[] args = {4,3.5,true};  // Arguments for the method, year and gpa
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "Eligible for Internship";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(4,3.5,true)");
+          assertTrue(passed);
+      }
+
+      // Test for not eligibility based on GPA
+      @Test
+      public void testEligibleByGpa() throws IOException {
+          Object[] args = {4, 2.5,true};  // Arguments for the method
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "Not eligible for Internship";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(4, 2.5, true)");
+          assertTrue(passed);
+      }
+
+      // Test for not eligible based on year
+      @Test
+      public void testNotEligibleForYear() throws IOException {
+          Object[] args = {2, 3.7, true};  // Arguments for the method
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "Not eligible for Internship";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(2, 3.7, true)");
+          assertTrue(passed);
+      }
+
+      // Test for not eligibility based on workExperience
+      @Test
+      public void testNotEligibleByExperience() throws IOException {
+          Object[] args = {5, 3.5, false};  // Arguments for the method
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "You only need some work experience!";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(5, 3.5, false)");
+          assertTrue(passed);
+      }
+
+      // Test for not eligibility based on GPA and lower school year
+      @Test
+      public void testEligibleByGpaAndYear() throws IOException {
+          Object[] args = {2, 3.2, true};  // Arguments for the method
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "Not eligible for Internship";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(2, 3.2, true)");
+          assertTrue(passed);
+      }
+      // Test for not eligibility based on GPA and not Experience 
+	@Test  
+      public void testEligibleByGpaAndExperience() throws IOException {
+          Object[] args = {4, 3.2, false};  // Arguments for the method
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "Not eligible for Internship";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(4, 3.2, false)");
+          assertTrue(passed);
+      }
+      // Test for not eligibility based on year and not Experience 
+      @Test  
+      public void testEligibleByExperienceAndYear() throws IOException {
+          Object[] args = {3, 3.5, false};  // Arguments for the method
+          String output = getMethodOutput("checkInternshipEligibility", args);
+          String expect = "Not eligible for Internship";
+          
+          boolean passed = getResults(expect, output, "checkInternshipEligibility(3, 3.5, false)");
+          assertTrue(passed);
+      }
+      
+    }
+    </tests>
+  </program>
+</activity>
+
+ <activity>
+    <statement>
+      <p>
+        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+      </p>
+    </statement>
+    
+    
+    
+    
+     <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class Internship {
+  public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
+    if (schoolYear >= 4 &amp;&amp; GPA >= 3.5 &amp;&amp; hasWorkExperience) {
+      return "Eligible for Internship";
+    } else {
+      return "You only need some work experience!";
+    }
+    return "Not eligible for Internship";
+  }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            The code doesn't have the same functionality with the original one.
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class Internship {
+  public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
+    if (schoolYear >= 4 &amp;&amp; GPA >= 3.5 &amp;&amp; hasWorkExperience) {
+      return "Eligible for Internship";
+    }
+    return "Not eligible for Internship";
+  }
+}
+  
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            The code doesn't have the same functionality with the original one.
+        </p>
+      </feedback>
+    </choice>
+
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class Internship {
+  public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
+    if (schoolYear &lt; 4 || GPA &lt; 3.5) {
+      return "Not eligible for Internship";
+    }
+    if (hasWorkExperience) {
+      return "Eligible for Internship";
+    }
+    return "You only need some work experience!";
+  }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+
+  
+   <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class Internship {
+  public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
+    if (schoolYear >= 4 &amp;&amp; GPA >= 3.5) {
+      if (hasWorkExperience) {
+        return "Eligible for Internship";
+      } else {
+        return "You only need some work experience!";
+      }
+    }
+  return "Not eligible for Internship";
+  }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code has nested ifs and can be improved further! 
+        </p>
+      </feedback>
+    </choice>
+    
+    </choices>
+   
+  </activity>
+ 
+ 
+
+
+
+
+
+
+</section>
+

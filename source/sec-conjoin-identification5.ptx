@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-identification5" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity> 
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)?
+    </p>
+    
+  </statement>
+  
+  
+
+  <choices>
+  
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+    if (hasBuiltRobot) {
+        if (passedSafetyTest) {
+            if (registeredOnTime) {
+                System.out.println("Eligible to join the competition!");
+            } else {
+                System.out.println("Not eligible.");
+            }
+        } else {
+            System.out.println("Not eligible.");
+        }
+    } else {
+        System.out.println("Not eligible.");
+    }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+   if (hasBuiltRobot &amp;&amp; passedSafetyTest &amp;&amp; registeredOnTime) {
+      System.out.println("Eligible to join the competition!");
+   } else {
+      System.out.println("Not eligible.");
+   }
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Correct!
+        </p>
+      </feedback>
+ </choice>
+ 
+ 
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+       <![CDATA[
+public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+   if (!hasBuiltRobot) { 
+      System.out.println("Not eligible.");
+   } else if (!passedSafetyTest) {
+      System.out.println("Not eligible.");
+   } else if (!registeredOnTime) {
+      System.out.println("Not eligible.");
+   } else {
+      System.out.println("Eligible to join the competition!");
+   }
+} 
+        ]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code block can be improved!
+        </p>
+      </feedback>
+    </choice>
+    
+    
+  </choices>
+</activity>
+</section>

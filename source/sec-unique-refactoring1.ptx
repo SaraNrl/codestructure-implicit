@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-refactoring1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Refactoring</title>
+
+  <activity>
+    <statement>
+      <p>
+        You will see a copy of the following code block in an interactive mode than you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
+      </p>
+      <program language="java">
+        <input>
+        <![CDATA[
+       
+		public class FinalPrice {
+			public static double calculateFinalPrice(double basePrice, boolean isMember) {
+				double discount = 0;
+				if (isMember) {
+					discount = basePrice * 0.1;
+					System.out.println("Thank you for being a loyal customer!");
+					System.out.println("Final price is: $" + (basePrice - discount));
+				} else {
+					discount = basePrice * 0.05;
+					System.out.println("Join our membership for more discounts!");
+					System.out.println("Final price is: $" + (basePrice - discount));
+				}
+				return basePrice - discount;
+			}
+		}
+		
+        ]]>
+        </input>
+      </program>
+    </statement>
+    
+  
+    <program label="imp-unique-refactoring1" interactive="activecode" language="java" >
+      <input>  <![CDATA[
+        
+		public class FinalPrice {
+			public static double calculateFinalPrice(double basePrice, boolean isMember) {
+				double discount = 0;
+				if (isMember) {
+					discount = basePrice * 0.1;
+					System.out.println("Thank you for being a loyal customer!");
+					System.out.println("Final price is: $" + (basePrice - discount));
+				} else {
+					discount = basePrice * 0.05;
+					System.out.println("Join our membership for more discounts!");
+					System.out.println("Final price is: $" + (basePrice - discount));
+				}
+				return basePrice - discount;
+			}
+		}
+		
+		
+         ]]>
+      </input>
+
+      <tests>
+        import static org.junit.Assert.*;
+		import org.junit.Test;
+		import java.io.*;
+
+		public class RunestoneTests extends CodeTestHelper {
+
+		  public RunestoneTests() {
+			super("FinalPrice");
+		  }
+
+		  // Test for member
+		  @Test
+		  public void testMember() throws IOException {
+			Object[] args = {100.0, true};  // Arguments for the method (basePrice, isMember)
+			
+			// Capture the printed output
+			ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+			System.setOut(new PrintStream(outContent)); 
+
+			// Run the method and get its return value
+			String output = getMethodOutput("calculateFinalPrice", args);
+			String expectedOutput = Double.toString(90.0);  // Expected price after 10% discount
+			String expectedMessage = "Thank you for being a loyal customer!\nFinal price is: $90.0\n";
+			
+			// Check both output and printed message separately
+			boolean outputMatches = getResults(expectedOutput, output, "calculateFinalPrice(100.0, true)");
+			String actualMessage = outContent.toString();  // Get the printed message
+			boolean messageMatches = expectedMessage.equals(actualMessage.trim());
+
+			assertTrue(outputMatches &amp;&amp; messageMatches);  // Combine conditions here
+		  }
+
+		  // Test for non-member
+		  @Test
+		  public void testNonMember() throws IOException {
+			Object[] args = {100.0, false};  // Arguments for the method (basePrice, isMember)
+			
+			// Capture the printed output
+			ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+			System.setOut(new PrintStream(outContent));
+
+			// Run the method and get its return value
+			String output = getMethodOutput("calculateFinalPrice", args);
+			String expectedOutput = Double.toString(95.0);  // Expected price after 5% discount
+			String expectedMessage = "Join our membership for more discounts!\nFinal price is: $95.0\n";
+			
+			// Check both output and printed message separately
+			boolean outputMatches = getResults(expectedOutput, output, "calculateFinalPrice(100.0, false)");
+			String actualMessage = outContent.toString();  // Get the printed message
+			boolean messageMatches = expectedMessage.equals(actualMessage.trim());
+
+			assertTrue(outputMatches &amp;&amp; messageMatches);  // Combine conditions here
+		  }
+		}
+
+
+      </tests>
+    </program>
+  </activity>
+  
+  
+  
+     <activity>
+    <statement>
+      <p>
+        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+      </p>
+    </statement>
+
+     <choices>
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class FinalPrice {
+    public static double calculateFinalPrice(double basePrice, boolean isMember) {
+        double discountRate = 0;
+        String message = "";
+        
+        if (isMember) {
+            discountRate = 0.1;
+            message = "Thank you for being a loyal customer!";
+        } else {
+            discountRate = 0.05;
+            message = "Join our membership for more discounts!";
+        }
+
+        double discount = basePrice * discountRate;
+        System.out.println(message);
+        System.out.println("Final price is: $" + (basePrice - discount));
+        
+        return basePrice - discount;
+    }
+}
+ 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class FinalPrice {
+    public static double calculateFinalPrice(double basePrice, boolean isMember) {
+        double discountRate = 0.05;
+        String message = "Join our membership for more discounts!";
+        
+        if (isMember) {
+            discountRate = 0.1;
+            message = "Thank you for being a loyal customer!";
+        }
+
+        double discount = basePrice * discountRate;
+        System.out.println(message);
+        System.out.println("Final price is: $" + (basePrice - discount));
+        
+        return basePrice - discount;
+    }
+}	
+		</input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+   
+   
+    
+    </choices>
+  </activity>
+  
+  
+</section>
+

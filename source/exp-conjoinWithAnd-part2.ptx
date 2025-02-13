@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ConjoinWithAndPart2" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 1) Conjoining Conditions </title>
+  <p>
+  Continue watching the video to learn when to conjoin conditions with &amp;&amp; and answer the following questions.
+  </p>
+  <figure>
+    <caption>Conjoining conditions with <c>&amp;&amp;</c> part 2</caption>
+    <video xml:id="conjoinWithAnd2" youtube="YQLX9tVt6YA" width="90%" margins="5% 5%" preview="conjoinWithAnd-part2"/>
+  </figure>
+ 
+ 
+ 
+ 
+ 
+  <activity>
+  <statement>
+    <p>
+     Consider the following Java function. What happens when the function is called with the given inputs: <c>print(3, 0, 0);</c>
+    </p>
+    <program language="java">
+      <input>
+      
+public static void print(int x, int y, int z) {
+    if (x > 10 &amp;&amp; x / y > 10 &amp;&amp; z > 10) {
+        System.out.println("Condition met");
+    }
+    System.out.println("End of program");
+}
+      </input>  
+    </program>
+  </statement>
+  
+  <choices>
+    <choice correct="no">
+      <statement> 
+        <p>The code first prints "Condition met" and then it prints "End of program" </p>
+      </statement> 
+    </choice>
+  
+    <choice correct="yes">
+      <statement> 
+        The code only prints "End of program" 
+      </statement>
+      <feedback>
+        <p>The first condition <code>x > 10</code> is <code>false</code>, so the short-circuit evaluation prevents the execution of <code>x / y > 10</code>. This avoids a division by zero error. Therefore, only <code>"End of program"</code> is printed.</p>
+      </feedback>
+    </choice>
+    
+    <choice correct="no">
+      <statement> 
+        <p>The code throws an error for division by zero</p>
+      </statement> 
+    </choice>
+    
+    <choice correct="no">
+      <statement> 
+        <p>Nothing will be printed</p>
+      </statement> 
+    </choice>
+  </choices>
+</activity>
+
+<activity>
+  <statement>
+    <p>
+      What happens when the function is called with these new inputs: <c>print(12, 0, 20);</c>
+    </p>
+  </statement>
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+        <p>The code first prints "Condition met" and then it prints "End of program" </p>
+      </statement> 
+    </choice>
+    
+    <choice correct="no">
+      <statement> 
+        The code only prints "End of program" 
+      </statement>
+    </choice>
+    
+    <choice correct="yes">
+      <statement> 
+        <p>The code throws an error for division by zero</p>
+      </statement> 
+    </choice>
+  </choices>
+</activity>
+
+
+
+
+
+</section>
+

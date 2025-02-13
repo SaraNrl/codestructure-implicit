@@ -1,0 +1,1 @@
+echo /usr/share/texlive/texmf-dist/tex/latex/zi4/zi4.sty | pretext build print

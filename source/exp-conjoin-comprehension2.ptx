@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="exp-conjoin-comprehension2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+<activity>
+  <statement>
+    <p>
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+    </p>
+    <program language="java">
+      <input>
+        public static String determineEventEligibility(int personAge, int yearsInGroup) {
+            if (personAge > 60) {
+                if (yearsInGroup >= 5) {
+                    return "Qualified";
+                } else {
+                    return "Not qualified";
+                }
+            }
+            return "Not qualified";
+        }
+      </input>  
+    </program>
+    
+
+  </statement>
+  
+  <statement>
+  	<p>
+      Select all that apply. 
+    </p> 
+  </statement>
+
+
+  <choices>
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+            public static String determineEventEligibility(int personAge, int yearsInGroup) {
+                if (personAge > 60 &amp;&amp; yearsInGroup >= 5) {
+                    return "Qualified";
+                } 
+                return "Not qualified";
+            }  
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Correct! 
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input>
+            public static String determineEventEligibility(int personAge, int yearsInGroup) {
+                if (personAge > 60) {
+                    if (yearsInGroup >= 5) {
+                        return "Qualified";
+                    }
+                } 
+                return "Not qualified";
+            }  
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct! The else statement was unnecessary and could be removed. 
+         </p>
+         </feedback>
+    </choice>
+    </choices>
+
+
+
+<statement>
+<hint> 
+      
+<p> Here is the truth table. Compare the functionality of the given code blocks with the original code. </p>
+  <tabular colsep="1" rowsep="1">
+  <row>
+    <cell><em>personAge > 60</em></cell>
+    <cell><em>yearsInGroup >= 5</em></cell>
+    <cell><em>Output</em></cell>
+  </row>
+  <row>
+    <cell>true</cell>
+    <cell>true</cell>
+    <cell>"Qualified"</cell>
+  </row>
+  <row>
+    <cell>true</cell>
+    <cell>false</cell>
+    <cell>"Not qualified"</cell>
+  </row>
+  <row>
+    <cell>false</cell>
+    <cell>-</cell>
+    <cell>"Not qualified"</cell>
+  </row>
+  <row>
+    <cell>false</cell>
+    <cell>-</cell>
+    <cell>"Not qualified"</cell>
+  </row>
+</tabular>
+
+   </hint> 
+</statement>
+ </activity>
+    
+    
+
+</section>

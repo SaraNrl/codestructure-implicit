@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-comprehension2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+  <activity>
+    <statement>
+      <p>
+        Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input).
+      </p>
+      <program language="java">
+        <input>
+        
+          public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+              if (isFragile) {
+                  weight = weight + (weight * 0.05);  // Add 5% extra for packaging
+              }
+              if (isBulk) {
+                  return weight + (weight * 0.10);  // Add by 10% for bulk items
+              } else {
+                  return weight;
+              }
+          }	
+        
+        </input>
+      </program>
+    
+      <p>
+        <hint> You can use the following test cases to compare the code blocks' functionality. Note that the test cases include examples across a range of different inputs.
+        <ul>
+          <li>
+            <c>calculateWeight(120, true, true)</c> 
+          </li>
+          <li>
+            <c>calculateWeight(100, true, false)</c>
+          </li>
+          <li>
+            <c>calculateWeight(100, false, true)</c>
+          </li>
+        </ul>
+        </hint>
+      </p>
+        <p>Select all that apply.</p>
+    </statement>
+
+    <choices>
+      <choice correct="no">
+        <statement>
+          <program language="java">
+            <input>
+            
+              public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+                  double adjustment = 0.0;
+                  if (isFragile) {
+                      adjustment += 0.05;  
+                  } else if (isBulk) {
+                      adjustment += 0.10;  
+                  }
+                  return weight * (1 + adjustment);
+              }
+            
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>Not correct!</p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <program language="java">
+            <input>
+            
+              public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+                  double finalWeight = weight;
+                  if (isFragile) {
+                      finalWeight += weight * 0.05;
+                  }
+                  if (isBulk) {
+                      finalWeight += weight * 0.10;
+                  }
+                  return finalWeight;
+              }
+            
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <program language="java">
+            <input>
+           
+              public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+                  double adjustment = 0.0;
+                  if (isFragile) {
+                      adjustment += 0.05;
+                  }
+                  if (isBulk) {
+                      adjustment += 0.10;
+                  }
+                  return weight * (1 + adjustment);
+              }
+            
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+</section>
+

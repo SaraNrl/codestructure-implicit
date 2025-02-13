@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-unique-selectable1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  
+   <exercise label="clickable-code">
+  <title>Clickable Areas</title>
+
+  <statement>
+              
+      			<p>In the following code block, highlight the lines of code that can be improved. You may need to highlight multiple lines.</p>
+           
+  </statement>
+
+            <areas language="java">
+            	<cline><area correct="no">public class FinalPrice {</area> </cline>
+                <cline>   <area correct="no"> public static double calculateFinalPrice(double basePrice, boolean isMember) {</area></cline>
+                <cline>       <area correct="yes">double discount; </area></cline>
+                <cline>           <area correct="yes">if (isMember) {</area></cline>
+                <cline>               <area correct="no">discount = basePrice * 0.1;</area></cline>
+                <cline>               <area correct="no">System.out.println("Thank you for being a loyal customer!");</area></cline>
+                <cline>               <area correct="no">System.out.println("Final price is: $" + (basePrice - discount));</area></cline>
+                
+                <cline>           <area correct="yes">} else {</area></cline>
+                <cline>               <area correct="no">discount = basePrice * 0.05;</area></cline>
+                <cline>               <area correct="no">System.out.println("Join our membership for more discounts!");</area></cline>
+                <cline>               <area correct="no">System.out.println("Final price is: $" + (basePrice - discount));</area></cline>
+                <cline>       }</cline>
+                <cline>       <area correct="no">return basePrice - discount;</area></cline>
+                <cline>   }</cline>
+                <cline>}</cline>
+            </areas>
+
+            <feedback>
+                <p></p>
+            </feedback>
+        </exercise>
+</section>
+
+

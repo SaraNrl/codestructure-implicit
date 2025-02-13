@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-fillblank5" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Fill-in-the-blank</title>
+
+  <exercise label="imp-return-fillblank5">
+
+    <statement>
+      <p> Fill in the blank line of code, so that the function isValidPassword() takes a String parameter password and returns a boolean. The function returns <term role="bold">false </term> when the password is less than 8 characters or contains any spaces. Otherwise, it returns true.
+      <ul>
+		  <li>You can use the<c>length()</c>function to check the length of any String. For example: password.length() returns the length of password. </li>
+		  <li>You can use the<c>contains()</c> function to check if a String contains a specific substring. For example, password.contains("a") returns true if password has a substring "a".</li>  
+  	</ul>
+       </p>
+    </statement>
+    <statement>
+	<program  language="java" >
+      <input>
+        
+		public static boolean isValidPassword(String password) {   
+    	   return .....Blank............... ; 
+		}
+	
+
+      </input>
+    </program>
+    </statement>
+    
+   <statement>
+   
+      <p>
+       Write your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank: <var width="45"/></p>
+	</statement>
+	 <setup>
+       <var>
+       
+		 <condition case="sensitive" string="(\s*password\.length\(\)\s*&gt;=\s*8\s*&amp;&amp;\s*!\s*\(?password\.contains\(\s*&quot;\s&quot;\s*\)\s*\)?\s*$)|(\s*!\s*\(?password\.contains\(\s*&quot;\s&quot;\s*\)\)?\s*\&amp;&amp;\s*password\.length\(\)\s*&gt;=\s*8\s*$)">
+		  <feedback>
+		  <p>Correct.</p>
+		  </feedback>
+		</condition>
+		
+		
+		 <condition case="sensitive" string="(\s*password\.length\(\)\s*&lt;\s*8\s*\|\|\s*password\.contains\(\s*&quot;\s&quot;\s*\)\s*$)|(\s*password\.contains\(\s*&quot;\s&quot;\s*\)\s*\|\|\s*password\.length\(\)\s*&lt;\s*8\s*$)">
+		  <feedback>
+		  <p>Wrong functionality! You may need to read the task description again.</p>
+		  </feedback>
+	     </condition>
+		
+		<condition case="sensitive" string="(\s*\!\s*\(\s*password\.length\(\)\s*&lt;\s*8\s*\|\|\s*password\.contains\(\s*&quot;\s&quot;\s*\)\s*\)\s*$)|(\s*!\s*\(\s*password\.contains\(\s*&quot;\s&quot;\s*\)\s*\|\|\s*password\.length\(\)\s*&lt;\s*8\s*\)\s*$)">
+		<feedback>
+		<p> Close! but this code can be simplified further. (hint: the final code should use &amp;&amp; instead of ||</p>
+		</feedback>
+	    </condition>
+						
+						
+		<condition string=".*">
+		<feedback>
+		<p>Try again!</p>
+		</feedback>
+	    </condition>
+      </var>
+	  
+	  
+	  </setup>
+
+  </exercise>
+
+</section>
+

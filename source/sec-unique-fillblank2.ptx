@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-fillblank2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Fill-in-the-blank</title>
+     <exercise label="imp-unique-fillblank2">
+      	
+      	<statement>
+      <p>
+     Please improve the style of the first printProductStatus() function to enhance its maintainability. For this, complete the blank sections in the second printProductStatus() function. These two functions must have the same behavior by the end.
+     </p>
+    </statement>
+
+     <statement>
+		<program  language="java">
+		    <input>
+	public void printProductStatus(int quantity) {
+		String status = "";
+    
+		if (quantity > 100) {
+    	    status = "High Stock";
+    	    System.out.println("Status: " + status);
+		} else if (quantity > 0) {
+    	    status = "In Stock";
+    	    System.out.println("Status: " + status);
+		} else {
+    	    status = "Out of Stock";
+    	    System.out.println("Status: " + status);
+		}
+	}
+
+
+
+		    </input>
+		</program>
+	</statement>
+	<statement>
+		<program language="java">
+		    <input>
+public void printProductStatus(int quantity) {
+    String status = "-----Blank1-----"; // Default value
+
+    if (quantity > 100) {
+        status = "High Stock";
+    } else if (quantity > 0) {
+        status = "In Stock";
+    } 
+
+    System.out.println(------Blank2-----);
+}
+
+
+
+		    </input>
+		</program>
+	</statement>
+	
+    <statement>
+      <p>
+       Put your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank 1: <var width="25"/></p>
+		<p>Blank 2: <var width="25"/></p>
+	</statement>
+
+      <setup>
+          	<var>
+		        <condition case="insensitive" string="Out of Stock">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  <var>
+            <condition case="insensitive" string=" *&quot;Status: *&quot; *\+ *status *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>
+            
+          </var>
+		 
+	  
+      </setup>
+     
+     
+    
+      
+    </exercise>
+</section>
+

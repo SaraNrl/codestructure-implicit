@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Chapter 1</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-conjoin-comprehension1.ptx" />
+  <xi:include href="sec-conjoin-identification1.ptx" />
+  <xi:include href="sec-conjoin-comprehension2.ptx" />
+  <xi:include href="sec-conjoin-identification2.ptx" />
+  <xi:include href="sec-conjoin-comprehension3.ptx" />
+  <xi:include href="sec-conjoin-identification3.ptx" />
+  <xi:include href="sec-conjoin-comprehension4.ptx" />
+  <xi:include href="sec-conjoin-identification4.ptx" />
+  <xi:include href="sec-conjoin-comprehension5.ptx" />
+  <xi:include href="sec-conjoin-identification5.ptx" />
+  <!--xi:include href="sec-conjoin-comprehension6.ptx" /-->
+  <!--xi:include href="sec-conjoin-identification6.ptx" /-->
+  <!--xi:include href="sec-conjoin-fillblank1.ptx" /-->
+  
+  <xi:include href="sec-conjoin-fillblank3.ptx" />
+  <xi:include href="sec-conjoin-fillblank1.ptx" />
+  <xi:include href="sec-conjoin-fillblank2.ptx" />
+  <xi:include href="sec-conjoin-fillblank4.ptx" />
+
+  <xi:include href="sec-conjoin-refactoring1.ptx" />
+  <!--xi:include href="sec-conjoin-refactoring1-response.ptx" /-->
+  <xi:include href="sec-conjoin-refactoring2.ptx" />
+  <xi:include href="sec-conjoin-refactoring3.ptx" />
+  <xi:include href="sec-conjoin-refactoring4.ptx" />
+  
+  
+  <xi:include href="sec-return-comprehension1.ptx" />
+    <xi:include href="sec-return-identification1.ptx" />
+  <xi:include href="sec-return-comprehension2.ptx" />
+  <xi:include href="sec-return-identification2.ptx" />
+  <xi:include href="sec-return-comprehension3.ptx" />
+  <xi:include href="sec-return-identification3.ptx" />
+  <xi:include href="sec-return-comprehension4.ptx" />
+  <xi:include href="sec-return-identification4.ptx" />
+  
+  <xi:include href="sec-return-fillblank1.ptx" />
+  <xi:include href="sec-return-fillblank2.ptx" />
+  <xi:include href="sec-return-fillblank3.ptx" />
+  <xi:include href="sec-return-fillblank4.ptx" />
+  <xi:include href="sec-return-fillblank5.ptx" />
+  <xi:include href="sec-return-refactoring1.ptx" />
+  <xi:include href="sec-return-refactoring2.ptx" />
+  <xi:include href="sec-return-refactoring3.ptx" />
+  <xi:include href="sec-return-refactoring5.ptx" />
+   <xi:include href="sec-return-refactoring4.ptx" />
+    
+    
+    
+  <xi:include href="sec-unique-comprehension1.ptx" />
+  <xi:include href="sec-unique-identification1.ptx" />
+  <xi:include href="sec-unique-comprehension2.ptx" />
+  <xi:include href="sec-unique-identification2.ptx" />
+  <xi:include href="sec-unique-fillblank1.ptx" />
+  <xi:include href="sec-unique-fillblank2.ptx" />
+    <xi:include href="sec-unique-fillblank3.ptx" />
+  <!--xi:include href="sec-unique-selectable1.ptx" /-->
+  <xi:include href="sec-unique-refactoring1.ptx" />
+    <!--xi:include href="sec-unique-selectable2.ptx" /-->
+  <xi:include href="sec-unique-refactoring2.ptx" />
+  
+ 
+  
+  
+</chapter>

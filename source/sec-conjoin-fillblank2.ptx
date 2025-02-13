@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-fillblank2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Fill-in-the-blank</title>
+     <exercise label="imp-conjoin-fillblank2">
+      	
+      	<statement>
+      <p>
+       We want the numberCheck() function to take an integer and return "Good guess!" if the number is a multiple of 3 or 5, but not a multiple of 15. Otherwise, it should return "Not correct!". Since you can't directly modify the code, please write your answers in the given boxes accordingly.
+     </p>
+    </statement>
+
+     <statement>
+		<program language="java">
+		    <input>
+		          public static String numberCheck(int number) {
+		             if ((-----------Blank 1-------------) &amp;&amp;-------Blank 2-------) {
+		                return "Good guess!";
+		             } 
+		                return "Not correct!";
+		          }  
+		    </input>
+		</program>
+	</statement>
+	<statement>
+      <p>
+       Here are some code segments that you may use to complete the numberCheck function (you may not need all the segments)
+      </p>
+      <p>
+      <ul>
+      <li> 
+      <c> number % 3 == 0   </c>
+      </li>
+      <li> 
+      <c> number % 5 == 0  </c>
+      </li>
+      <li> 
+      <c> number % 5 != 0 </c>
+      </li>
+      <li> 
+      <c> number % 3 != 0   </c>
+      </li>
+      <li> 
+      <c> number % 15 != 0  </c>
+      </li>
+      </ul>
+      </p>
+    </statement>
+    <statement>
+      <p>
+       Put your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank 1: <var width="45"/></p>
+		<p>Blank 2: <var width="25"/></p>
+		
+	</statement>
+
+      <setup>
+          	<var>
+		        <condition case="sensitive" string="( *number *% *3 *== * 0 * *\|\| *number *% *5 *== *0 *)|( *number *% *5 *== * 0 * *\|\| *number *% *3 *== *0 *)">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition case="sensitive" string="( *number *% *5 *!= *0 *)|( *number *% *3 *!= *0 *)">
+						  <feedback>
+					<p>Try Again, Not the correct condition!</p>
+						  </feedback>
+						</condition>
+				
+					<condition case="sensitive" string=".*&amp;&amp;.*">
+						  <feedback>
+					<p>Try again, Wrong operator!</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Use the given code segments!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  <var>
+            <condition case="sensitive" string=" *number *% *15 *!= * 0 *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				    
+				    <condition case="sensitive" string=" *number *% *5 *!= *0 *)|( *number *% *3 *!= *0 *)|( *number *% *5 *== *0 *)|( *number *% *3 *!= *0 *">
+				      <feedback>
+				<p>Try Again, Not correct condition</p>
+				      </feedback>
+				    </condition>
+				    
+				    <condition string=".*">
+						  <feedback>
+					<p>Use the given code segments!</p>
+		          </feedback>
+		        </condition>
+            
+          </var>
+	 
+	  
+      </setup>
+     
+      <!--hint>The first blank needs only one condition and the second one needs conjunction of two conditions. -->
+    
+      
+    </exercise>
+
+</section>
+

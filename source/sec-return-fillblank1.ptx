@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-fillblank1" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Fill-in-the-blank</title>
+
+  <exercise label="imp-return-fillblank1">
+
+    <statement>
+      <p>
+        Fill in the blank line of code, so that the function isArrayEmpty() takes an array as input and returns true when <term role="bold"> the array is empty </term> and returns false otherwise. 
+       </p>
+    </statement>
+<statement>
+	<program  language="java" >
+      <input>
+      
+         public static boolean isArrayEmpty(int[] arr) {
+            return .......Blank......... ; 
+         }
+
+      </input>
+    </program>
+    </statement>
+   <statement>
+   
+      <p>
+       Write your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank: <var width="45"/></p>
+	</statement>
+	 <setup>
+          	<var>
+		        <condition case="sensitive" string=" *arr\.length *== *0 *">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition case="insensitive" string="( *arr\.length *> *0 *)|( *arr\.length *&lt; *0 *)">
+						  <feedback>
+					<p>Try Again!</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  
+	  
+	  </setup>
+  </exercise>
+
+</section>
+

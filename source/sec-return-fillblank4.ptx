@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-fillblank4" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Fill-in-the-blank</title>
+
+  <exercise label="imp-return-fillblank4">
+
+    <statement>
+      <p> Fill in the blank lines of code, so that the function eligibleForDiscount() takes an integer age and returns a boolean. The function should return true when <term role="bold">the age is less than 18 or greater than 60 </term> and return false otherwise.
+      
+       </p>
+    </statement>
+    <statement>
+	<program  language="java" >
+      <input>
+        
+		public static boolean eligibleForDiscount(int age) {   
+    	   return .....Blank.......... ; 
+		}
+	
+
+      </input>
+    </program>
+    </statement>
+    
+   <statement>
+   
+      <p>
+       Write your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank: <var width="45"/></p>
+	</statement>
+	 <setup>
+          	<var>
+		        <condition case="sensitive" string="(\s*age\s*&lt;\s*18\s*\|\|\s*age\s*>\s*60\s*)|(\s*age\s*>\s*60\s*\|\|\s*age\s*&lt;\s*18)">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition case="sensitive" string="(\s*age\s*&lt;\s*18\s*&amp;&amp;\s*age\s*>\s*60\s*)|(\s*age\s*>\s*60\s*&amp;&amp;*age\s*&lt;\s*18)">
+		          <feedback>
+					<p>Try again! Wrong operator.</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  
+	  
+	  </setup>
+
+  </exercise>
+
+</section>
+

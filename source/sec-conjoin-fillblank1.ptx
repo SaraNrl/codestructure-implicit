@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-fillblank1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Fill-in-the-blank</title>
+     <exercise label="sec-conjoin-fillblank1">
+      	<title>Fill-in-the-blank</title>
+      	<statement>
+      <p>
+We want the wordCheck() function to return "Valid" only if the input is a string that starts with 'A' and ends with 'c'. Otherwise, it should return "Not valid". Since you can't directly modify the code, please write your answers in the given boxes accordingly.
+     </p>
+    </statement>
+
+     <statement>
+		<program  language="java">
+		    <input>
+		            public static String wordCheck(String word) {
+		                int lastCharIndex = word.length() - 1;
+		                if (-------Blank 1------) {
+		                    return "Not valid"; 
+		                }   
+		                if (--------Blank 2------) {
+		                    return "Valid"; 
+		                } 
+		                return "Not valid";
+		            }
+		    </input>
+		</program>
+	</statement>
+	<statement>
+      <p>
+       Here are some code segments that you should use to complete the wordCheck function.
+      </p>
+      <p>
+		  <ul>
+			<li><c>word.charAt(0) == 'A'</c></li>
+			<li><c>word.charAt(lastCharIndex) == 'c'</c></li>
+			<li><c>word.length() &lt; 2</c></li>
+		  </ul>
+	</p>
+    </statement>
+    <statement>
+      <p>
+       Write your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank 1: <var width="25"/></p>
+		<p>Blank 2: <var width="45"/></p>
+		 <hint>The first blank needs only one condition and the second one needs conjunction of two conditions. </hint>
+	</statement>
+
+      <setup>
+          	<var>
+		        <condition case="sensitive" string="\(? *word\.length\(\) *&lt; *2 \)?">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition case="insensitive" string=" *word\.charAt\( *lastCharIndex *\) *== *'c' *">
+						  <feedback>
+					<p>Try Again, Not the correct condition!</p>
+						  </feedback>
+						</condition>
+					<condition case="insensitive" string=" *word\.charAt\( *0 *\) *== *'A' *">
+						  <feedback>
+					<p>Try Again, Not the correct condition!</p>
+						  </feedback>
+						</condition>
+					<condition case="insensitive" string=".*&amp;&amp;.*">
+						  <feedback>
+					<p>You only need one condition here</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Use the given code segments!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  <var>  
+            <condition case="sensitive" string=" *word\.charAt\( *lastCharIndex *\) *== *'c' *&amp;&amp; *word\.charAt\( *0 *\) *== *'A' *)|( *word\.charAt\( *0 *\) *== *'A' *&amp;&amp; *word\.charAt\( *lastCharIndex *\) *== *'c' *\ ">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				    
+				    <condition case="sensitive" string=" *word\.charAt\( *lastCharIndex *\) *== *'c' *&amp;&amp; *word\.length\( * *\) *&lt;2 *)|( *word\.length\( * *\) *&lt;2 *&amp;&amp; *word\.charAt\( *lastCharIndex *\) *== *'c' *">
+				      <feedback>
+				<p>Try Again, Not rigth conditions are selected to be combined</p>
+				      </feedback>
+				    </condition>
+				<condition case="insensitive" string=" *word\.charAt\( *0 *\) *== *'A' *&amp;&amp; *word\.length\( * *\) *&lt;2 *)|( *word\.length\( * *\) *&lt;2 *&amp;&amp; *word\.charAt\( *0 *\) *== *'A' *">
+				      <feedback>
+				<p>Try Again, Not rigth conditions are selected to be combined</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string="^(?!.*&amp;&amp;).*">
+				      <feedback>
+				<p>Try again.</p>
+              </feedback>
+            </condition>
+            
+          </var>
+	 
+	  
+      </setup>
+     
+     
+    
+      
+    </exercise>
+</section>
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-refactoring2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Refactoring</title>
+
+  <activity>
+    <statement>
+      <p>
+        There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
+      </p>
+      <program language="java">
+        <input>
+        <![CDATA[
+       
+		public class WithinRange {
+			public static boolean isInRange(int number, int lowerBound, int upperBound) {
+				if (number >= lowerBound && number <= upperBound) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}
+		
+        ]]>
+        </input>
+      </program>
+    </statement>
+    
+  
+    <program label="imp-return-refactoring2" interactive="activecode" language="java" >
+      <input> 
+       <![CDATA[
+       
+		public class WithinRange {
+			public static boolean isInRange(int number, int lowerBound, int upperBound) {
+				if (number >= lowerBound && number <= upperBound) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}
+		
+        ]]>
+      </input>
+
+      <tests>
+        import static org.junit.Assert.*;
+		import org.junit.Test;
+		import java.io.*;
+
+		public class RunestoneTests extends CodeTestHelper {
+
+		  public RunestoneTests() {
+			  super("WithinRange");
+		  }
+
+		  // Test for within the range
+		  @Test
+		  public void testWithin() throws IOException {
+			  Object[] args = {10, 1, 20};  // Arguments for the method
+			  String output = getMethodOutput("isInRange", args);
+			  String expect = Boolean.toString(true);  // Convert expected boolean to String
+			  
+			  // No need to manually convert the result as the output is already a string
+			  boolean passed = getResults(expect, output, "isInRange(10,1,20)");
+			  assertTrue(passed);
+		  }
+
+		  // Test for zero
+		  @Test
+		  public void testOutsideLower() throws IOException {
+			  Object[] args = {-10, 0, 10};  // Arguments for the method
+			  String output = getMethodOutput("isInRange", args);
+			  String expect = Boolean.toString(false);  // Convert expected boolean to String
+			  
+			  boolean passed = getResults(expect, output, "isInRange(-10,0,10)");
+			  assertTrue(passed);
+		  }
+
+		  // Test for negative number
+		  @Test
+		  public void testOutsideUpper() throws IOException {
+			  Object[] args = {-2, -10, -4};  // Arguments for the method
+			  String output = getMethodOutput("isInRange", args);
+			  String expect = Boolean.toString(false);  // Convert expected boolean to String
+			  
+			  boolean passed = getResults(expect, output, "isInRange(-2,-10,-4)");
+			  assertTrue(passed);
+		  }
+
+		}
+
+
+      </tests>
+    </program>
+  </activity>
+  
+     <activity>
+    <statement>
+      <p>
+        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+      </p>
+    </statement>
+    
+    
+    
+    
+     <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class WithinRange {
+	public static boolean isInRange(int number, int lowerBound, int upperBound) {
+		if (number >= lowerBound &amp;&amp; number &lt;= upperBound) {
+			return true;
+		}
+		return false;
+	}
+}	
+ 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can further be improved!
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class WithinRange {
+	public static boolean isInRange(int number, int lowerBound, int upperBound) {
+		return number >= lowerBound &amp;&amp; number &lt;= upperBound;
+	}
+}	
+		</input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+   
+   
+    
+    </choices>
+  </activity>
+  
+</section>
+

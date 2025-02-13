@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-identification3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity>
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these three code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 
+    </p>
+    
+    
+  </statement>
+  
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+public static boolean canPlayoutside(String weather) {
+   if (weather.equals("rainy")) {
+        return false;
+   } else {
+        return true;
+   } 
+}
+
+           	
+        ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved! 
+        </p>
+      </feedback>
+    </choice>
+
+    
+
+    <choice correct="no">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+public static boolean canPlayoutside(String weather) {
+   if (weather.equals("rainy")) {
+        return false;
+   } return true;
+}
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          This code can be improved! 
+        </p>
+      </feedback>
+      
+    </choice>
+     <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+public static boolean canPlayoutside(String weather) {
+   if (!weather.equals("rainy")) {
+        return true;
+   } return false;
+}
+
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+
+     <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+public static boolean canPlayoutside(String weather) {
+   return !weather.equals("rainy");
+}
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct! 
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</activity>
+</section>

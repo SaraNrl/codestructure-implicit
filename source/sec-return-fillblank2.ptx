@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-fillblank2" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Fill-in-the-blank</title>
+
+  <exercise label="imp-return-fillblank2">
+
+    <statement>
+      <p> Fill in the blank line of code, so that the function areStringsEqual() takes two string of str1 and str2. When <term role="bold"> the two strings are the same </term> it returns true and returns false otherwise.  
+       </p>
+    </statement>
+	<statement>
+		<program language="java" >
+		  <input>
+				public static boolean areStringsEqual(String str1, String str2) {   
+				   return .......Blank......... ; 
+				}
+		  </input>
+		</program>
+	</statement>
+	
+    <statement>
+   
+      <p>
+         Write your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank: <var width="45"/></p>
+	</statement>
+	 <setup>
+          	<var>
+		        <condition case="sensitive" string="\s*str1\s*\.equals\s*\(\s*str2\s*\)\s*|\s*str2\s*\.equals\s*\(\s*str1\s*\)\s*">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+
+						<condition case="insensitive" string=" *str1 *== *str2 *">
+						  <feedback>
+					<p>Try Again! To compare strings you should use equals() function instead of "==". </p>
+						  </feedback>
+						</condition>
+						<condition case="insensitive" string=" *str1\.equal\( *str2 *\) *">
+						  <feedback>
+					<p>Try Again! You should use equals() instead of equal().</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+	  
+	  
+	  </setup>
+  </exercise>
+
+</section>
+

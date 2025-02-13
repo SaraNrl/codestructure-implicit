@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-identification2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity>
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one(s) of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 
+    </p>
+    
+    
+  </statement>
+  
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+
+  public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+    if (isFragile) {
+      weight = weight + (weight * 0.05);  // Add 5% extra for packaging
+    }
+    if (isBulk) {
+      return weight + (weight * 0.10);  // Add by 10% for bulk items
+    } else {
+      return weight;
+    }
+  }	
+
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+             This code can be improved! 
+        </p>
+      </feedback>
+    </choice>
+    
+
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+  public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+    double adjustment = 0.0;
+    if (isFragile) {
+      adjustment += 0.05;  
+    } 
+    if (isBulk) {
+      adjustment += 0.10;  
+    }
+    return weight * (1 + adjustment);
+  }
+
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct!
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="no">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+
+  public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+    double finalWeight = weight;
+    if (isFragile) {
+      finalWeight += weight * 0.05;
+    }
+    if (isBulk) {
+      finalWeight += weight * 0.10;
+    }
+    return finalWeight;
+  }
+
+        ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           This code can be improved! 
+        </p>
+      </feedback>
+    </choice>
+    
+   
+  </choices>
+</activity>
+</section>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-identification6" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity>
+  <statement>
+    <p>
+      Some of the following code blocks are the ones you saw in the previous question. They all have the same functionality. Which one(s) of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 
+
+    </p>
+  </statement>
+  
+
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+            public static String checkNumber(String str) {
+	            if (isNumeric(str)) {
+	                int number = Integer.parseInt(str);
+                    if (number > 100) {
+                        if (number < 1000) {
+           	                return "Valid"; 
+                        } 
+                    }
+                }
+                return "Not valid";
+            }
+          ]]>
+          </input>
+        </program>
+      </statement>
+  <feedback>
+          <p>
+              This code can be improved!
+          </p>
+        </feedback>
+    </choice>
+
+
+    <choice correct="yes">
+        <statement> 
+         <program language="java">
+            <input><![CDATA[
+            public static String checkNumber(String str) {
+              if (isNumeric(str)) {
+                  int number = Integer.parseInt(str);
+                  if (number > 100 && number < 1000) {
+           	         return "Valid";  
+                  }
+              } 
+              return "Not valid";
+            }
+          ]]>  
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>
+              Correct!
+          </p>
+        </feedback>
+      </choice>
+    <choice correct="yes">
+        <statement> 
+         <program language="java">
+            <input><![CDATA[
+public static String checkNumber(String str) {
+   if (!isNumeric(str)) {
+       return "Not valid";
+   }
+   int number = Integer.parseInt(str);
+   if (number > 100 && number < 1000) {
+       return "Valid"; 
+   } 
+   return "Not valid";
+} 
+          ]]>  
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>
+              Correct!
+          </p>
+        </feedback>
+      </choice>
+    
+
+    <choice correct="no">
+        <statement>
+          <program language="java">
+            <input><![CDATA[
+            public static String checkNumber(String str) {
+	            if (isNumeric(str) && Integer.parseInt(str) > 100 &&
+                    Integer.parseInt(str) < 1000) {
+           	        return "Valid"; 
+                } 
+                return "Not valid";
+            }
+            ]]>
+            </input>
+          </program>
+          
+        </statement>
+        <feedback>
+          <p>
+              Close!, but conjoining all conditions together may not always be a great idea!
+          </p>
+        </feedback>
+      </choice>
+  </choices>
+</activity>
+</section>

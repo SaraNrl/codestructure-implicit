@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-return-comprehension1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+<activity>
+  <statement>
+    <p>
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+    </p>
+    <program language="java">
+      <input>
+        <![CDATA[
+        public static boolean hasPermission(boolean isAdmin, boolean hasWriteAccess, boolean isAccountActive) {
+    	    if (isAdmin == true) {
+        	  return true;
+    	    }
+    	    if (hasWriteAccess == true) {
+        	  return true;
+    	    }
+    	    if (isAccountActive == true) {
+        	  return true;
+    	    }
+    	    return false;
+        }
+        ]]>
+            
+      </input>  
+    </program>
+    
+    <p>
+      <hint>You can use the following test cases to compare the code blocks' functionality. Note that the test cases include examples across a range of different inputs.
+          <ul>
+            <li>
+              <c>hasPermission(true, true, true)</c> 
+            </li>
+            <li>
+              <c>permission(false, false, false)</c>
+            </li>
+            <li>
+              <c>hasPermission(true, true, false)</c>
+            </li>
+            <li>
+              <c>hasPermission(true, false, false)</c>
+            </li>
+            <li>
+              <c>hasPermission(true, false, true)</c>
+            </li>
+            <li>
+              <c>hasPermission(false, true, true)</c>
+            </li>
+          </ul>
+          </hint>
+    </p>
+    <p>
+      Select all that apply. 
+    </p>
+  </statement>
+  
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+            public static boolean hasPermission(boolean isAdmin, boolean hasWriteAccess, boolean isAccountActive) {
+    	        return isAdmin && hasWriteAccess && isAccountActive; 
+            } 
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Not correct! Compare the output of the given code vs. code block in option A for <c> hasPermission(false, true, true);</c>
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+            public static boolean hasPermission(boolean isAdmin, boolean hasWriteAccess, boolean isAccountActive) {
+    	        return isAdmin || hasWriteAccess || isAccountActive; 
+            } 
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct! 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+            public static boolean hasPermission(boolean isAdmin, boolean hasWriteAccess, boolean isAccountActive) {
+    	        return isAdmin == true || hasWriteAccess == true || 
+                     isAccountActive ==true; 
+            }
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct! 
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</activity>
+</section>

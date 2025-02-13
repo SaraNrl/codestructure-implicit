@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoined-identification2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity>
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 
+
+    </p>
+  </statement>
+  
+
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+            public static String determineEventEligibility(int personAge, int yearsInGroup) {
+                if (personAge > 60) {
+                    if (yearsInGroup >= 5) {
+                        return "Qualified";
+                    } else {
+                        return "Not qualified";
+                    }
+                }
+                return "Not qualified";
+            } 
+          ]]></input>
+        </program>
+      </statement>
+  <feedback>
+          <p>
+              This code can be improved!
+          </p>
+        </feedback>
+    </choice>
+
+
+    <choice correct="yes">
+        <statement> 
+         <program language="java">
+            <input>
+              public static String determineEventEligibility(int personAge, int yearsInGroup) {
+                  if (personAge > 60 &amp;&amp; yearsInGroup >= 5) {
+                      return "Qualified";
+                  } 
+                  return "Not qualified";
+              }  
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>
+              Correct!
+          </p>
+        </feedback>
+      </choice>
+    
+    <choice correct="no">
+      <statement>
+        <program language="java">
+          <input>
+            public static String determineEventEligibility(int personAge, int yearsInGroup) {
+                if (personAge > 60) {
+                    if (yearsInGroup >= 5) {
+                        return "Qualified";
+                    }
+                } 
+                return "Not qualified";
+            }  
+          </input>
+        </program>
+      </statement>
+      <feedback>
+          <p>
+              This code can be improved!
+          </p>
+        </feedback>
+      
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input>
+<![CDATA[
+public static String determineEventEligibility(int personAge, int yearsInGroup) {
+    if (personAge <= 60 || yearsInGroup < 5) {
+        return "Not qualified";
+    }
+    return "Qualified";
+}
+]]> 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+          <p>
+              Correct!
+          </p>
+        </feedback>
+      
+    </choice>
+  </choices>
+</activity>
+</section>

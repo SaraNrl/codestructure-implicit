@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="booleanReturnPart2" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 2) Directly return boolean expressions </title>
+  <p>
+ Continue watching the videos to learn the second rule.
+  </p>
+  <figure>
+    <caption>Conjoining conditions with <c>||</c> part 4</caption>
+    <video xml:id="booleanReturn2" youtube="t2iMfbk1wFU" width="90%" margins="5% 5%" preview="booleanReturn-part2"/>
+  </figure>
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+</section>
+

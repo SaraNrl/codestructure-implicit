@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-fillblank3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Fill-in-the-blank</title>
+     <exercise label="imp-unique-fillblank3">
+      	
+      	<statement>
+      <p>
+     Please improve the style of the first generateOrderSummary() function to enhance its maintainability. For this, complete the blank sections in the second generateOrderSummary() function provided. These two functions must have the same behavior by the end.
+     </p>
+    </statement>
+
+     <statement>
+		<program  language="java">
+		    <input>
+	public void generateOrderSummary(double totalPrice, boolean isMember) {
+		String message = "";
+
+		if (totalPrice > 100) {
+			message = "High order value. ";
+			if (isMember) {
+		    	message += "You earned 500 loyalty points!";
+			} else {
+		    	message += "Join our membership to earn loyalty points!";
+			}
+			System.out.println(message);
+		} else if (totalPrice > 50) {
+			message = "Moderate order value. ";
+			if (isMember) {
+		    	message += "You earned 200 loyalty points!";
+			} else {
+		    	message += "Join our membership to earn loyalty points!";
+			}
+			System.out.println(message);
+		} else {
+			message = "Low order value. ";
+			if (isMember) {
+		    	message += "You earned 100 loyalty points!";
+			} else {
+		    	message += "Join our membership to earn loyalty points!";
+			}
+			System.out.println(message);
+		}
+	}
+
+
+
+
+
+		    </input>
+		</program>
+	</statement>
+	<statement>
+		<program  language="java">
+		    <input>
+	public void generateOrderSummary(double totalPrice, boolean isMember) {
+		String messagePrefix = "";
+		String messageSuffix = "";
+		int points = 0;
+
+		if (totalPrice > 100) {
+			messagePrefix = -----Blank 1--------;
+			points = 500; 
+		} else if (totalPrice > 50) {
+			messagePrefix = ------Blank 2-------;
+			points = 200;
+		} else {
+			messagePrefix = -----Blank 3--------;
+			points = ---Blank 4---;
+		}
+
+		if (isMember) {
+			messageSuffix = ----Blank 5----;
+		} else {
+			messageSuffix = ----Blank 6----;
+		}
+
+		String message = messagePrefix + messageSuffix;
+		System.out.println(message);
+	}
+
+
+
+		    </input>
+		</program>
+	</statement>
+	
+    <statement>
+      <p>
+       Put your responses here:
+      </p>
+    </statement>
+	<statement>
+		<p>Blank 1: <var width="25"/></p>
+		<p>Blank 2: <var width="25"/></p>
+		<p>Blank 3: <var width="25"/></p>
+		<p>Blank 4: <var width="25"/></p>
+		<p>Blank 5: <var width="25"/></p>
+		<p>Blank 6: <var width="25"/></p>
+	</statement>
+
+      <setup>
+          	
+          <var>
+            <condition case="insensitive" string=" *&quot;High order value. &quot; *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>
+            
+          </var>
+	  	
+	  	
+	  	 <var>
+            <condition case="insensitive" string=" *&quot;Moderate order value. &quot; *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>
+          </var>
+          
+          
+          <var>
+		        <condition case="sensitive" string=" *&quot;Low order value. &quot; *">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+          
+          <var>
+		        <condition case="insensitive" string=" *100 *">
+		          <feedback>
+					<p>Correct.</p>
+						  </feedback>
+						</condition>
+						<condition string=".*">
+						  <feedback>
+					<p>Try again!</p>
+		          </feedback>
+		        </condition>
+          </var>
+                   
+          
+          
+          
+          
+          
+           <var>
+            <condition case="insensitive" string=" *&quot;You earned\s*\&quot;\s*\+ *points *\+ *&quot; *loyalty points! *&quot;">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>  
+          </var>
+          
+          
+          <var>
+            <condition case="insensitive" string=" *&quot;Join our membership to earn loyalty points!&quot; *">
+              <feedback>
+				<p>Correct.</p>
+				      </feedback>
+				    </condition>
+				
+				    <condition string=".*">
+				      <feedback>
+				<p>Try again!</p>
+              </feedback>
+            </condition>
+            
+          </var>
+           
+		 
+		 
+	  
+      </setup>
+     
+     
+    
+      
+    </exercise>
+</section>
+

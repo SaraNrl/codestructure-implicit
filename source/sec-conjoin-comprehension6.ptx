@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-comprehension6" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+<activity>
+  <statement>
+    <p>
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+    </p>
+    <program language="java">
+      <input>
+        <![CDATA[
+        public static String checkNumber(String str) {
+            if (!isNumeric(str)) {
+                return "Not valid";
+            }
+            int number = Integer.parseInt(str);
+            if (number > 100 && number < 1000) {
+                return "Valid"; 
+            } 
+            return "Not valid";
+        } 
+        ]]>
+            
+      </input>  
+    </program>
+    
+    <p>
+      <hint> You can use the following test cases to compare the code blocks' functionality. Note that the test cases include examples across a range of different inputs.
+          <ul>
+		  <li><c>validWord("435gjhg")</c></li>
+		  <li><c>validWord("987")</c></li>
+		  <li><c>validWord("7679")</c></li>
+		  <li><c>validWord("12")</c></li>
+		</ul>
+		</hint>
+    </p>
+    <p>
+      Select all that apply. 
+    </p>
+  </statement>
+  
+
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+            public static String checkNumber(String str) {
+                if (Integer.parseInt(str) > 100 && Integer.parseInt(str) < 1000 && isNumer(str)) {
+                    return "Valid";
+                } else {
+                    return "Not valid";
+                }
+            }            
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Not quite right! Compare the output of the given code vs. code block in option A for <c>validWord(“435gjhg”);  </c>
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+            public static String checkNumber(String str) {
+                if (isNumeric(str) && Integer.parseInt(str) > 100 && Integer.parseInt(str) < 1000) {
+                    return "Valid"; 
+                } 
+                return "Not valid";
+            }            
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          Correct! 
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</activity>
+</section>

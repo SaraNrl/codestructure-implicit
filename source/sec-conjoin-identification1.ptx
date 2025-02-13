@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-identification1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity>
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)?
+    </p> 
+  </statement>
+
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public static String whereToPlay(boolean isSunny, int temperature) {
+    if (isSunny) {
+        if (temperature > 70) { 
+            return "play outside";    
+        }
+    } 
+    return "play inside";
+}  
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+       <![CDATA[
+public static String whereToPlay(boolean isSunny, int temperature) {
+   if (!isSunny) {
+      return "play inside";
+   }
+   if (temperature <= 70) { 
+      return "play inside";    
+   } 
+      return "play outside";
+} 
+        ]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input>
+public static String whereToPlay(boolean isSunny, int temperature) {
+   if (isSunny &amp;&amp; temperature > 70) { 
+      return "play outside";    
+   } 
+   return "play inside";
+}  
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+         Correct!
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</activity>
+</section>

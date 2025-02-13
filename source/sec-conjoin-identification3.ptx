@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-conjoin-identification3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity> 
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)?
+    </p>
+
+  </statement>
+  
+
+  <choices>
+  
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (!isPeerReviewed) {
+        return "Not a high-impact research.";
+    }  
+    if (!isWellKnownJournal(journalName)) {
+        return "Not a high-impact research.";
+    }
+    if (citationCount &lt;= 50) { 
+        return "Not a high-impact research.";               
+    }               
+    return "A high-impact research!";
+}
+
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+    
+     <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (isPeerReviewed) {  
+        if (isWellKnownJournal(journalName)) { 
+            if (citationCount > 50) { 
+                return "A high-impact research!";
+            }
+        }
+    }
+    return "Not a high-impact research.";
+}
+
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (isPeerReviewed &amp;&amp; isWellKnownJournal(journalName) &amp;&amp; citationCount > 50) { 
+       return "A high-impact research!";
+    }
+    return "Not a high-impact research.";
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Correct!
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+           <![CDATA[
+public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (!isPeerReviewed || !isWellKnownJournal(journalName) || citationCount <= 50) { 
+        return "Not a high-impact research.";               
+    } else {               
+        return "A high-impact research!"; 
+    }
+}
+
+
+  ]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            This code can be improved!
+        </p>
+      </feedback>
+    </choice>
+
+
+  </choices>
+</activity>
+</section>

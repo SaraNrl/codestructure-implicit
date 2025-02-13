@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-conjoin-refactoring2" xmlns:xi="http://www.w3.org/2001/XInclude" label="campusHousing">
+  <title>Code Refactoring</title>
+
+<activity>
+  <statement>
+    <p>
+      There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
+    </p>
+    <program language="java">
+      <input>
+        <![CDATA[
+public class CampusHousing {
+	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+    	if (schoolYear <= 3) { 
+        	return "Not eligible";
+    	} 
+    	if (GPA > 3.4){
+          	return "Eligible";
+      	} else {
+         	return "Not eligible";
+        }
+    }
+}
+
+		]]>
+      </input>
+    </program>
+  </statement>
+
+  <program label="sec-conjoin-refactoring2" interactive="activecode" language="java" >
+    <input>
+    <![CDATA[
+public class CampusHousing {
+	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+    	if (schoolYear <= 3) { 
+        	return "Not eligible";
+    	}
+    	if (GPA > 3.4){
+          	return "Eligible";
+      	} else {
+         	return "Not eligible";
+        }
+	}
+}
+	]]>
+     
+    </input>
+    <tests> 
+    import static org.junit.Assert.*;
+    import org.junit.Test;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper {
+
+      public RunestoneTests() {
+          super("CampusHousing");
+      }
+
+     /*** // Test for eligibility based on school year
+      @Test
+      public void testEligibleBySchoolYear() throws IOException {
+          Object[] args = {4, 2.5};  // Arguments for the method, year and gpa
+          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String expect = "Eligible";
+          
+          boolean passed = getResults(expect, output, "eligibleForCampusHousing(4, 2.5)");
+          assertTrue(passed);
+      }
+  
+      // Test for eligibility based on GPA
+      @Test
+      public void testEligibleByGpa() throws IOException {
+          Object[] args = {2, 3.5};  // Arguments for the method
+          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String expect = "Eligible";
+          
+          boolean passed = getResults(expect, output, "eligibleForCampusHousing(2, 3.5)");
+          assertTrue(passed);
+      }***/
+
+      // Test for not eligible based on both conditions
+      @Test
+      public void testNotEligible() throws IOException {
+          Object[] args = {2, 3.0};  // Arguments for the method
+          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String expect = "Not eligible";
+          
+          boolean passed = getResults(expect, output, "eligibleForCampusHousing(2, 3.0)");
+          assertTrue(passed);
+      }
+
+      // Test for eligibility based on school year but GPA doesn't qualify
+      @Test
+      public void testNotEligibleByGpa() throws IOException {
+          Object[] args = {4, 3.0};  // Arguments for the method
+          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String expect = "Not eligible";
+          
+          boolean passed = getResults(expect, output, "eligibleForCampusHousing(4, 3.0)");
+          assertTrue(passed);
+      }
+
+      // Test for eligibility based on GPA and lower school year
+      @Test
+      public void testEligibleByGpaAndHighYear() throws IOException {
+          Object[] args = {6, 3.2};  // Arguments for the method
+          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String expect = "Not eligible";
+          
+          boolean passed = getResults(expect, output, "eligibleForCampusHousing(6, 3.2)");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void testEligibleByGpaAndLowYear() throws IOException {
+          Object[] args = {6, 3.6};  // Arguments for the method
+          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String expect = "Eligible";
+          
+          boolean passed = getResults(expect, output, "eligibleForCampusHousing(6, 3.6)");
+          assertTrue(passed);
+      }
+    }
+    </tests>
+  </program>
+  
+</activity>
+
+<activity>
+    <statement>
+      <p>
+        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+      </p>
+    </statement>
+
+
+ 
+   <choices>
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class CampusHousing {
+	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+		if (schoolYear > 3 &amp;&amp; GPA > 3.4) {
+			return "Eligible";
+		} else {
+			return "Not eligible";
+		}
+	}
+} 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class CampusHousing {
+	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+		if (schoolYear > 3 || GPA > 3.4) {
+			return "Eligible";
+		} 
+		return "Not eligible";
+		
+	}
+} 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            The code doesn't have the same functionality with the original one.
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class DiscountChecker {
+   public static String eligibleForCampusHousing(int schoolYear, double GPA)  {
+      if (schoolYear &lt;= 3 || GPA &lt;= 3.4) {
+            return "Not eligible";	
+      }  
+      return "Eligible";
+   }
+} 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+public class DiscountChecker {
+   public static String eligibleForCampusHousing(int schoolYear, double GPA)  {
+      if (schoolYear &lt;= 3 &amp;&amp; GPA &lt;= 3.4) {
+            return "Not eligible";	
+      } else {  
+            return "Eligible";
+      }
+   }
+}
+
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            The code doesn't have the same functionality with the original one.
+        </p>
+      </feedback>
+    </choice>
+   </choices>
+  </activity>
+
+</section>
+

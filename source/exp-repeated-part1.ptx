@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="uniqueRepeatedPart1" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 3) Remove repeated code and logic from conditional branches </title>
+  <p>
+  Please watch the video to learn the first rule and answer the following questions. Enlarge the window to view the code examples clearly. If needed, click the settings icon in the video player and set the quality to 1080p for better clarity.
+  </p>
+  <figure>
+    <caption>Remove repeated code from branches part 1 </caption>
+    <video xml:id="uniqueRepeated1" youtube="leWATGkAWaU" width="90%" margins="5% 5%" preview="uniqueRepeated-part1"/>
+  </figure>
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+</section>
+

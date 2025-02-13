@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="Motivation" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Writing well-structured Code is Very Important </title>
+  <p>
+  
+
+Programming is not just about writing code that works as intended. Code it must also be easy to read, understand, and maintain. Well-structured code requires minimal commenting because it speaks for itself.
+<p>&#160;</p>
+In the professional world, companies expect developers to follow best practices and write clean, and maintainable code. In industry, you won’t be coding just for yourself, you’ll be working in teams. Others need to understand your code to test, modify, and extend it effectively. 
+
+In addition, research shows that most of software development time is spent on reading and understanding existing code. Well-structured code facilitates peer reviews, reduces time spent on future modifications, and simplifies debugging. As software evolves, a clean and organized codebase enables efficient collaboration and minimizes unexpected vulnerabilities.
+ <p>&#160;</p>
+There are two key ways to achieve well-structured code:
+<ol>
+<li>Writing well initially – This involves thinking through different approaches and structures and selecting the best one. However, achieving perfectly structured code initially is difficult.</li>
+
+<li>Reviewing and refining code for structure – Similar to proofreading an essay, where the content remains the same, but sentences are polished for clarity and conciseness, and the overall organization may be adjusted. The process of modifying the structure of code without changing its behavior is called refactoring. </li>
+</ol>
+
+Refactoring is the process of enhancing a software’s internal structure to make it easier to read and maintain without changing its input-output behavior.
+<p>&#160;</p>
+ This course primarily focuses on refactoring because, no matter how carefully we write well-structured code, we still may introduce quality issues. Therefore, it is good practice to always review your code and identify areas for improvement. Here, we discuss three refactoring rules, but refactoring encompasses much more than what we cover in this course. Let's get started. 
+  </p>
+
+
+
+</section>
+

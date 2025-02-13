@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="my-great-book">
+    <title>Code Structure V1</title>
+    <subtitle>The Value of Writing Well-structured Code</subtitle>
+    
+    
+    <subtitle>How to Use the Book</subtitle>
+ 		<p> Many questions include one or more hints. Make sure to think through the question before opening any hints, but after writing your response, always check them, as they are designed to teach you something valuable. Many questions have a "check me" button, please only check your answer after you responded and make sure that you read the feedback it gives you. If you couldn't solve a question at first try,, keep trying and checking until you answer the question correctly.   </p>
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+
+    <!-- Include chapters -->
+    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-chapter-title2.ptx" />
+
+    <!-- Include backmatter -->
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>
