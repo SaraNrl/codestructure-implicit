@@ -3,7 +3,7 @@
 <section xml:id="imp-return-refactoring5" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Code Refactoring</title>
 
-  <activity>
+  <activity label="imp-return-refactoringCredentialCheck">
     <statement>
       <p>
         There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
@@ -60,7 +60,7 @@ public class CredentialCheck {
     </statement>
     
   
-    <program label="imp-return-refactoring5" interactive="activecode" language="java" >
+    <program label="imp-return-refactoringCredentialCheck-code" interactive="activecode" language="java" >
       <input> 
        <![CDATA[
 public class CredentialCheck {
@@ -255,7 +255,7 @@ public class CredentialCheck {
   </activity>
   
   
-   <activity>
+   <activity label="imp-return-refactoringCredentialCheck-response">
     <statement>
       <p>
         Compare your refactored code with the solution below. Did you refactor correctly?

@@ -4,7 +4,7 @@
 
   <title>Fill-in-the-blank</title>
 
-  <exercise label="imp-return-fillblank3">
+  <exercise label="imp-return-fillinPositiveAndEven">
 
     <statement>
       <p> Fill in the blank lines of code so that the function isPositiveAndEven() takes an integer number as input and returns true <term role="bold"> if the number is positive (greater than 0) and even </term> and returns false otherwise.  

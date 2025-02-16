@@ -12,7 +12,7 @@
     <video xml:id="conjoinWithOr4" youtube="H65ZStOGnIc" width="90%" margins="5% 5%" preview="conjoinWithOr-part4"/>
   </figure>
  
- <activity>
+ <activity label="exp-conjoinWithOr-refactoringInternship">
   <statement>
     <p>
       There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
@@ -38,7 +38,7 @@ public class Internship
     </program>
   </statement>
 
-  <program label="exp-conjoinOr-refactoring1" interactive="activecode" language="java" >
+  <program label="exp-conjoinWithOr-refactoringInternship-code" interactive="activecode" language="java" >
     <input>
 public class Internship {
 	public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
@@ -146,7 +146,7 @@ public class Internship {
   </program>
 </activity>
 
- <activity>
+ <activity label="exp-conjoinWithOr-refactoringInternship-response">
     <statement>
       <p>
         Which of the following code blocks is the most similar to your final refactored code for the previous question?

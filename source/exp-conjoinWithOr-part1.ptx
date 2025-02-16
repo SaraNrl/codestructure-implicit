@@ -16,7 +16,7 @@
  
  
  
-<activity>
+<activity label="exp-conjoinWithOr-comprehensionPrint1">
   <statement>
     <p>
      Consider the following Java function. What happens when the function is called with the given inputs: <c>print(2, 0, 0);</c>
@@ -60,7 +60,7 @@ public static void print(int x, int y, int z) {
   </choices>
 </activity>
 
-<activity>
+<activity label="exp-conjoinWithOr-comprehensionPrint2">
   <statement>
     <p>
       What happens when the function is called with these new inputs: <c>print(12, 0, 20);</c>

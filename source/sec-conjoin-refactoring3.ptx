@@ -3,7 +3,7 @@
 <section xml:id="imp-conjoin-refactoring3" xmlns:xi="http://www.w3.org/2001/XInclude" label="scholarship">
   <title>Code Refactoring</title>
 
-<activity>
+<activity label="imp-conjoin-refactoringScholarship">
   <statement>
     <p>
       There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
@@ -27,7 +27,7 @@
     </program>
   </statement>
 
-  <program label="imp-conjoin-refactoring3" interactive="activecode" language="java" >
+  <program label="imp-conjoin-refactoringScholarship-code" interactive="activecode" language="java" >
     <input>
      public class Scholarship {
 			public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
@@ -118,7 +118,7 @@
   </activity>
   
   
-   <activity>
+   <activity label="imp-conjoin-refactoringScholarship-response">
     <statement>
       <p>
         Which of the following code blocks is the most similar to your final refactored code for the previous question?

@@ -6,7 +6,7 @@
     <p> TESTText before the first section. </p>
   </introduction>
   
-  
+  <!--xi:include href="test.ptx" /-->
   <xi:include href="Motivation.ptx" />
   <xi:include href="ApproachingTheBook.ptx" />
   

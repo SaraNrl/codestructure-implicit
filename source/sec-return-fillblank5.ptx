@@ -4,7 +4,7 @@
 
   <title>Fill-in-the-blank</title>
 
-  <exercise label="imp-return-fillblank5">
+  <exercise label="imp-return-fillinValidPassword">
 
     <statement>
       <p> Fill in the blank line of code, so that the function isValidPassword() takes a String parameter password and returns a boolean. The function returns <term role="bold">false </term> when the password is less than 8 characters or contains any spaces. Otherwise, it returns true.

@@ -3,7 +3,7 @@
 <section xml:id="imp-return-refactoring1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Code Refactoring</title>
 
-  <activity>
+  <activity label="imp-return-refactoringPositive">
     <statement>
       <p>
         There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases. 
@@ -28,7 +28,7 @@
     </statement>
     
   
-    <program label="imp-return-refactoring1" interactive="activecode" language="java" >
+    <program label="imp-return-refactoringPositive-code" interactive="activecode" language="java" >
       <input>  <![CDATA[
         
 		public class Positive {
@@ -97,7 +97,7 @@
   </activity>
   
   
-   <activity>
+   <activity label="imp-return-refactoringPositive-response" >
     <statement>
       <p>
         Which of the following code blocks is the most similar to your final refactored code for the previous question?

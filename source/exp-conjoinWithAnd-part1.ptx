@@ -16,7 +16,7 @@
  
  
  
-<exercise label="conjoinWithAnd1-fillin">
+<exercise label="conjoinWithAnd-fillinMessage">
   <statement>
     <p>
      Consider the following Java function and complete the blank parts of the truth table.
@@ -32,10 +32,7 @@ public static String message(int age, boolean didConsent) {
 }
       </input>  
     </program>
-  </statement>
-  
-  <line></line>
-  <statement>
+
    <tabular colsep="1" rowsep="1">
   <row>
     <cell><em>age >= 18</em></cell>
@@ -63,14 +60,11 @@ public static String message(int age, boolean didConsent) {
     <cell>---Blank 3---</cell>
   </row>
 </tabular>
-  </statement>
   
-  <statement>
       <p>
        Write your responses here:
       </p>
-    </statement>
-	<statement>
+
 		<p>Blank 1: <var width="55"/></p>
 		<p>Blank 2: <var width="55"/></p>
 		<p>Blank 3: <var width="55"/></p>

@@ -4,7 +4,7 @@
 
   <title>Fill-in-the-blank</title>
 
-  <exercise label="imp-return-fillblank2">
+  <exercise label="imp-return-fillinAreStringsEqual">
 
     <statement>
       <p> Fill in the blank line of code, so that the function areStringsEqual() takes two string of str1 and str2. When <term role="bold"> the two strings are the same </term> it returns true and returns false otherwise.  

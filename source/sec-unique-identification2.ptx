@@ -3,7 +3,7 @@
 <section xml:id="imp-unique-identification2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Identification</title>
 
-<activity>
+<activity label="imp-unique-identificationCalculateWeight">
   <statement>
     <p>
       These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one(s) of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 

@@ -3,7 +3,7 @@
 <section xml:id="imp-conjoin-identification4" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Identification</title>
 
-<activity> 
+<activity label = "imp-conjoin-identificationGuessGame"> 
   <statement>
     <p>
       These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)?

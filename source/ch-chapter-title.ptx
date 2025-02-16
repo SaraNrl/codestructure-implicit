@@ -8,6 +8,10 @@
   </introduction>
 
   <!-- include sections -->
+  <xi:include href="sec-motivation.ptx" />
+  <xi:include href="sec-approachingTheBook.ptx" />
+  
+  
   <xi:include href="sec-conjoin-comprehension1.ptx" />
   <xi:include href="sec-conjoin-identification1.ptx" />
   <xi:include href="sec-conjoin-comprehension2.ptx" />

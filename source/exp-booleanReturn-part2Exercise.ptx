@@ -4,15 +4,14 @@
 
   <title>Practice Problems</title>
 
-<p> Click on the checkpoint, answer the question, and then complete the activities.</p>
-  <exercise label="exp-booleanReturn-fillin2">
+
+  <exercise label="exp-booleanReturn-fillinEligibleForDiscount">
 
     <statement>
       <p> Fill in the blank lines of code, so that the function eligibleForDiscount() takes an integer age and returns a boolean. The function should return true when <term role="bold">the age is less than 18 or greater than 60 </term> and return false otherwise.
       
        </p>
-    </statement>
-    <statement>
+   
 	<program  language="java" >
       <input>
         
@@ -23,15 +22,10 @@
 
       </input>
     </program>
-    </statement>
-    
-   <statement>
    
       <p>
        Write your responses here:
       </p>
-    </statement>
-	<statement>
 		<p>Blank: <var width="45"/></p>
 	</statement>
 	 <setup>
@@ -62,7 +56,7 @@
   
   
 
-  <activity>
+  <activity label="exp-booleanReturn-refactoringFileProcess">
     <statement>
       <p>
         There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
@@ -89,7 +83,7 @@
     </statement>
     
   
-    <program label="exp-booleanReturn-refactoring1" interactive="activecode" language="java" >
+    <program label="exp-booleanReturn-refactoringFileProcess-code" interactive="activecode" language="java" >
       <input> 
        <![CDATA[
        
@@ -159,19 +153,16 @@
 
 
       </tests>
-    </program>
+    </program>  
   </activity>
   
 
-     <activity>
+     <activity label= "exp-booleanReturn-refactoringFileProcess-response">
     <statement>
       <p>
         Which of the following code blocks is the most similar to your final refactored code for the previous question?
       </p>
     </statement>
-    
-    
-    
     
      <choices>
     <choice correct="no">

@@ -3,7 +3,7 @@
 <section xml:id="imp-conjoin-comprehension2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Code Comprehension</title>
 
-<activity>
+<activity label = "imp-conjoin-comprehensionEventEligibility">
   <statement>
     <p>
       Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.

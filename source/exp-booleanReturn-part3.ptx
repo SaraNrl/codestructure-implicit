@@ -14,7 +14,7 @@
  
  
  
- <activity> 
+ <activity label="exp-booleanReturn-comprehensionIsHighImpact"> 
   <statement>
     <p>
       Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
@@ -35,9 +35,7 @@ public static boolean isHighImpact(boolean isPeerReviewed, String journalName, i
       </input>  
     </program>
     
-  </statement>
   
-  <statement>
   	<p>
       Select all that apply. 
     </p> 
@@ -146,7 +144,7 @@ public static boolean isHighImpact(boolean isPeerReviewed, String journalName, i
 
 
 
- <activity> 
+ <activity label="exp-booleanReturn-comprehensionNegation"> 
   <statement>
     <p>
       What is the negation of the following expression?
@@ -157,10 +155,7 @@ public static boolean isHighImpact(boolean isPeerReviewed, String journalName, i
 
       </input>  
     </program>
-    
-  </statement>
-  
-  <statement>
+
   	<p>
       Select all that apply. 
     </p> 

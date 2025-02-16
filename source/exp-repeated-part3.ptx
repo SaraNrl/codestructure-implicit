@@ -15,7 +15,7 @@
  
  
  
-      <exercise label="exp-unique-fillin2">
+      <exercise label="exp-unique-fillinGenerateOrderSummersy">
       	
       	<statement>
       <p>
@@ -62,8 +62,7 @@
 
 		    </input>
 		</program>
-	</statement>
-	<statement>
+
 		<program  language="java">
 		    <input>
 	public void generateOrderSummary(double totalPrice, boolean isMember) {
@@ -96,9 +95,7 @@
 
 		    </input>
 		</program>
-	</statement>
-	
-    <statement>
+
       <p>
        Put your responses here:
       </p>

@@ -15,7 +15,7 @@
  
  
  
-<activity label="conjoinWithOr-fillin2">
+<activity label="exp-conjoinWithOr-fillinGuessGame">
   <statement>
     <p>
      Consider the following two functions (guessGame1 and guessGame2). For which input(s) these code blocks show different behavior?  

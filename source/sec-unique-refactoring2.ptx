@@ -3,7 +3,7 @@
 <section xml:id="imp-unique-refactoring2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Code Refactoring</title>
 
-  <activity>
+  <activity label="imp-unique-refactoringPrintDiscount">
     <statement>
       <p>
         You will see a copy of the following code block in an interactive mode that you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
@@ -48,7 +48,7 @@ public static class FinalPrice {
     </statement>
     
   
-    <program label="imp-unique-refactoring2" interactive="activecode" language="java" >
+    <program label="imp-unique-refactoringPrintDiscount-code" interactive="activecode" language="java" >
       <input>  <![CDATA[
         
 public static class FinalPrice {
@@ -143,7 +143,7 @@ public static class FinalPrice {
   
   
   
-   <activity>
+   <activity label="imp-unique-refactoringPrintDiscount-response">
     <statement>
       <p>
         Which of the following code blocks is the most similar to your final refactored code for the previous question?

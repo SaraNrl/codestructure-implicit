@@ -14,13 +14,12 @@
  
  
  
- <exercise label="exp-BooleanReturn-fillin1">
+ <exercise label="exp-BooleanReturn-fillinAreEqualStrings">
 
     <statement>
       <p> Fill in the blank line of code, so that the function areStringsEqual() takes two string of str1 and str2. When <term role="bold"> the two strings are the same </term> it returns true and returns false otherwise.  
        </p>
-    </statement>
-	<statement>
+    
 		<program language="java" >
 		  <input>
 				public static boolean areStringsEqual(String str1, String str2) {   
@@ -28,9 +27,7 @@
 				}
 		  </input>
 		</program>
-	</statement>
-	
-    <statement>
+
    
       <p>
          Write your responses here:
