@@ -137,7 +137,7 @@ public class Internship {
   </program>
 </activity>
 
- <activity  label="imp-conjoin-refactoringInternship-code">
+ <activity  label="imp-conjoin-refactoringInternship-response">
     <statement>
       <p>
         Which of the following code blocks is the most similar to your final refactored code for the previous question?
