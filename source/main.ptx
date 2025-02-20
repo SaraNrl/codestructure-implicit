@@ -6,10 +6,9 @@
 
   <book xml:id="my-great-book">
     <title>Practice Code Structure</title>
-    <subtitle>The Value of Writing Well-structured Code</subtitle>
+    <subtitle> Well-structured Code</subtitle>
     
     
-    <subtitle>How to Use the Book</subtitle>
  		<p> Many questions include one or more hints. Make sure to think through the question before opening any hints, but after writing your response, always check them, as they are designed to teach you something valuable. Many questions have a "check me" button, please only check your answer after you responded and make sure that you read the feedback it gives you. If you couldn't solve a question at first try,, keep trying and checking until you answer the question correctly.   </p>
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
