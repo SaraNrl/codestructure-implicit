@@ -5,7 +5,7 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>Code Structure V1</title>
+    <title>Practice Code Structure</title>
     <subtitle>The Value of Writing Well-structured Code</subtitle>
     
     
