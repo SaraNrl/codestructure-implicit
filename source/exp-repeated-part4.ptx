@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="uniqueRepeatedPart4" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 3) Remove repeated code and logic from conditional branches </title>
+  <p>
+   Please watch the video to learn the third rule and complete the activities. 
+  </p>
+  <figure>
+    <caption>Remove repeated code from branches part 4</caption>
+    <video xml:id="uniqueRepeated4" youtube="fu2OlnRnrCk" width="90%" margins="5% 5%" preview="uniqueRepeated-part4"/>
+  </figure>
+ 
+ 
+  <activity label="exp-unique-refactoringFinalPrice">
+    <statement>
+      <p>
+        You will see a copy of the following code block in an interactive mode that you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
+      </p>
+      <program language="java">
+        <input>
+        <![CDATA[
+       
+public class FinalPrice {
+  public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
+    double standardDiscount = 0.15;
+	double highValueDiscount = 0.25;
+	double vipDiscount = 0.5;
+	String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+	String finalMessage = "Discounted Price: $";
+
+	if ("electronics".equals(itemType) && hasSpecialOffer) {
+		String message = introMessage;
+		message += "Special offer applied. " + finalMessage;
+		double discountedPrice = originalPrice * (1 - vipDiscount);
+		message += discountedPrice;
+		System.out.println(message);
+	} else if (originalPrice > 200) {
+		String message = introMessage;
+		message += "High-value purchase discount applied! " + finalMessage;
+		double discountedPrice = originalPrice * (1 - highValueDiscount);
+		message += discountedPrice;
+		System.out.println(message);
+    } else {
+	    String message = introMessage;
+		message += finalMessage;
+		double discountedPrice = originalPrice * (1 - standardDiscount);
+		message += discountedPrice;
+		System.out.println(message);
+	}
+  }
+}
+		
+        ]]>
+        </input>
+      </program>
+    </statement>
+    
+  
+    <program label="exp-unique-refactoringFinalPrice-code" interactive="activecode" language="java" >
+      <input>  <![CDATA[
+        
+public class FinalPrice {
+  public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
+    double standardDiscount = 0.15;
+	double highValueDiscount = 0.25;
+	double vipDiscount = 0.5;
+	
+	String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+	String finalMessage = "Discounted Price: $";
+
+	if ("electronics".equals(itemType) && hasSpecialOffer) {
+		String message = introMessage;
+		message += "Special offer applied. " + finalMessage;
+		double discountedPrice = originalPrice * (1 - vipDiscount);
+		message += discountedPrice;
+		System.out.println(message);
+	} else if (originalPrice > 200) {
+		String message = introMessage;
+		message += "High-value purchase discount applied! " + finalMessage;
+		double discountedPrice = originalPrice * (1 - highValueDiscount);
+		message += discountedPrice;
+		System.out.println(message);
+    } else {
+	    String message = introMessage;
+		message += finalMessage;
+		double discountedPrice = originalPrice * (1 - standardDiscount);
+		message += discountedPrice;
+		System.out.println(message);
+	}
+  }
+}
+		
+         ]]>
+      </input>
+
+      <tests>
+     	<tests>
+     	import static org.junit.Assert.*;
+		import org.junit.Test;
+		import java.io.*;
+		import org.junit.Before;
+		import org.junit.After;
+		import java.io.ByteArrayOutputStream;
+		import java.io.PrintStream;
+
+		public class RunestoneTests extends CodeTestHelper {
+			
+			public RunestoneTests() {
+				super("FinalPrice");
+		  	}
+			@Test
+          public void testElectronics() throws IOException {
+            Object[] args = {"electronics", 500.0, true};
+            String output = getMethodOutput("printDiscount", args);
+            //System.out.println(output);
+            String expectedMessage = "Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0";
+               boolean passed = getResults(expectedMessage, output.trim(), "printDiscount(\"electronics\", 500.0, true)");
+               
+               assertTrue(passed);
+
+
+          }
+          @Test
+          public void bulk1() throws IOException {
+            Object[] args = {"clothes", 300.0, true};
+            String output = getMethodOutput("printDiscount", args);
+            //System.out.println(output);
+            String expectedMessage = "Item: clothes, Original Price: $300.0. High-value purchase discount applied!  Discounted Price: $225.0";
+               boolean passed = getResults(expectedMessage, output.trim(), "printDiscount(\"clothes\", 300.0, true)");
+               
+               assertTrue(passed);
+
+          }
+          @Test
+          public void bulk2() throws IOException {
+            Object[] args = {"clothes", 500.0, false};
+            String output = getMethodOutput("printDiscount", args);
+            //System.out.println(output);
+            String expectedMessage = "Item: clothes, Original Price: $500.0. High-value purchase discount applied!  Discounted Price: $375.0";
+               boolean passed = getResults(expectedMessage, output.trim(), "printDiscount(\"clothes\", 500.0, false)");
+               
+               assertTrue(passed);
+
+          }
+		
+}
+</tests>
+
+      </tests>
+    </program>
+  </activity>
+  
+  
+  
+   <activity label="exp-unique-refactoringFinalPrice-response">
+    <statement>
+      <p>
+        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+      </p>
+    </statement>
+
+     <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+           <![CDATA[
+public class FinalPrice {
+  public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
+    double standardDiscount = 0.15;
+    double highValueDiscount = 0.25;
+    double vipDiscount = 0.5;
+    double discountedPrice = 0;
+    
+    String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+    String finalMessage = "Discounted Price: $";
+
+    if ("electronics".equals(itemType) && hasSpecialOffer) {
+       introMessage += "Special offer applied. "; 
+       discountedPrice = originalPrice * (1 - vipDiscount);
+    } else if (originalPrice > 200) {
+       introMessage += "High-value purchase discount applied! ";
+       discountedPrice = originalPrice * (1 - highValueDiscount);
+    } else {
+       discountedPrice = originalPrice * (1 - standardDiscount);
+    }   
+    String message = introMessage + finalMessage + discountedPrice;
+    System.out.println(message);
+    }
+}
+
+]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            You are on the right track. But, this code can further be improved!
+        </p>
+      </feedback>
+    </choice>
+   
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class FinalPrice {
+    public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
+        double standardDiscount = 0.15;
+        double highValueDiscount = 0.25;
+        double vipDiscount = 0.5;
+        double discountType = 0;
+        double finalPrice;
+
+        String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+        String finalMessage = "Discounted Price: $";
+
+        if ("electronics".equals(itemType) &amp;&amp; hasSpecialOffer) {
+            introMessage += "Special offer applied. "; 
+            discountType = vipDiscount;
+        } else if (originalPrice > 200) {
+            introMessage += "High-value purchase discount applied! ";
+            discountType = highValueDiscount;
+        } else {
+            discountType = standardDiscount;
+        }  
+
+        finalPrice = originalPrice * (1 - discountType);
+        String message = introMessage + finalMessage + finalPrice;
+        System.out.println(message);
+    }
+}
+
+	
+		</input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           You did it correctly!
+        </p>
+      </feedback>
+    </choice>
+
+
+   <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class FinalPrice {
+    public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {   
+        double discountRate = 0.15;
+        String message = "";
+        
+        String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
+        String finalMessage = "Discounted Price: $";
+
+        if ("electronics".equals(itemType) &amp;&amp; hasSpecialOffer) {
+            discountRate = 0.5;
+            message = "Special offer applied. ";
+        } else if (originalPrice > 200) {
+            discountRate = 0.25;
+            message = "High-value purchase discount applied! ";
+        }
+
+        double finalPrice = originalPrice * (1 - discountRate);
+        String printMessage = introMessage + message + finalMessage + finalPrice;
+        System.out.println(printMessage);
+    }
+}
+
+	
+		</input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           You did it correctly!
+        </p>
+      </feedback>
+    </choice>   
+   
+    
+    </choices>
+  </activity>
+ 
+
+
+
+
+
+
+</section>
+

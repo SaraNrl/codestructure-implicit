@@ -5,10 +5,16 @@
      <exercise label="imp-conjoin-fillinCanBeShipped">
       	<title>Fill-in-the-blank</title>
       	<statement>
-      <p>
-        We want the canBeShipped() function to print "We can ship it!" only if The item is not fragile (isNotFragile is true) and the weight is less than 50, and the length is less than 150. Otherwise, the function should print "Cannot be shipped!". 
+     <p>  
+    The <code>canBeShipped()</code> function takes two double inputs and one boolean input and prints some messages. Complete the function so that it prints "We can ship it!" only when all the following conditions are met; otherwise, it prints "Cannot be shipped!". 
+</p>  
 
-     </p>
+<ol>  
+    <li>The item is not fragile (<code>isNotFragile</code> is true).</li>  
+    <li>The weight is less than 50.</li>  
+    <li>The length is less than 150.</li>  
+</ol>
+
     </statement>
 
      <statement>

@@ -86,7 +86,7 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
       </feedback>
     </choice>
 
-    <choice correct="no">
+    <choice correct="yes">
       <statement> 
        <program language="java">
           <input>
@@ -106,7 +106,7 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
       </statement>
       <feedback>
         <p>
-            This code can be improved!
+            Correct!
         </p>
       </feedback>
     </choice>

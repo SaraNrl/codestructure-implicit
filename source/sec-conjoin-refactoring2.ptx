@@ -188,7 +188,7 @@ public class CampusHousing {
       <statement> 
        <program language="java">
           <input>
-public class DiscountChecker {
+public class CampusHousing {
    public static String eligibleForCampusHousing(int schoolYear, double GPA)  {
       if (schoolYear &lt;= 3 || GPA &lt;= 3.4) {
             return "Not eligible";	
@@ -210,7 +210,7 @@ public class DiscountChecker {
       <statement> 
        <program language="java">
           <input>
-public class DiscountChecker {
+public class CampusHousing {
    public static String eligibleForCampusHousing(int schoolYear, double GPA)  {
       if (schoolYear &lt;= 3 &amp;&amp; GPA &lt;= 3.4) {
             return "Not eligible";	

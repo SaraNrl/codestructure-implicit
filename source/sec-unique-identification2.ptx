@@ -19,16 +19,16 @@
        <program language="java">
           <input><![CDATA[
 
-  public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
-    if (isFragile) {
-      weight = weight + (weight * 0.05);  // Add 5% extra for packaging
-    }
-    if (isBulk) {
-      return weight + (weight * 0.10);  // Add by 10% for bulk items
-    } else {
-      return weight;
-    }
-  }	
+public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+	if (isFragile) {
+		return weight + (weight * 0.1);  // Add 10% extra for packaging
+	}
+	else if (isBulk) {
+		return weight + (weight * 0.05);  // Add by 5% for bulk items
+	} else {
+		return weight;
+	}
+}	
 
           ]]></input>
         </program>
@@ -45,16 +45,15 @@
       <statement>
         <program language="java">
           <input><![CDATA[
-  public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
-    double adjustment = 0.0;
-    if (isFragile) {
-      adjustment += 0.05;  
-    } 
-    if (isBulk) {
-      adjustment += 0.10;  
-    }
-    return weight * (1 + adjustment);
-  }
+public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+	double adjustment = 0.0;
+	if (isFragile) {
+		adjustment += 0.1;  
+	} else if (isBulk) {
+		adjustment += 0.05;  
+	}
+	return weight * (1 + adjustment);
+}
 
           ]]></input>
         </program>
@@ -71,16 +70,15 @@
         <program language="java">
           <input><![CDATA[
 
-  public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
-    double finalWeight = weight;
-    if (isFragile) {
-      finalWeight += weight * 0.05;
-    }
-    if (isBulk) {
-      finalWeight += weight * 0.10;
-    }
-    return finalWeight;
-  }
+public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
+	double finalWeight = weight;
+	if (isFragile) {
+		finalWeight += weight * 0.1;
+	} else if (isBulk) {
+		finalWeight += weight * 0.05;
+	}
+	return finalWeight;
+}
 
         ]]></input>
         </program>

@@ -10,7 +10,7 @@
     </p>
     <program language="java">
       <input>
-public class Internship 
+public class Internship {
 	public static String checkInternshipEligibility(int schoolYear, double GPA, boolean hasWorkExperience) {
 		if (schoolYear >= 4) {
 			if (GPA >= 3.5) {
@@ -167,7 +167,7 @@ public class Internship {
       </statement>
       <feedback>
         <p>
-            The code doesn't have the same functionality with the original one.
+            This code won't even compile because the last return statement is unreachable (never executes)
         </p>
       </feedback>
     </choice>

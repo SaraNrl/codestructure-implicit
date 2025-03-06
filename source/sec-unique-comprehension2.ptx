@@ -6,17 +6,17 @@
   <activity label="imp-unique-comprehensionCalculateWeight">
     <statement>
       <p>
-        Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input).
+Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Remember to check the Hint after answering the question. 
       </p>
       <program language="java">
         <input>
         
           public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
               if (isFragile) {
-                  weight = weight + (weight * 0.05);  // Add 5% extra for packaging
+                   return weight + (weight * 0.1);  // Add 10% extra for packaging
               }
               if (isBulk) {
-                  return weight + (weight * 0.10);  // Add by 10% for bulk items
+                  return weight + (weight * 0.05);  // Add by 5% for bulk items
               } else {
                   return weight;
               }
@@ -44,7 +44,7 @@
     </statement>
 
     <choices>
-      <choice correct="no">
+      <choice correct="yes">
         <statement>
           <program language="java">
             <input>
@@ -52,9 +52,9 @@
               public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
                   double adjustment = 0.0;
                   if (isFragile) {
-                      adjustment += 0.05;  
+                      adjustment += 0.1;  
                   } else if (isBulk) {
-                      adjustment += 0.10;  
+                      adjustment += 0.05;  
                   }
                   return weight * (1 + adjustment);
               }
@@ -63,11 +63,11 @@
           </program>
         </statement>
         <feedback>
-          <p>Not correct!</p>
+          <p> Correct!</p>
         </feedback>
       </choice>
 
-      <choice correct="yes">
+      <choice correct="no">
         <statement>
           <program language="java">
             <input>
@@ -75,10 +75,10 @@
               public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
                   double finalWeight = weight;
                   if (isFragile) {
-                      finalWeight += weight * 0.05;
+                      finalWeight += weight * 0.1;
                   }
                   if (isBulk) {
-                      finalWeight += weight * 0.10;
+                      finalWeight += weight * 0.05;
                   }
                   return finalWeight;
               }
@@ -87,7 +87,7 @@
           </program>
         </statement>
         <feedback>
-          <p>Correct!</p>
+          <p>Not correct! Compare the outputs for calculateWeight(100, true, true)</p>
         </feedback>
       </choice>
 
@@ -97,14 +97,14 @@
             <input>
            
               public static double calculateWeight(double weight, boolean isFragile, boolean isBulk) {
-                  double adjustment = 0.0;
+                  double finalWeight = weight;
                   if (isFragile) {
-                      adjustment += 0.05;
+                      finalWeight += weight * 0.1;
                   }
-                  if (isBulk) {
-                      adjustment += 0.10;
+                  else if (isBulk) {
+                      finalWeight += weight * 0.05;
                   }
-                  return weight * (1 + adjustment);
+                  return finalWeight;
               }
             
             </input>

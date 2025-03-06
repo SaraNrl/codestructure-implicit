@@ -127,7 +127,7 @@
           <input>
 public class SWord {
 	public static boolean startsWithS(String str) {
-		if (!str.isEmpty() &amp;&amp; str.charAt(0) != 'S') {
+		if (!str.isEmpty() &amp;&amp; str.charAt(0) == 'S') {
 			return true;
 		} 
 		return false;

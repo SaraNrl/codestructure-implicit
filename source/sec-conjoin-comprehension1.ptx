@@ -6,7 +6,7 @@
 <activity label="imp-conjoin-comprehensionWhereToPlay">
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
     </p>
     <program language="java">
       <input>
@@ -26,11 +26,11 @@ public static String whereToPlay(boolean isSunny, int temperature) {
       <hint>
       Hint: You can use the following test cases to compare the functionality of the code blocks. Note that the test cases include examples across a range of different inputs. 
         <ul>
-		  <li><c>whereToPlay(true, 77)</c></li>
-		  <li><c>whereToPlay(true, 20)</c></li>
-		  <li><c>whereToPlay(false, 70)</c></li>
-		  <li><c>whereToPlay(false, 90)</c></li>
-		  <li><c>whereToPlay(true, 70)</c></li>
+		  <li><c>whereToPlay(true,77)</c></li>
+		  <li><c>whereToPlay(true,20)</c></li>
+		  <li><c>whereToPlay(false,70)</c></li>
+		  <li><c>whereToPlay(false,90)</c></li>
+		  <li><c>whereToPlay(true,70)</c></li>
 		</ul>
       </hint>
     </p>
@@ -59,7 +59,7 @@ public static String whereToPlay(boolean isSunny, int temperature) {
       </statement>
       <feedback>
         <p>
-            Code block in option A does not do the same thing as the given code block!
+            Code block in option A does not do the same thing as the given code block. Compare the outputs for whereToPlay(true,20);
         </p>
       </feedback>
     </choice>

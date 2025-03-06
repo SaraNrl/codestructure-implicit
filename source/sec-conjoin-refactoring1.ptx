@@ -149,7 +149,7 @@ public class DiscountChecker {
       </statement>
       <feedback>
         <p>
-            The code doesn't have the same functionality with the original one.
+            The code doesn't have the same functionality with the original one. 
         </p>
       </feedback>
     </choice>

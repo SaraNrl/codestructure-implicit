@@ -6,7 +6,7 @@
 <activity label= "imp-conjoin-comprehensionRoboticCompetition"> 
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
     </p>
     <program language="java">
       <input>
@@ -78,7 +78,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-            Code block in option A does not do the same thing as the given code block! Compare their outputs using canJoinRoboticsCompetition(false,false,false)
+Code block in option A does not do the same thing as the given code block! Compare their outputs using canJoinRoboticsCompetition(false,false,false)
         </p>
       </feedback>
     </choice>
@@ -172,7 +172,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-         Code block in option E does not do the same thing as the given code block! Compare the outputs using canJoinRoboticsCompetition(true,false,true)
+         Code block in option E does not do the same thing as the given code block! Compare the outputs for canJoinRoboticsCompetition(true,false,true);
         </p>
       </feedback>
     </choice>

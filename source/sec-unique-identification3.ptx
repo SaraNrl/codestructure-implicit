@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-identification3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Identification</title>
+
+<activity label="imp-unique-identificationCalculateWeight">
+  <statement>
+    <p>
+      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one(s) of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)? 
+    </p>
+    
+    
+  </statement>
+  
+
+  <choices>
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input><![CDATA[
+
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice = 0;
+
+   if ("VIP".equals(customerType)) {
+       finalPrice = price * 0.8;  // 20% discount
+       System.out.println("Customer Type: VIP");
+       System.out.println("Original Price: $" + price);
+       System.out.println("Discounted Price: $" + finalPrice);
+   } else if ("Regular".equals(customerType)) {
+       finalPrice = price * 0.9;  // 10% discount
+       System.out.println("Customer Type: Regular");
+       System.out.println("Original Price: $" + price);
+       System.out.println("Discounted Price: $" + finalPrice);
+   } else {
+       finalPrice = price;  // No discount
+       System.out.println("Customer Type: Guest");
+       System.out.println("Original Price: $" + price);
+       System.out.println("Discounted Price: $" + finalPrice);
+   }
+}
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+             This code can be improved! 
+        </p>
+      </feedback>
+    </choice>
+    
+
+    <choice correct="no">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice;
+
+   if ("VIP".equals(customerType)) {
+       finalPrice = price * 0.8;  // 20% discount
+       System.out.println("Customer Type: VIP");
+   } else if ("Regular".equals(customerType)) {
+       finalPrice = price * 0.9;  // 10% discount
+       System.out.println("Customer Type: Regular");
+   } else {
+       finalPrice = price;  // No discount
+       System.out.println("Customer Type: Guest");
+   }
+
+   System.out.println("Original Price: $" + price);
+   System.out.println("Discounted Price: $" + finalPrice);
+} 
+
+          ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+          This code can be improved further!
+        </p>
+      </feedback>
+    </choice>
+    
+    <choice correct="yes">
+      <statement>
+        <program language="java">
+          <input><![CDATA[
+
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice = 0;
+   double adjustedPriceFactor = 1;
+
+   if ("VIP".equals(customerType)) {
+       adjustedPriceFactor = 0.8; 
+       System.out.println("Customer Type: VIP");
+   } else if ("Regular".equals(customerType)) {
+       adjustedPriceFactor = 0.9;  
+       System.out.println("Customer Type: Regular");
+   } else {
+       System.out.println("Customer Type: Guest");
+   }
+   
+   finalPrice = price * adjustedPriceFactor;  
+   System.out.println("Original Price: $" + price);
+   System.out.println("Discounted Price: $" + finalPrice);
+}   }
+
+        ]]></input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           Correct! 
+        </p>
+      </feedback>
+    </choice>
+    
+   
+  </choices>
+</activity>
+</section>

@@ -6,7 +6,7 @@
 <activity label="imp-conjoin-comprehensionCheckNumber">
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the question.
     </p>
     <program language="java">
       <input>

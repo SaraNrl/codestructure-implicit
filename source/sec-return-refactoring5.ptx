@@ -262,8 +262,8 @@ public class CredentialCheck {
       </p>
     </statement>
     <choices>
-     <choice> <statement> Yes  </statement> </choice>
-     <choice> <statement> No   </statement> </choice>
+     <choice correct="yes"> <statement> Ye. Three functions required refactoring </statement> </choice>
+     <choice correct="no"> <statement> No   </statement> </choice>
     </choices>
 
 	 <statement>

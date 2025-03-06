@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-comprehension4" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+  <activity label="imp-unique-comprehensionDisplayNumberCategory">
+    <statement>
+      <p>
+Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Remember to check the Hint after answering the question. 
+      </p>
+      <program language="java">
+        <input>
+                 
+public static void displayNumberCategory(int num) {
+    if (num > 100) {
+        System.out.println("Large number");
+        System.out.println("Processing complete.");
+    } else if (num > 50) {
+        System.out.println("Medium number");
+        System.out.println("Processing complete.");
+    } else if (num > 0) {
+        System.out.println("Small number");
+        System.out.println("Processing complete.");
+    }
+}
+	
+        
+        </input>
+      </program>
+    
+      <p>
+        <hint> You can use the following test cases to compare the code blocks' functionality. Note that the test cases include examples across a range of different inputs.
+        <ul>
+          <li>
+            <c>displayNumberCategory(150)</c> 
+          </li>
+          <li>
+            <c>displayNumberCategory(58)</c> 
+          </li>
+          <li>
+           <c>displayNumberCategory(23)</c> 
+          </li>
+          <li>
+           <c>displayNumberCategory(0)</c> 
+          </li>
+        </ul>
+        </hint>
+      </p>
+        <p>Select all that apply.</p>
+    </statement>
+
+   <choices>  
+
+      <choice correct="no">
+        <statement>
+          <program language="java">
+            <input>
+            
+public static void displayNumberCategory(int num) {
+    if (num > 100) {
+        System.out.println("Large number");
+    } else if (num > 50) {
+        System.out.println("Medium number");
+    } else if (num > 0) {
+        System.out.println("Small number");  
+    }
+    
+    System.out.println("Processing complete.");
+}
+    
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>Not correct! Compare the outputs for displayNumberCategory(0) </p>
+        </feedback>
+      </choice>
+      
+
+      <choice correct="yes">
+        <statement>
+          <program language="java">
+            <input>
+            
+public static void displayNumberCategory(int num) {
+    if (num > 100) {
+        System.out.println("Large number");
+        displayHelper();
+    } else if (num > 50) {
+        System.out.println("Medium number");
+        displayHelper();
+    } else if (num > 0) {
+        System.out.println("Small number"); 
+        displayHelper(); 
+    }
+}
+
+public static void displayHelper() {
+    System.out.println("Processing complete.");
+}      
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p> Correct!</p>
+        </feedback>
+      </choice>
+
+
+    </choices>
+  </activity>
+</section>
+

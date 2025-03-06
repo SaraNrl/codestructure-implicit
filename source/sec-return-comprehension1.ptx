@@ -6,22 +6,22 @@
 <activity label="imp-return-comprehensionHasPermission" >
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
     </p>
     <program language="java">
       <input>
         <![CDATA[
         public static boolean hasPermission(boolean isAdmin, boolean hasWriteAccess, boolean isAccountActive) {
-    	    if (isAdmin == true) {
+    	   if (isAdmin == true) {
+              return true;
+    	   }
+    	   if (hasWriteAccess == true) {
         	  return true;
-    	    }
-    	    if (hasWriteAccess == true) {
+    	   }
+    	   if (isAccountActive == true) {
         	  return true;
-    	    }
-    	    if (isAccountActive == true) {
-        	  return true;
-    	    }
-    	    return false;
+    	   }
+    	   return false;
         }
         ]]>
             
@@ -71,7 +71,7 @@
       </statement>
       <feedback>
         <p>
-            Not correct! Compare the output of the given code vs. code block in option A for <c> hasPermission(false, true, true);</c>
+Not correct! Compare the output of the given code vs. code block in option A for <c> hasPermission(false, true, true);</c>
         </p>
       </feedback>
     </choice>
@@ -99,7 +99,7 @@
           <input><![CDATA[
             public static boolean hasPermission(boolean isAdmin, boolean hasWriteAccess, boolean isAccountActive) {
     	        return isAdmin == true || hasWriteAccess == true || 
-                     isAccountActive ==true; 
+                     isAccountActive == true; 
             }
           ]]></input>
         </program>

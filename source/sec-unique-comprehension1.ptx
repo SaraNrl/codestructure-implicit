@@ -6,7 +6,7 @@
   <activity label="imp-unique-comprehensionCalculatePrice">
     <statement>
       <p>
-        Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the questions.
+        Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
       </p>
       <program language="java">
         <input>
@@ -125,7 +125,7 @@
           </program>
         </statement>
         <feedback>
-          <p>Code block in option D does not do the same thing as the given code block! Compare the outputs for calculatePrice(100, true, true)</p>
+          <p>Code block in option D does not do the same thing as the given code block! Compare the outputs for <code> calculatePrice(100, true, true)</code></p>
         </feedback>
       </choice>
       

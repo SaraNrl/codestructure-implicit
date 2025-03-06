@@ -6,7 +6,9 @@
       	
       	<statement>
       <p>
-       We want the canPlayOutside() function to take a String weather and prints some messages. If the weather equals "Sunny" the function prints, "You can play outside!". Similarly, when the weather is "Cloudy" the function prints "You can play outside!". However, if the weather is "Windy", it prints, "you should play inside!".
+      The <code>canPlayOutside()</code> function takes a String input and prints messages. When the input (weather) equals "Sunny" or "Cloudy", the function prints "You can play outside!". However, when the weather is "Windy", it prints "You should play inside!". You can use equals() to compare String values. 
+
+Remember to use the equals() method when comparing String values.
      </p>
     </statement>
 
@@ -15,13 +17,11 @@
 		    <input>
 public static void canPlayOutside(String weather) {
 	if (.........blank1...............) {
-           System.out.println(“You can play outside!”);
-      } ....blank2..... {
-           System.out.println(“You should play inside!”);
-      }
- }   
-   
-
+        System.out.println(“You can play outside!”);
+    } ......blank2........ {
+        System.out.println(“You should play inside!”);
+    }
+}   
 		    </input>
 		</program>
 	</statement>
@@ -47,7 +47,7 @@ public static void canPlayOutside(String weather) {
 						
 						<condition string=".*">
 						  <feedback>
-					<p>Try again!</p>
+					<p>Try again! The tests are case-sensitive. </p>
 		          </feedback>
 		        </condition>
           </var>
@@ -60,7 +60,7 @@ public static void canPlayOutside(String weather) {
 				    
 				    <condition string=".*">
 						  <feedback>
-					<p>Try again!</p>
+					<p>Try again! The tests are case-sensitive.</p>
 		          </feedback>
 		        </condition>
             

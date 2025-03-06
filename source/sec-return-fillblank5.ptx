@@ -7,10 +7,10 @@
   <exercise label="imp-return-fillinValidPassword">
 
     <statement>
-      <p> Fill in the blank line of code, so that the function isValidPassword() takes a String parameter password and returns a boolean. The function returns <term role="bold">false </term> when the password is less than 8 characters or contains any spaces. Otherwise, it returns true.
+      <p> The function isValidPassword() takes a String input, password, and returns a boolean. Complete the function  so it returns <term role="bold">false </term> when the password is less than 8 characters or contains any spaces. Otherwise, it returns true.
       <ul>
 		  <li>You can use the<c>length()</c>function to check the length of any String. For example: password.length() returns the length of password. </li>
-		  <li>You can use the<c>contains()</c> function to check if a String contains a specific substring. For example, password.contains("a") returns true if password has a substring "a".</li>  
+		  <li>You can use the<c>contains()</c> function to check whether a String contains a specific substring. For example, password.contains("a") returns true when password has a substring "a".</li>  
   	</ul>
        </p>
     </statement>

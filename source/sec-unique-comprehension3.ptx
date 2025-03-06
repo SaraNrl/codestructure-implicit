@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="imp-unique-comprehension3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Code Comprehension</title>
+
+  <activity label="imp-unique-comprehensionDisplayDiscount">
+    <statement>
+      <p>
+Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Remember to check the Hint after answering the question. 
+      </p>
+      <program language="java">
+        <input>
+                 
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice = 0;
+
+   if ("VIP".equals(customerType)) {
+       finalPrice = price * 0.8;  // 20% discount
+       System.out.println("Customer Type: VIP");
+       System.out.println("Original Price: $" + price);
+       System.out.println("Discounted Price: $" + finalPrice);
+   } else if ("Regular".equals(customerType)) {
+       finalPrice = price * 0.9;  // 10% discount
+       System.out.println("Customer Type: Regular");
+       System.out.println("Original Price: $" + price);
+       System.out.println("Discounted Price: $" + finalPrice);
+   } else {
+       finalPrice = price;  // No discount
+       System.out.println("Customer Type: Guest");
+       System.out.println("Original Price: $" + price);
+       System.out.println("Discounted Price: $" + finalPrice);
+   }
+}
+	
+        
+        </input>
+      </program>
+    
+      <p>
+        <hint> You can use the following test cases to compare the code blocks' functionality. Note that the test cases include examples across a range of different inputs.
+        <ul>
+          <li>
+            <c>displayDiscount("VIP", 100)</c> 
+          </li>
+          <li>
+            <c>displayDiscount("Regular", 200)</c> 
+          </li>
+          <li>
+           <c>displayDiscount("Guest", 300)</c> 
+          </li>
+          <li>
+           <c>displayDiscount("Visitor", 300)</c> 
+          </li>
+        </ul>
+        </hint>
+      </p>
+        <p>Select all that apply.</p>
+    </statement>
+
+   <choices>  
+
+      <choice correct="yes">
+        <statement>
+          <program language="java">
+            <input>
+            
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice;
+
+   if ("VIP".equals(customerType)) {
+       finalPrice = price * 0.8;  // 20% discount
+       System.out.println("Customer Type: VIP");
+   } else if ("Regular".equals(customerType)) {
+       finalPrice = price * 0.9;  // 10% discount
+       System.out.println("Customer Type: Regular");
+   } else {
+       finalPrice = price;  // No discount
+       System.out.println("Customer Type: Guest");
+   }
+
+   System.out.println("Original Price: $" + price);
+   System.out.println("Discounted Price: $" + finalPrice);
+}      
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      
+
+      <choice correct="yes">
+        <statement>
+          <program language="java">
+            <input>
+            
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice = 0;
+   double adjustedPriceFactor = 1;
+
+   if ("VIP".equals(customerType)) {
+       adjustedPriceFactor = 0.8; 
+       System.out.println("Customer Type: VIP");
+   } else if ("Regular".equals(customerType)) {
+       adjustedPriceFactor = 0.9;  
+       System.out.println("Customer Type: Regular");
+   } else {
+       System.out.println("Customer Type: Guest");
+   }
+   
+   finalPrice = price * adjustedPriceFactor;  
+   System.out.println("Original Price: $" + price);
+   System.out.println("Discounted Price: $" + finalPrice);
+}       
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p> Correct!</p>
+        </feedback>
+      </choice>
+
+      <choice correct="no">
+        <statement>
+          <program language="java">
+            <input>
+           
+public static void displayDiscount(String customerType, double price) {
+   double finalPrice = 0;
+   double adjustedPriceFactor = 0;
+
+   if ("VIP".equals(customerType)) {
+       adjustedPriceFactor = 0.8; 
+
+   } else if ("Regular".equals(customerType)) {
+       adjustedPriceFactor = 0.9;  
+   }
+   System.out.println("Customer Type:" + customerType);
+   finalPrice = price * adjustedPriceFactor;  
+   System.out.println("Original Price: $" + price);
+   System.out.println("Discounted Price: $" + finalPrice);
+}          
+            </input>
+          </program>
+        </statement>
+        <feedback>
+          <p>Not correct! Compare the outputs for displayDiscount("Visitor", 300) 
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+</section>
+

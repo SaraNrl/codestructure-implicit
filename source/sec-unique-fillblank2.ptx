@@ -6,14 +6,14 @@
       	
       	<statement>
       <p>
-     Please improve the style of the first printProductStatus() function to enhance its maintainability. For this, complete the blank sections in the second printProductStatus() function. These two functions must have the same behavior by the end.
+     Improve the style of the first printProductStatus() function to enhance its maintainability. For this, complete the blank sections in the second printProductStatus() function. These two functions must have the same behavior by the end.
      </p>
     </statement>
 
      <statement>
 		<program  language="java">
 		    <input>
-	public void printProductStatus(int quantity) {
+	public static void printProductStatus(int quantity) {
 		String status = "";
     
 		if (quantity > 100) {
@@ -36,7 +36,7 @@
 	<statement>
 		<program language="java">
 		    <input>
-public void printProductStatus(int quantity) {
+public static void printProductStatus(int quantity) {
     String status = "-----Blank1-----"; // Default value
 
     if (quantity > 100) {

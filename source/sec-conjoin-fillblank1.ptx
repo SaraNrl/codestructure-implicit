@@ -6,7 +6,7 @@
       	<title>Fill-in-the-blank</title>
       	<statement>
       <p>
-We want the wordCheck() function to return "Valid" only if the input is a string that starts with 'A' and ends with 'c'. Otherwise, it should return "Not valid". Since you can't directly modify the code, please write your answers in the given boxes accordingly.
+The <code>wordCheck()</code> function takes a String input and returns a String. Complete the function so that it returns "Valid" only when the input starts with capital 'A' and ends with 'c'. Otherwise, it returns "Not valid". Since you can't directly modify the code, please write your answers in the given boxes accordingly.
      </p>
     </statement>
 
@@ -28,7 +28,7 @@ We want the wordCheck() function to return "Valid" only if the input is a string
 	</statement>
 	<statement>
       <p>
-       Here are some code segments that you should use to complete the wordCheck function.
+       Here are some code segments that you should use to complete the wordCheck().
       </p>
       <p>
 		  <ul>
@@ -51,7 +51,7 @@ We want the wordCheck() function to return "Valid" only if the input is a string
 
       <setup>
           	<var>
-		        <condition case="sensitive" string="\(? *word\.length\(\) *&lt; *2 \)?">
+		        <condition case="sensitive" string=" *word\.length\(\) *&lt; *2 *">
 		          <feedback>
 					<p>Correct.</p>
 						  </feedback>
@@ -77,31 +77,32 @@ We want the wordCheck() function to return "Valid" only if the input is a string
 		          </feedback>
 		        </condition>
           </var>
-	  <var>  
-            <condition case="sensitive" string=" *word\.charAt\( *lastCharIndex *\) *== *'c' *&amp;&amp; *word\.charAt\( *0 *\) *== *'A' *)|( *word\.charAt\( *0 *\) *== *'A' *&amp;&amp; *word\.charAt\( *lastCharIndex *\) *== *'c' *\ ">
-              <feedback>
-				<p>Correct.</p>
-				      </feedback>
-				    </condition>
-				    
-				    <condition case="sensitive" string=" *word\.charAt\( *lastCharIndex *\) *== *'c' *&amp;&amp; *word\.length\( * *\) *&lt;2 *)|( *word\.length\( * *\) *&lt;2 *&amp;&amp; *word\.charAt\( *lastCharIndex *\) *== *'c' *">
-				      <feedback>
-				<p>Try Again, Not rigth conditions are selected to be combined</p>
-				      </feedback>
-				    </condition>
-				<condition case="insensitive" string=" *word\.charAt\( *0 *\) *== *'A' *&amp;&amp; *word\.length\( * *\) *&lt;2 *)|( *word\.length\( * *\) *&lt;2 *&amp;&amp; *word\.charAt\( *0 *\) *== *'A' *">
-				      <feedback>
-				<p>Try Again, Not rigth conditions are selected to be combined</p>
-				      </feedback>
-				    </condition>
-				
-				    <condition string="^(?!.*&amp;&amp;).*">
-				      <feedback>
-				<p>Try again.</p>
-              </feedback>
-            </condition>
-            
-          </var>
+	 <var>  
+    <condition case="sensitive" string=" *(word\.charAt\( *lastCharIndex *\) *== *'c' *&amp;&amp; *word\.charAt\( *0 *\) *== *'A' *)|( *word\.charAt\( *0 *\) *== *'A' *&amp;&amp; *word\.charAt\( *lastCharIndex *\) *== *'c' *) *">
+        <feedback>
+            <p>Correct.</p>
+        </feedback>
+    </condition>
+
+    <condition case="sensitive" string=" *(word\.charAt\( *lastCharIndex *\) *== *'c' *&amp;&amp; *word\.length\( *\) *&lt; *2 *)|( *word\.length\( *\) *&lt; *2 *&amp;&amp; *word\.charAt\( *lastCharIndex *\) *== *'c' *) *">
+        <feedback>
+            <p>Try Again, incorrect conditions are selected to be combined.</p>
+        </feedback>
+    </condition>
+
+    <condition case="insensitive" string=" *(word\.charAt\( *0 *\) *== *'A' *&amp;&amp; *word\.length\( *\) *&lt; *2 *)|( *word\.length\( *\) *&lt; *2 *&amp;&amp; *word\.charAt\( *0 *\) *== *'A' *) *">
+        <feedback>
+            <p>Try Again, incorrect conditions are selected to be combined.</p>
+        </feedback>
+    </condition>
+
+    <condition string="^(?!.*&amp;&amp;).*">
+        <feedback>
+            <p>Try again.</p>
+        </feedback>
+    </condition>
+</var>
+
 	 
 	  
       </setup>

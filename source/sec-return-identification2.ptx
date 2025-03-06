@@ -18,7 +18,7 @@
       <statement> 
        <program language="java">
           <input><![CDATA[
-public boolean canPlayGolf(String weather, int humidity, boolean isWindy) {
+public static boolean canPlayGolf(String weather, int humidity, boolean isWindy) {
    if (weather.equals("Sunny")) {
       if (humidity < 60) {
          if (isWindy == false) {
@@ -27,6 +27,7 @@ public boolean canPlayGolf(String weather, int humidity, boolean isWindy) {
       }
    }
    return false;
+}
            	
         ]]></input>
         </program>

@@ -4,7 +4,7 @@
   <title>Do the tasks in order</title>
 
   <introduction>
-    <p>  </p>
+    <p> Please do all the sections in order</p>
   </introduction>
 
   <!-- include sections -->
@@ -63,7 +63,10 @@
   <xi:include href="sec-unique-comprehension1.ptx" />
   <xi:include href="sec-unique-identification1.ptx" />
   <xi:include href="sec-unique-comprehension2.ptx" />
-  <xi:include href="sec-unique-identification2.ptx" />
+    <xi:include href="sec-unique-identification2.ptx" />
+   <xi:include href="sec-unique-comprehension3.ptx" />
+  <xi:include href="sec-unique-identification3.ptx" />
+     <xi:include href="sec-unique-comprehension4.ptx" />
   <xi:include href="sec-unique-fillblank1.ptx" />
   <xi:include href="sec-unique-fillblank2.ptx" />
     <xi:include href="sec-unique-fillblank3.ptx" />

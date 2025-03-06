@@ -6,14 +6,14 @@
       	
       	<statement>
       <p>
-     Please improve the style of the first generateOrderSummary() function to enhance its maintainability. For this, complete the blank sections in the second generateOrderSummary() function provided. These two functions must have the same behavior by the end.
+     Improve the style of the first generateOrderSummary() function to enhance its maintainability. For this, complete the blank sections in the second generateOrderSummary() function provided. These two functions must have the same behavior by the end.
      </p>
     </statement>
 
      <statement>
 		<program  language="java">
 		    <input>
-	public void generateOrderSummary(double totalPrice, boolean isMember) {
+	public static void generateOrderSummary(double totalPrice, boolean isMember) {
 		String message = "";
 
 		if (totalPrice > 100) {
@@ -53,7 +53,7 @@
 	<statement>
 		<program  language="java">
 		    <input>
-	public void generateOrderSummary(double totalPrice, boolean isMember) {
+	public static void generateOrderSummary(double totalPrice, boolean isMember) {
 		String messagePrefix = "";
 		String messageSuffix = "";
 		int points = 0;

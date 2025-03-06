@@ -6,7 +6,7 @@
       	
       	<statement>
       <p>
-       We want the numberCheck() function to take an integer and return "Good guess!" if the number is a multiple of 3 or 5, but not a multiple of 15. Otherwise, it should return "Not correct!". Since you can't directly modify the code, please write your answers in the given boxes accordingly.
+       The <code>numberCheck() </code> function takes an integer and returns a String. Complete the function so that when the number is a multiple of 3 or 5 but not a multiple of 15, it returns "Good guess!". Otherwise, it returns "Not correct!". Reminder: You can use the % operator to check the remainder. For example, when a number is a multiple of 2, number % 2 == 0. Since you can't directly modify the code, please write your answers in the given boxes accordingly.
      </p>
     </statement>
 
@@ -23,30 +23,6 @@
 		</program>
 	</statement>
 	<statement>
-      <p>
-       Here are some code segments that you may use to complete the numberCheck function (you may not need all the segments)
-      </p>
-      <p>
-      <ul>
-      <li> 
-      <c> number % 3 == 0   </c>
-      </li>
-      <li> 
-      <c> number % 5 == 0  </c>
-      </li>
-      <li> 
-      <c> number % 5 != 0 </c>
-      </li>
-      <li> 
-      <c> number % 3 != 0   </c>
-      </li>
-      <li> 
-      <c> number % 15 != 0  </c>
-      </li>
-      </ul>
-      </p>
-    </statement>
-    <statement>
       <p>
        Put your responses here:
       </p>

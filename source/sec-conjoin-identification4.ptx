@@ -80,7 +80,7 @@ public static String guessGame(int number) {
       </feedback>
     </choice>
 
-    <choice correct="no">
+    <choice correct="yes">
       <statement> 
        <program language="java">
           <input>
@@ -98,7 +98,7 @@ public static String guessGame(int number) {
       </statement>
       <feedback>
         <p>
-            This code can be improved!
+            Correct!
         </p>
       </feedback>
     </choice>

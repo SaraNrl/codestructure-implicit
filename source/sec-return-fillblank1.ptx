@@ -8,7 +8,7 @@
 
     <statement>
       <p>
-        Fill in the blank line of code, so that the function isArrayEmpty() takes an array as input and returns true when <term role="bold"> the array is empty </term> and returns false otherwise. 
+        The function isArrayEmpty() takes an array as input and returns a boolean. Complete the function so that it returns true when <term role="bold"> the array is empty </term> and returns false otherwise. 
        </p>
     </statement>
 <statement>

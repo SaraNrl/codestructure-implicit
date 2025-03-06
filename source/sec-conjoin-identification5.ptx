@@ -88,7 +88,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-            This code block can be improved!
+            This code can be improved!
         </p>
       </feedback>
     </choice>
