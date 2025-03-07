@@ -6,7 +6,7 @@
 <activity label="imp-conjoin-comprehensionGuessGame"> 
   <statement>
     <p>
-Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
+Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -24,7 +24,8 @@ public static String guessGame(int number) {
     
     <p>
       <hint>
-      Hint: You can use the following test cases to compare the functionality of the code blocks. Note that the test cases include examples across a range of different inputs. 
+      <p>
+      Hint: You can use the following test cases to compare the functionality of the code blocks. </p>
         <ul>
 		  <li><c>guessGame(28)</c></li>
 		  <li><c>guessGame(12)</c></li>
@@ -64,7 +65,7 @@ public static String guessGame(int number) {
       </statement>
       <feedback>
         <p>
-            Code block in option A does the same thing as the given code block! 
+            Correct!
         </p>
       </feedback>
     </choice>
@@ -84,7 +85,7 @@ public static String guessGame(int number) {
       </statement>
       <feedback>
         <p>
-           Code block in option B does the same thing as the given code block! 
+            Correct!
         </p>
       </feedback>
     </choice>
@@ -107,7 +108,7 @@ public static String guessGame(int number) {
       </statement>
       <feedback>
         <p>
-           Code block in option C does the same thing as the given code block! 
+            Correct!
         </p>
       </feedback>
     </choice>

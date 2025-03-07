@@ -6,7 +6,7 @@
 <activity label = "imp-conjoin-comprehensionEventEligibility">
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please check the Hint after answering the question.
+      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -25,14 +25,13 @@
     
     <p>
       <hint>
-      Hint: You can use the following test cases to compare the functionality of the code blocks. Note that the test cases include examples across a range of different inputs. 
+      <p>
+      Hint: You can use the following test cases to compare the functionality of the code blocks.</p>  
         <ul>
 		  <li><c>determineEventEligibility(62, 5)</c></li>
 		  <li><c>determineEventEligibility(62, 3)</c></li>
-		  <li><c>determineEventEligibility(60, 10)</c></li>
-		  <li><c>determineEventEligibility(58, 10)</c></li>
-		  <li><c>determineEventEligibility(58, 2)</c></li>
 		  <li><c>determineEventEligibility(60, 5)</c></li>
+		  <li><c>determineEventEligibility(58, 2)</c></li>
 		</ul>
       </hint>
     </p>
@@ -61,7 +60,7 @@
       </statement>
       <feedback>
         <p>
-            Code block in option A does the same thing as the given code block but is easier to read!
+           Correct!
         </p>
       </feedback>
     </choice>
@@ -83,7 +82,7 @@
       </statement>
       <feedback>
         <p>
-          Code block in option B does the same thing as the given code block but removes the unnecesary else.
+          Correct!
         </p>
       </feedback>
     </choice>
@@ -104,7 +103,7 @@ public static String determineEventEligibility(int personAge, int yearsInGroup) 
       </statement>
       <feedback>
           <p>
-              Code block in option C does the same thing as the given code block but is simpler to read!
+             Correct!
           </p>
         </feedback>
       

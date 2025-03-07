@@ -6,7 +6,7 @@
 <activity label= "imp-conjoin-comprehensionIsHighImpact"> 
   <statement>
     <p>
-Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
+      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -14,11 +14,11 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
     if (isPeerReviewed) {  
         if (isWellKnownJournal(journalName)) { 
             if (citationCount > 50) { 
-                return "A high-impact research!";
+                return "High-impact!";
             }
         }
     }
-    return "Not a high-impact research.";
+    return "Not high-impact.";
 }
 
       </input>  
@@ -26,7 +26,8 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
     
     <p>
       <hint>
-      Hint: You can use the following test cases to compare the functionality of the code blocks. Note that the test cases include examples across a range of different inputs. 
+      <p>
+      Hint: You can use the following test cases to compare the functionality of the code blocks. </p>
         <ul>
 		  <li><c>isHighImpact(true, true,true)</c></li>
 		  <li><c>isHighImpact(true, true, false)</c></li>
@@ -57,15 +58,15 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
           <input>
 public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
     if (!isPeerReviewed) {
-        return "Not a high-impact research.";
+        return "Not high-impact.";
     }  
     if (!isWellKnownJournal(journalName)) {
-        return "Not a high-impact research.";
+        return "Not high-impact.";
     }
     if (citationCount &lt;= 50) { 
-        return "Not a high-impact research.";               
+        return "Not high-impact.";               
     }               
-    return "A high-impact research!";
+    return "High-impact!";
 }
 
           </input>
@@ -73,7 +74,7 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
       </statement>
       <feedback>
         <p>
-            Code block in option A do the same thing as the given code block!
+            Correct!
         </p>
       </feedback>
     </choice>
@@ -84,16 +85,16 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
           <input>
 public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
     if (isPeerReviewed &amp;&amp; isWellKnownJournal(journalName) &amp;&amp; citationCount > 50) { 
-       return "A high-impact research!";
+       return "High-impact!";
     }
-    return "Not a high-impact research.";
+    return "Not high-impact.";
 }
           </input>
         </program>
       </statement>
       <feedback>
         <p>
-            Code block in option B does the same thing as the given code block, but it is simpler to read!
+            Correct!
         </p>
       </feedback>
     </choice>
@@ -105,9 +106,9 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
            <![CDATA[
 public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
     if (!isPeerReviewed || !isWellKnownJournal(journalName) || citationCount <= 50) { 
-        return "Not a high-impact research.";               
+        return "Not high-impact.";               
     } else {               
-        return "A high-impact research!"; 
+        return "High-impact!"; 
     }
 }
 
@@ -118,7 +119,7 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
       </statement>
       <feedback>
         <p>
-            Code block in option C do the same thing as the given code block, but it is simpler to read!
+            Correct!
         </p>
       </feedback>
     </choice>

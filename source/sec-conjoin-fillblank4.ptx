@@ -6,7 +6,7 @@
       	
       	<statement>
       <p>
-      The <code>canPlayOutside()</code> function takes a String input and prints messages. When the input (weather) equals "Sunny" or "Cloudy", the function prints "You can play outside!". However, when the weather is "Windy", it prints "You should play inside!". You can use equals() to compare String values. 
+      The <c>canPlayOutside()</c> function takes a String input and prints messages. Complete the function by filling in the blanks so that when the input (weather) equals "Sunny" or "Cloudy", the function prints "You can play outside!". However, when the weather is "Windy", it prints "You should play inside!". You can use equals() to compare String values. 
 
 Remember to use the equals() method when comparing String values.
      </p>

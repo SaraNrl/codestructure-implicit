@@ -6,7 +6,7 @@
   <activity label="imp-unique-comprehensionCalculatePrice">
     <statement>
       <p>
-        Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
+      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
       </p>
       <program language="java">
         <input>
@@ -23,7 +23,7 @@
       </program>
       
       <p>
-        <hint>You can use the following test cases to compare the code blocks' functionality. Notice that these test cases cover all possible scenarios. Note that the test cases include examples across a range of different inputs.
+        <hint><p>You can use the following test cases to compare the code blocks' functionality.</p>
         <ul>
           <li>
             <c>calculatePrice(120, true, true)</c> 
@@ -61,7 +61,7 @@
           </program>
         </statement>
         <feedback>
-          <p>Code block in option C does the same thing as the given code block but is simpler!</p>
+          <p>Correct!</p>
         </feedback>
       </choice>
 
@@ -84,7 +84,7 @@
           </program>
         </statement>
         <feedback>
-          <p>Code block in option B does the same thing as the given code block!</p>
+          <p>Correct!</p>
         </feedback>
       </choice>
       
@@ -105,7 +105,7 @@
           </program>
         </statement>
         <feedback>
-          <p>Code block in option C does the same thing as the given code block but is simpler!</p>
+          <p>Correct!</p>
         </feedback>
       </choice>
        <choice correct="no">
@@ -125,7 +125,7 @@
           </program>
         </statement>
         <feedback>
-          <p>Code block in option D does not do the same thing as the given code block! Compare the outputs for <code> calculatePrice(100, true, true)</code></p>
+          <p>Not always! Code block in option D does not have the same functionality with the first code block! Compare the outputs for <code> calculatePrice(100, true, true)</code></p>
         </feedback>
       </choice>
       

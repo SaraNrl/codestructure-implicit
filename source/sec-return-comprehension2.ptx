@@ -6,7 +6,7 @@
 <activity label="imp-return-comprehensioncanPlayGolf">
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
+      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -30,7 +30,7 @@ public static boolean canPlayGolf(String weather, int humidity, boolean isWindy)
     </program>
     
     <p>
-      <hint>You can use the following test cases to compare the code blocks' functionality. Note that the test cases include examples across a range of different inputs.
+      <hint><p>You can use the following test cases to compare the code blocks' functionality. </p>
           <ul>
             <li>
               <c>canPlayGolf("Rainy", 50, false)</c> 

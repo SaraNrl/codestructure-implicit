@@ -7,7 +7,7 @@
   <exercise label="imp-return-fillinEligibleForDiscount">
 
     <statement>
-      <p> The function eligibleForDiscount() takes an integer input and returns a boolean. Complete the function so that it returns true when <term role="bold">the age is less than 18 or greater than 60 </term> and otherwise it returns false.
+      <p> The function <c>eligibleForDiscount()</c> takes an integer input and returns a boolean. Complete the function by filling in the blanks so that it returns true when <term role="bold">the age is less than 18 or greater than 60 </term> and otherwise it returns false.
       
        </p>
     </statement>

@@ -7,7 +7,7 @@
   <exercise label="imp-return-fillinPositiveAndEven">
 
     <statement>
-      <p> The function isPositiveAndEven() takes an integer as input and returns a boolean. Complete the function so that <term role="bold"> when the input is positive and even </term> it returns true. Otherwise, it returns false. Reminder: use the "%" operator to get the reminder. For example, 23 % 2 is 1 since 23 is an odd number. 
+      <p> The function <c>isPositiveAndEven()</c> takes an integer as input and returns a boolean. Complete the function by filling in the blanks so that <term role="bold"> when the input is positive and even </term> it returns true. Otherwise, it returns false. Reminder: use the "%" operator to get the reminder. For example, 23 % 2 is 1 since 23 is an odd number. 
       
      </p>
     </statement>

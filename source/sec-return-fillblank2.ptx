@@ -7,7 +7,7 @@
   <exercise label="imp-return-fillinAreStringsEqual">
 
     <statement>
-      <p> The function areStringsEqual() takes two String inputs and returns a boolean. Complete the function so that when <term role="bold"> the two Strings are the same </term> it returns true. Otherwise, it returns false. You can compare String values using equals() method.  
+      <p> The function<c> areStringsEqual()</c> takes two String inputs and returns a boolean. Complete the function by filling in the blanks so that when <term role="bold"> the two Strings are the same </term> it returns true. Otherwise, it returns false. You can compare String values using equals() method.  
        </p>
     </statement>
 	<statement>

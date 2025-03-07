@@ -6,7 +6,7 @@
 <activity label= "imp-conjoin-comprehensionRoboticCompetition"> 
   <statement>
     <p>
-Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for the same inputs). Please remember to check the Hint after answering the question.
+      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -31,7 +31,9 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
     
     <p>
       <hint>
-      Hint: You can use the following test cases to compare the functionality of the code blocks. Note that the test cases include examples across a range of different inputs. 
+      <p>
+      Hint: You can use the following test cases to compare the functionality of the code blocks. 
+      </p>
         <ul>
 		  <li><c>canJoinRoboticsCompetition(true, true,true)</c></li>
 		  <li><c>canJoinRoboticsCompetition(true, true, false)</c></li>
@@ -78,7 +80,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-Code block in option A does not do the same thing as the given code block! Compare their outputs using canJoinRoboticsCompetition(false,false,false)
+Code block in option A does not alway have the same functionality as the first code block! Compare their outputs using canJoinRoboticsCompetition(false,false,false)
         </p>
       </feedback>
     </choice>
@@ -99,7 +101,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-            Code block in option B does the same thing as the given code block!
+            Correct!
         </p>
       </feedback>
     </choice>
@@ -120,7 +122,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-            Code block in option C does not do the same thing as the given code block! Compare the outputs using canJoinRoboticsCompetition(true,true,true)
+            Code block in option C does not always have the same functionality as the first code block! Compare the outputs using canJoinRoboticsCompetition(true,true,true)
         </p>
       </feedback>
     </choice>
@@ -147,7 +149,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-            Code block in option D does the same thing as the given code block but is is simpler to read!
+            Correct!
         </p>
       </feedback>
     </choice>
@@ -172,7 +174,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-         Code block in option E does not do the same thing as the given code block! Compare the outputs for canJoinRoboticsCompetition(true,false,true);
+         Code block in option E does not always have the same functionality as the first code block! Compare the outputs for canJoinRoboticsCompetition(true,false,true);
         </p>
       </feedback>
     </choice>

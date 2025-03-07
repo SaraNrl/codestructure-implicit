@@ -6,7 +6,7 @@
 <activity label = "imp-conjoin-identificationIsHighImpact"> 
   <statement>
     <p>
-      These code blocks are the ones you saw in the previous question and they all doing the same thing. Which one of these code blocks is well-structured (Uses appropriate language construct and structure that an expert programmer would use)?
+   These code blocks are the ones you saw in the previous question and they all have the same functionality. Select the code blocks that are well-structured (Use appropriate language construct and structure that an expert programmer would use)?
     </p>
 
   </statement>
@@ -20,15 +20,15 @@
           <input>
 public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
     if (!isPeerReviewed) {
-        return "Not a high-impact research.";
+        return "Not high-impact.";
     }  
     if (!isWellKnownJournal(journalName)) {
-        return "Not a high-impact research.";
+        return "Not high-impact.";
     }
     if (citationCount &lt;= 50) { 
-        return "Not a high-impact research.";               
+        return "Not high-impact.";               
     }               
-    return "A high-impact research!";
+    return "High-impact!";
 }
 
           </input>
@@ -49,11 +49,11 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
     if (isPeerReviewed) {  
         if (isWellKnownJournal(journalName)) { 
             if (citationCount > 50) { 
-                return "A high-impact research!";
+                return "High-impact!";
             }
         }
     }
-    return "Not a high-impact research.";
+    return "Not high-impact.";
 }
 
           </input>
@@ -72,9 +72,9 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
           <input>
 public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
     if (isPeerReviewed &amp;&amp; isWellKnownJournal(journalName) &amp;&amp; citationCount > 50) { 
-       return "A high-impact research!";
+       return "High-impact!";
     }
-    return "Not a high-impact research.";
+    return "Not high-impact.";
 }
           </input>
         </program>
@@ -93,9 +93,9 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
            <![CDATA[
 public static String isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
     if (!isPeerReviewed || !isWellKnownJournal(journalName) || citationCount <= 50) { 
-        return "Not a high-impact research.";               
+        return "Not high-impact.";               
     } else {               
-        return "A high-impact research!"; 
+        return "High-impact!"; 
     }
 }
 

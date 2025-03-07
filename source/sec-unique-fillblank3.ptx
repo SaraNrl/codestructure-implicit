@@ -6,7 +6,7 @@
       	
       	<statement>
       <p>
-     Improve the style of the first generateOrderSummary() function to enhance its maintainability. For this, complete the blank sections in the second generateOrderSummary() function provided. These two functions must have the same behavior by the end.
+Improve the style of <c>generateOrderSummary()</c>. The original function is below, followed by a version with six blanks. Fill in the blanks so that the original functionality is preserved, but the code is easier to maintain.
      </p>
     </statement>
 

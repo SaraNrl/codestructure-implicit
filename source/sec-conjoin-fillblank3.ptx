@@ -6,7 +6,7 @@
       	<title>Fill-in-the-blank</title>
       	<statement>
      <p>  
-    The <code>canBeShipped()</code> function takes two double inputs and one boolean input and prints some messages. Complete the function so that it prints "We can ship it!" only when all the following conditions are met; otherwise, it prints "Cannot be shipped!". 
+    The <c>canBeShipped()</c> function takes two double inputs and one boolean input and prints some messages. Complete the function by filling in the blanks so that it prints "We can ship it!" only when all the following conditions are met; otherwise, it prints "Cannot be shipped!". 
 </p>  
 
 <ol>  
@@ -50,7 +50,7 @@ public static void canBeShipped(double weight, double length, boolean isNotFragi
 					<p>Correct.</p>
 						  </feedback>
 						</condition>
-						<condition case="sensitive" string="( *isNotFragile *== true *&amp;&amp; *weight *&lt; *50 *&amp;&amp; *length *&lt; *150)|( *weight *&lt; *50 *&amp;&amp; *length *&lt; *150 *&amp;&amp; *isNotFragile *== true *)|( *isNotFragile *== true *&amp;&amp; *length *&lt; *150 *&amp;&amp; *weight *&lt; *50 )|( *length *&lt; *150 *&amp;&amp; *isNotFragile *== true *&amp;&amp; *weight *&lt; *50 )|( *length *&lt; *150 *&amp;&amp; *weight *&lt; *50 &amp;&amp; *isNotFragile *== true *)|( *weight *&lt; *50 *&amp;&amp; *isNotFragile *== true *&amp;&amp; *length *&lt; *150  )">
+						<condition case="sensitive" string="( *isNotFragile *== *true *&amp;&amp; *weight *&lt; *50 *&amp;&amp; *length *&lt; *150)|( *weight *&lt; *50 *&amp;&amp; *length *&lt; *150 *&amp;&amp; *isNotFragile *== *true *)|( *isNotFragile *== *true *&amp;&amp; *length *&lt; *150 *&amp;&amp; *weight *&lt; *50 )|( *length *&lt; *150 *&amp;&amp; *isNotFragile *== *true *&amp;&amp; *weight *&lt; *50 )|( *length *&lt; *150 *&amp;&amp; *weight *&lt; *50 &amp;&amp; *isNotFragile *== *true *)|( *weight *&lt; *50 *&amp;&amp; *isNotFragile *== *true *&amp;&amp; *length *&lt; *150  )">
 						  <feedback>
 					    <p>You don't need the "== true" in "isNotFragile == true". </p>
 						  </feedback>

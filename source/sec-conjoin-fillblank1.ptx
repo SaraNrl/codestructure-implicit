@@ -6,7 +6,7 @@
       	<title>Fill-in-the-blank</title>
       	<statement>
       <p>
-The <code>wordCheck()</code> function takes a String input and returns a String. Complete the function so that it returns "Valid" only when the input starts with capital 'A' and ends with 'c'. Otherwise, it returns "Not valid". Since you can't directly modify the code, please write your answers in the given boxes accordingly.
+The <c>wordCheck()</c> function takes a String input and returns a String. Complete the code by filling in the blanks underneath so that it returns "Valid" only when the input starts with capital 'A' and ends with 'c'. Otherwise, it returns "Not valid". 
      </p>
     </statement>
 
@@ -28,7 +28,7 @@ The <code>wordCheck()</code> function takes a String input and returns a String.
 	</statement>
 	<statement>
       <p>
-       Here are some code segments that you should use to complete the wordCheck().
+       Here are some code segments that you should use to complete the <c>wordCheck()</c>. However, you may need to conjoin some of these code segments using appropriate operators.  
       </p>
       <p>
 		  <ul>
@@ -46,7 +46,7 @@ The <code>wordCheck()</code> function takes a String input and returns a String.
 	<statement>
 		<p>Blank 1: <var width="25"/></p>
 		<p>Blank 2: <var width="45"/></p>
-		 <hint>The first blank needs only one condition and the second one needs conjunction of two conditions. </hint>
+		 <hint><p>The first blank needs only one condition and the second one needs conjunction of two conditions. </p></hint>
 	</statement>
 
       <setup>

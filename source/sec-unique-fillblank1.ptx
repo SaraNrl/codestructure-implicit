@@ -6,7 +6,8 @@
       	<title>Fill-in-the-blank</title>
       	<statement>
       <p>
-     Improve the style of the first applyDiscount() function to enhance its maintainability. For this, complete the blank sections in the second applyDiscount() function. These two functions must have the same behavior by the end.
+Improve the style of <c>applyDiscount()</c>. The original function is below, followed by a version with three blanks. Fill in the blanks so that the original functionality is preserved, but the code is easier to maintain.
+
      </p>
     </statement>
 

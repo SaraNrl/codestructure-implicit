@@ -6,7 +6,7 @@
 <activity label="imp-conjoin-comprehensionCheckNumber">
   <statement>
     <p>
-      Determine which of the following code blocks have the same functionality as the given code block (i.e., they produce the same output for any input). Please check the hints after answering the question.
+      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs). You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -60,7 +60,7 @@
       </statement>
       <feedback>
         <p>
-            Not quite right! Compare the output of the given code vs. code block in option A for <c>validWord(“435gjhg”);  </c>
+            Not always! Compare the output of the given code vs. code block in option A for <c>validWord(“435gjhg”);  </c>
         </p>
       </feedback>
     </choice>
