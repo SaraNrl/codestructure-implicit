@@ -3,7 +3,7 @@
 <section xml:id="imp-conjoin-fillblank1" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Fill-in-the-blank</title>
      <exercise label="imp-conjoin-fillinWordCheck">
-      	<title>Fill-in-the-blank</title>
+
       	<statement>
       <p>
 The <c>wordCheck()</c> function takes a String input and returns a String. Complete the code by filling in the blanks underneath so that it returns "Valid" only when the input starts with capital 'A' and ends with 'c'. Otherwise, it returns "Not valid". 

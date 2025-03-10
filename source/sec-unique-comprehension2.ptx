@@ -6,7 +6,7 @@
   <activity label="imp-unique-comprehensionCalculateWeight">
     <statement>
       <p>
-      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
+      Look at the first code block, which of the following options have the same functionality as it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
       </p>
       <program language="java">
         <input>

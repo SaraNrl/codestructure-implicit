@@ -6,7 +6,7 @@
 <activity label="imp-unique-identificationCalculateWeight">
   <statement>
     <p>
-     These code blocks are the ones you saw in the previous question and they all have the same functionality. Which code block is well-structured (Use appropriate language construct and structure that an expert programmer would use)? 
+     These code blocks are the ones you saw in the previous question and they all have the same functionality. Which code block is well-structured (uses appropriate language construct and structure that an expert programmer would use)? 
     </p>
     
     
@@ -23,17 +23,17 @@ public static void displayDiscount(String customerType, double price) {
    double finalPrice = 0;
 
    if ("VIP".equals(customerType)) {
-       finalPrice = price * 0.8;  // 20% discount
+       finalPrice = price * 0.8; 
        System.out.println("Customer Type: VIP");
        System.out.println("Original Price: $" + price);
        System.out.println("Discounted Price: $" + finalPrice);
    } else if ("Regular".equals(customerType)) {
-       finalPrice = price * 0.9;  // 10% discount
+       finalPrice = price * 0.9; 
        System.out.println("Customer Type: Regular");
        System.out.println("Original Price: $" + price);
        System.out.println("Discounted Price: $" + finalPrice);
    } else {
-       finalPrice = price;  // No discount
+       finalPrice = price;  
        System.out.println("Customer Type: Guest");
        System.out.println("Original Price: $" + price);
        System.out.println("Discounted Price: $" + finalPrice);
@@ -55,16 +55,15 @@ public static void displayDiscount(String customerType, double price) {
         <program language="java">
           <input><![CDATA[
 public static void displayDiscount(String customerType, double price) {
-   double finalPrice;
+   double finalPrice = price;
 
    if ("VIP".equals(customerType)) {
-       finalPrice = price * 0.8;  // 20% discount
+       finalPrice = price * 0.8;  
        System.out.println("Customer Type: VIP");
    } else if ("Regular".equals(customerType)) {
-       finalPrice = price * 0.9;  // 10% discount
+       finalPrice = price * 0.9; 
        System.out.println("Customer Type: Regular");
    } else {
-       finalPrice = price;  // No discount
        System.out.println("Customer Type: Guest");
    }
 
@@ -88,7 +87,6 @@ public static void displayDiscount(String customerType, double price) {
           <input><![CDATA[
 
 public static void displayDiscount(String customerType, double price) {
-   double finalPrice = 0;
    double adjustedPriceFactor = 1;
 
    if ("VIP".equals(customerType)) {
@@ -101,10 +99,10 @@ public static void displayDiscount(String customerType, double price) {
        System.out.println("Customer Type: Guest");
    }
    
-   finalPrice = price * adjustedPriceFactor;  
+   double finalPrice = price * adjustedPriceFactor;  
    System.out.println("Original Price: $" + price);
    System.out.println("Discounted Price: $" + finalPrice);
-}   }
+}   
 
         ]]></input>
         </program>

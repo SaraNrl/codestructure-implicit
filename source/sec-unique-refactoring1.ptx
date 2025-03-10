@@ -6,7 +6,7 @@
   <activity label="imp-unique-refactoringFinalPrice">
     <statement>
       <p>
-        You will see a copy of the following code block in an interactive mode than you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
+        You will see a copy of the following code block in an interactive mode than you can modify and compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
       </p>
       <program language="java">
         <input>
@@ -158,7 +158,7 @@ public class FinalPrice {
       </statement>
       <feedback>
         <p>
-            You did it correctly!
+            You refactored correctly!
         </p>
       </feedback>
     </choice>
@@ -189,11 +189,44 @@ public class FinalPrice {
       </statement>
       <feedback>
         <p>
-           You did it correctly!
+           You refactored correctly!
         </p>
       </feedback>
     </choice>
    
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public class FinalPrice {
+    public static double calculateFinalPrice(double basePrice, boolean isMember) {
+        double discountRate = 0;
+        String message = "";
+        
+        if (isMember) {
+            discountRate = 0.1;
+            message = "Thank you for being a loyal customer!";
+        } else {
+            discountRate = 0.05;
+            message = "Join our membership for more discounts!";
+        }
+
+        double finalPrice = basePrice * (1 - discountRate);
+        System.out.println(message);
+        System.out.println("Final price is: $" + finalPrice);
+        
+        return finalPrice;
+    }
+}
+		</input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           You refactored correctly!
+        </p>
+      </feedback>
+    </choice>
    
     
     </choices>

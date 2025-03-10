@@ -3,7 +3,7 @@
 <section xml:id="imp-conjoin-fillblank3" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Fill-in-the-blank</title>
      <exercise label="imp-conjoin-fillinCanBeShipped">
-      	<title>Fill-in-the-blank</title>
+
       	<statement>
      <p>  
     The <c>canBeShipped()</c> function takes two double inputs and one boolean input and prints some messages. Complete the function by filling in the blanks so that it prints "We can ship it!" only when all the following conditions are met; otherwise, it prints "Cannot be shipped!". 
@@ -20,7 +20,7 @@
      <statement>
 		<program  language="java">
 		    <input>
-public static void canBeShipped(double weight, double length, boolean isNotFragile) {
+public static void canBeShipped(boolean isNotFragile, double weight, double length) {
    if (...........blank1..............) { 
       System.out.println("We can ship it!"); 
    }

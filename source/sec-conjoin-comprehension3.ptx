@@ -6,7 +6,7 @@
 <activity label= "imp-conjoin-comprehensionIsHighImpact"> 
   <statement>
     <p>
-      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
+      Look at the first code block, which of the following options have the same functionality as it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
@@ -29,14 +29,14 @@ public static String isHighImpact(boolean isPeerReviewed, String journalName, in
       <p>
       Hint: You can use the following test cases to compare the functionality of the code blocks. </p>
         <ul>
-		  <li><c>isHighImpact(true, true,true)</c></li>
-		  <li><c>isHighImpact(true, true, false)</c></li>
-		  <li><c>isHighImpact(true, false, true)</c></li>
-		  <li><c>isHighImpact(true, false, false)</c></li>
-		  <li><c>isHighImpact(false, true,true)</c></li>
-		  <li><c>isHighImpact(false, true, false)</c></li>
-		  <li><c>isHighImpact(false, false, true)</c></li>
-		  <li><c>isHighImpact(false, false, false)</c></li>
+		  <li><c>isHighImpact(true, "IEEE",20)</c></li>
+		  <li><c>isHighImpact(true, "ACM", 120)</c></li>
+		  <li><c>isHighImpact(true, "unknown", 300)</c></li>
+		  <li><c>isHighImpact(true, "unknown", 20)</c></li>
+		  <li><c>isHighImpact(false, "ACM", 97)</c></li>
+		  <li><c>isHighImpact(false, "ACM", 34)</c></li>
+		  <li><c>isHighImpact(false, "unknown", 543)</c></li>
+		  <li><c>isHighImpact(false, "unknown", 12)</c></li>
 
 		</ul>
       </hint>

@@ -7,18 +7,18 @@
   
 Programming is not just about writing code that produces the desired output. Code must also be easy to read, understand, and maintain. Well-structured code requires minimal commenting because it speaks for itself.
 <p>&#160;</p>
-In the professional world, companies expect developers to follow best practices and write clean, and maintainable code. In industry, you won’t be coding just for yourself, you’ll be working in teams. Others need to understand your code to test, modify, and extend it effectively. 
+In the professional world, developers are expected to follow best practices and write clean, and maintainable code. In industry, you won’t be coding just for yourself---you’ll be working in teams. Others need to understand your code to test, modify, and extend it effectively. 
 
-In addition, research shows that most of software development time is spent on reading and understanding existing code. Well-structured code facilitates peer reviews, reduces time spent on future modifications, and simplifies debugging. As software evolves, a clean and organized codebase enables efficient collaboration and minimizes unexpected vulnerabilities.
+Additionally, research shows that most of the time in software development is spent reading and understanding existing code. Well-structured code facilitates peer reviews, reduces time spent on future modifications, and simplifies debugging. As software evolves, a clean and organized codebase enables efficient collaboration and minimizes unexpected vulnerabilities.
  <p>&#160;</p>
 There are two key ways to achieve well-structured code:
 <ol>
-<li>Writing well initially---This involves thinking through different approaches and structures and selecting the best one. However, achieving perfectly structured code initially is difficult.</li>
+<li>Writing well initially---involves thinking through different approaches and structures and selecting the best one. However, achieving perfectly structured code initially is difficult.</li>
 
-<li>Reviewing and refining code for structure---Similar to proofreading an essay, where the content remains the same, but sentences are polished for clarity and conciseness, and the overall organization may be adjusted. The process of modifying the structure of code without changing its behavior is called refactoring. </li>
+<li>Reviewing and refining code for structure---similar to proofreading an essay, where the content remains the same, but sentences are polished for clarity and conciseness, and the overall organization may be adjusted. The process of modifying the structure of code without changing its behavior is called refactoring. </li>
 </ol>
 
-Refactoring is the process of improving a software’s internal structure to enhance readability and maintainability without altering its input-output behavior. This short book offers practice opportunities with feedback on various tasks related to writing and refactoring for well-structured code.
+Refactoring is the process of improving software's internal structure to enhance readability and maintainability without altering its input-output behavior. This short book offers practice opportunities with feedback on various tasks related to writing and refactoring. Note that there is much more to refactoring than what you learn here.
 <p>&#160;</p>
  
   </p> 

@@ -6,7 +6,7 @@
   <activity label="imp-return-refactoringFileProcess">
     <statement>
       <p>
-        There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
+        There is a copy of the following code block in an interactive mode that you can modify and compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
       </p>
       <program language="java">
         <input>
@@ -173,7 +173,7 @@ public class FileProcess {
       </statement>
       <feedback>
         <p>
-           You did it correctly!
+           You refactored correctly!
         </p>
       </feedback>
     </choice>   

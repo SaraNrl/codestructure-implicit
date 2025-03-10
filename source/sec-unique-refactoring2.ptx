@@ -6,7 +6,7 @@
   <activity label="imp-unique-refactoringPrintDiscount">
     <statement>
       <p>
-        You will see a copy of the following code block in an interactive mode that you can compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
+        You will see a copy of the <c>printDiscount()</c> function in an interactive mode where you can modify and compile it. We want you to improve the style of this function as an expert would view it without changing its behavior. To ensure this you can run your refactored code and compare the expected print messages with what your refactored method actually prints.
       </p>
       <program language="java">
         <input>
@@ -40,6 +40,26 @@ public class FinalPrice {
 		System.out.println(message);
 	}
   }
+  
+  public static void main(String[] args) {
+        // Test Case 1: printDiscount("clothes", 300.0, true);
+        System.out.println("Test Case 1: Clothes with Special Offer");
+        System.out.println("Expected Output: Item: clothes, Original Price: $300.0. Bulk discount applied. Discounted Price: $225.0");
+        System.out.print("Actual Output: ");
+        printDiscount("clothes", 300.0, true);
+        
+        // Test Case 2: printDiscount("clothes", 500.0, false);
+        System.out.println("\nTest Case 2: Clothes without Special Offer");
+        System.out.println("Expected Output: Item: clothes, Original Price: $500.0. Bulk discount applied. Discounted Price: $375.0");
+        System.out.print("Actual Output: ");
+        printDiscount("clothes", 500.0, false);
+
+        // Test Case 3: printDiscount("electronics", 500.0, true);
+        System.out.println("\nTest Case 3: Electronics with Special Offer");
+        System.out.println("Expected Output: Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0");
+        System.out.print("Actual Output: ");
+        printDiscount("electronics", 500.0, true);
+    }
 }
 		
         ]]>
@@ -79,6 +99,26 @@ public class FinalPrice {
 		System.out.println(message);
 	}
   }
+  
+  public static void main(String[] args) {
+        // Test Case 1: printDiscount("clothes", 300.0, true);
+        System.out.println("Test Case 1: Clothes with Special Offer");
+        System.out.println("Expected Output: Item: clothes, Original Price: $300.0. Bulk discount applied. Discounted Price: $225.0");
+        System.out.print("Actual Output: ");
+        printDiscount("clothes", 300.0, true);
+        
+        // Test Case 2: printDiscount("clothes", 500.0, false);
+        System.out.println("\nTest Case 2: Clothes without Special Offer");
+        System.out.println("Expected Output: Item: clothes, Original Price: $500.0. Bulk discount applied. Discounted Price: $375.0");
+        System.out.print("Actual Output: ");
+        printDiscount("clothes", 500.0, false);
+
+        // Test Case 3: printDiscount("electronics", 500.0, true);
+        System.out.println("\nTest Case 3: Electronics with Special Offer");
+        System.out.println("Expected Output: Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0");
+        System.out.print("Actual Output: ");
+        printDiscount("electronics", 500.0, true);
+    }
 }
 		
          ]]>
@@ -188,7 +228,7 @@ public class FinalPrice {
       </statement>
       <feedback>
         <p>
-            You are on the right track. But, this code can further be improved!
+            You are on the right track, but it is not well-structured yet, so keep improving it further.
         </p>
       </feedback>
     </choice>
@@ -222,6 +262,7 @@ public class FinalPrice {
         String message = introMessage + finalMessage + finalPrice;
         System.out.println(message);
     }
+    
 }
 
 	

@@ -8,7 +8,7 @@
       <p>
       The <c>canPlayOutside()</c> function takes a String input and prints messages. Complete the function by filling in the blanks so that when the input (weather) equals "Sunny" or "Cloudy", the function prints "You can play outside!". However, when the weather is "Windy", it prints "You should play inside!". You can use equals() to compare String values. 
 
-Remember to use the equals() method when comparing String values.
+Remember to use the <c>equals()</c> method when comparing String values.
      </p>
     </statement>
 
@@ -17,9 +17,9 @@ Remember to use the equals() method when comparing String values.
 		    <input>
 public static void canPlayOutside(String weather) {
 	if (.........blank1...............) {
-        System.out.println(“You can play outside!”);
+        System.out.println("You can play outside!");
     } ......blank2........ {
-        System.out.println(“You should play inside!”);
+        System.out.println("You should play inside!");
     }
 }   
 		    </input>

@@ -6,7 +6,7 @@
   <activity label="imp-unique-comprehensionDisplayDiscount">
     <statement>
       <p>
-      Look at the first code block, which of the following options has the same functionality with it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples. 
+      Look at the first code block, which of the following options have the same functionality as it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples. 
       </p>
       <program language="java">
         <input>
@@ -65,16 +65,15 @@ public static void displayDiscount(String customerType, double price) {
             <input>
             
 public static void displayDiscount(String customerType, double price) {
-   double finalPrice;
+   double finalPrice = price;
 
    if ("VIP".equals(customerType)) {
-       finalPrice = price * 0.8;  // 20% discount
+       finalPrice = price * 0.8;  
        System.out.println("Customer Type: VIP");
    } else if ("Regular".equals(customerType)) {
-       finalPrice = price * 0.9;  // 10% discount
+       finalPrice = price * 0.9;  
        System.out.println("Customer Type: Regular");
    } else {
-       finalPrice = price;  // No discount
        System.out.println("Customer Type: Guest");
    }
 
@@ -96,7 +95,6 @@ public static void displayDiscount(String customerType, double price) {
             <input>
             
 public static void displayDiscount(String customerType, double price) {
-   double finalPrice = 0;
    double adjustedPriceFactor = 1;
 
    if ("VIP".equals(customerType)) {
@@ -109,7 +107,7 @@ public static void displayDiscount(String customerType, double price) {
        System.out.println("Customer Type: Guest");
    }
    
-   finalPrice = price * adjustedPriceFactor;  
+   double finalPrice = price * adjustedPriceFactor;  
    System.out.println("Original Price: $" + price);
    System.out.println("Discounted Price: $" + finalPrice);
 }       
@@ -127,8 +125,8 @@ public static void displayDiscount(String customerType, double price) {
             <input>
            
 public static void displayDiscount(String customerType, double price) {
-   double finalPrice = 0;
-   double adjustedPriceFactor = 0;
+   double finalPrice = price;
+   double adjustedPriceFactor = 1;
 
    if ("VIP".equals(customerType)) {
        adjustedPriceFactor = 0.8; 

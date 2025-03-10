@@ -6,41 +6,40 @@
 <activity label="imp-conjoin-refactoringScholarship">
   <statement>
     <p>
-      There is a copy of the following code block in an interactive mode that you can compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
+      There is a copy of the following code block in an interactive mode that you can modify and compile. Your task is to improve the code's style as an expert would view it, while ensuring its behavior remains unchanged. You may run your refactored code to verify that it still passes all test cases.
     </p>
     <program language="java">
       <input>
-		 public class Scholarship {   
-			public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
-				if (schoolYear >= 4) {
-					if (GPA >= 3.5) {
-						 if (hasResearchExperience == true) {
-							      return "Eligible";
-						 } 
-					} 
+public class Scholarship {
+	public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+		if (schoolYear >= 4) {
+			if (GPA >= 3.5) {
+				if (hasResearchExperience == true) {
+					return "Eligible";
 				} 
-				return "Not eligible";
-			}
-		}
-
+			} 
+		} 
+		return "Not eligible";
+	}
+}
       </input>
     </program>
   </statement>
 
   <program label="imp-conjoin-refactoringScholarship-code" interactive="activecode" language="java" >
     <input>
-     public class Scholarship {
-			public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
-				if (schoolYear >= 4) {
-					if (GPA >= 3.5) {
-						  if (hasResearchExperience == true) {
-							      return "Eligible";
-						  } 
-					} 
+public class Scholarship {
+	public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+		if (schoolYear >= 4) {
+			if (GPA >= 3.5) {
+				if (hasResearchExperience == true) {
+					return "Eligible";
 				} 
-				return "Not eligible";
-			}
-		}
+			} 
+		} 
+		return "Not eligible";
+	}
+}
 
     </input>
     <tests> 
@@ -168,7 +167,8 @@ public class Scholarship {
       </statement>
       <feedback>
         <p>
-            The code doesn't have the same functionality with the original one.
+            The code doesn't have the same functionality with the original one. Copy the original code into the interactive section and try refactoring it again.
+
         </p>
       </feedback>
     </choice>
@@ -190,7 +190,7 @@ public class Scholarship {
       </statement>
       <feedback>
         <p>
-            You did it correctly!
+            You refactored correctly!
         </p>
       </feedback>
     </choice>
