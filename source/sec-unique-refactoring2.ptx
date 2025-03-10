@@ -43,19 +43,19 @@ public class FinalPrice {
   
   public static void main(String[] args) {
         // Test Case 1: printDiscount("clothes", 300.0, true);
-        System.out.println("Test Case 1: Clothes with Special Offer");
+        System.out.println("Test Case 1: printDiscount("clothes", 300.0, true);");
         System.out.println("Expected Output: Item: clothes, Original Price: $300.0. Bulk discount applied. Discounted Price: $225.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 300.0, true);
         
         // Test Case 2: printDiscount("clothes", 500.0, false);
-        System.out.println("\nTest Case 2: Clothes without Special Offer");
+        System.out.println("\nTest Case 2: printDiscount("clothes", 500.0, false);");
         System.out.println("Expected Output: Item: clothes, Original Price: $500.0. Bulk discount applied. Discounted Price: $375.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 500.0, false);
 
         // Test Case 3: printDiscount("electronics", 500.0, true);
-        System.out.println("\nTest Case 3: Electronics with Special Offer");
+        System.out.println("\nTest Case 3: printDiscount("electronics", 500.0, true);");
         System.out.println("Expected Output: Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0");
         System.out.print("Actual Output: ");
         printDiscount("electronics", 500.0, true);
@@ -102,19 +102,19 @@ public class FinalPrice {
   
   public static void main(String[] args) {
         // Test Case 1: printDiscount("clothes", 300.0, true);
-        System.out.println("Test Case 1: Clothes with Special Offer");
+        System.out.println("Test Case 1: printDiscount("clothes", 300.0, true);");
         System.out.println("Expected Output: Item: clothes, Original Price: $300.0. Bulk discount applied. Discounted Price: $225.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 300.0, true);
         
         // Test Case 2: printDiscount("clothes", 500.0, false);
-        System.out.println("\nTest Case 2: Clothes without Special Offer");
+        System.out.println("\nTest Case 2: printDiscount("clothes", 500.0, false);");
         System.out.println("Expected Output: Item: clothes, Original Price: $500.0. Bulk discount applied. Discounted Price: $375.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 500.0, false);
 
         // Test Case 3: printDiscount("electronics", 500.0, true);
-        System.out.println("\nTest Case 3: Electronics with Special Offer");
+        System.out.println("\nTest Case 3: printDiscount("electronics", 500.0, true);");
         System.out.println("Expected Output: Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0");
         System.out.print("Actual Output: ");
         printDiscount("electronics", 500.0, true);
@@ -187,7 +187,7 @@ public class FinalPrice {
    <activity label="imp-unique-refactoringPrintDiscount-response">
     <statement>
       <p>
-        Which of the following code blocks is the most similar to your final refactored code for the previous question?
+        Which of the following code blocks is the most similar to your final refactored printDiscount() function?
       </p>
     </statement>
 
@@ -197,7 +197,6 @@ public class FinalPrice {
        <program language="java">
           <input>
            <![CDATA[
-public class FinalPrice {
   public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
     double standardDiscount = 0.15;
     double bulkDiscount = 0.25;
@@ -219,8 +218,8 @@ public class FinalPrice {
     }   
     String message = introMessage + finalMessage + discountedPrice;
     System.out.println(message);
-    }
-}
+  }
+
 
 ]]>
           </input>
@@ -237,7 +236,7 @@ public class FinalPrice {
       <statement> 
        <program language="java">
           <input>
-public class FinalPrice {
+
     public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
         double standardDiscount = 0.15;
         double bulkDiscount = 0.25;
@@ -262,8 +261,7 @@ public class FinalPrice {
         String message = introMessage + finalMessage + finalPrice;
         System.out.println(message);
     }
-    
-}
+
 
 	
 		</input>
@@ -271,7 +269,7 @@ public class FinalPrice {
       </statement>
       <feedback>
         <p>
-           You did it correctly!
+           You refactored correctly!
         </p>
       </feedback>
     </choice>
@@ -281,7 +279,6 @@ public class FinalPrice {
       <statement> 
        <program language="java">
           <input>
-public class FinalPrice {
     public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
         String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
         String finalMessage = "Discounted Price: $";
@@ -300,7 +297,7 @@ public class FinalPrice {
         String printMessage = introMessage + message + finalMessage + finalPrice;
         System.out.println(printMessage);
     }
-}
+
 
 	
 		</input>
@@ -308,7 +305,7 @@ public class FinalPrice {
       </statement>
       <feedback>
         <p>
-           You did it correctly!
+           You refactored correctly!
         </p>
       </feedback>
     </choice>   
