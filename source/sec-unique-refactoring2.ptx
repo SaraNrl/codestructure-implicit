@@ -42,20 +42,20 @@ public class FinalPrice {
   }
   
   public static void main(String[] args) {
-        // Test Case 1: printDiscount("clothes", 300.0, true);
-        System.out.println("Test Case 1: printDiscount("clothes", 300.0, true);");
+        // Test Case 1: 
+        System.out.println("Test Case 1: printDiscount(\"clothes\", 300.0, true);");
         System.out.println("Expected Output: Item: clothes, Original Price: $300.0. Bulk discount applied. Discounted Price: $225.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 300.0, true);
         
-        // Test Case 2: printDiscount("clothes", 500.0, false);
-        System.out.println("\nTest Case 2: printDiscount("clothes", 500.0, false);");
+        // Test Case 2: 
+        System.out.println("\nTest Case 2: printDiscount(\"clothes\", 500.0, false);");
         System.out.println("Expected Output: Item: clothes, Original Price: $500.0. Bulk discount applied. Discounted Price: $375.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 500.0, false);
 
-        // Test Case 3: printDiscount("electronics", 500.0, true);
-        System.out.println("\nTest Case 3: printDiscount("electronics", 500.0, true);");
+        // Test Case 3: 
+        System.out.println("\nTest Case 3: printDiscount(\"electronics\", 500.0, true);");
         System.out.println("Expected Output: Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0");
         System.out.print("Actual Output: ");
         printDiscount("electronics", 500.0, true);
@@ -101,20 +101,20 @@ public class FinalPrice {
   }
   
   public static void main(String[] args) {
-        // Test Case 1: printDiscount("clothes", 300.0, true);
-        System.out.println("Test Case 1: printDiscount("clothes", 300.0, true);");
+        // Test Case 1: 
+        System.out.println("Test Case 1: printDiscount(\"clothes\", 300.0, true);");
         System.out.println("Expected Output: Item: clothes, Original Price: $300.0. Bulk discount applied. Discounted Price: $225.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 300.0, true);
         
-        // Test Case 2: printDiscount("clothes", 500.0, false);
-        System.out.println("\nTest Case 2: printDiscount("clothes", 500.0, false);");
+        // Test Case 2: 
+        System.out.println("\nTest Case 2: printDiscount(\"clothes\", 500.0, false);");
         System.out.println("Expected Output: Item: clothes, Original Price: $500.0. Bulk discount applied. Discounted Price: $375.0");
         System.out.print("Actual Output: ");
         printDiscount("clothes", 500.0, false);
 
-        // Test Case 3: printDiscount("electronics", 500.0, true);
-        System.out.println("\nTest Case 3: printDiscount("electronics", 500.0, true);");
+        // Test Case 3: 
+        System.out.println("\nTest Case 3: printDiscount(\"electronics\", 500.0, true);");
         System.out.println("Expected Output: Item: electronics, Original Price: $500.0. Special offer applied. Discounted Price: $250.0");
         System.out.print("Actual Output: ");
         printDiscount("electronics", 500.0, true);
@@ -261,6 +261,7 @@ public class FinalPrice {
         String message = introMessage + finalMessage + finalPrice;
         System.out.println(message);
     }
+    
 
 
 	
@@ -279,6 +280,7 @@ public class FinalPrice {
       <statement> 
        <program language="java">
           <input>
+
     public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
         String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
         String finalMessage = "Discounted Price: $";
