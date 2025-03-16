@@ -6,7 +6,7 @@
 
       	<statement>
      <p>  
-    The <c>canBeShipped()</c> function takes two double inputs and one boolean input and prints some messages. Complete the function by filling in the blanks so that it prints "We can ship it!" only when all the following conditions are met; otherwise, it prints "Cannot be shipped!". 
+    The <c>shippingMessage()</c> function takes two double inputs and one boolean input and prints some messages. Complete the function by filling in the blanks so that it prints "We can ship it!" only when all the following conditions are met; otherwise, it prints "Cannot be shipped!". 
 </p>  
 
 <ol>  
@@ -20,7 +20,7 @@
      <statement>
 		<program  language="java">
 		    <input>
-public static void canBeShipped(boolean isNotFragile, double weight, double length) {
+public static void shippingMessage(boolean isNotFragile, double weight, double length) {
    if (...........blank1..............) { 
       System.out.println("We can ship it!"); 
    }

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="booleanReturnPart3" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 2) Directly return boolean expressions </title>
+  <p>
+Continue watching to learn about the second rule, then answer the following questions.
+  </p>
+  <figure>
+    <caption>Directly return boolean expressions part 3</caption>
+    <video xml:id="booleanReturn3" youtube="EQD5ZuL7oMA" width="90%" margins="5% 5%" preview="booleanReturn-part3"/>
+  </figure>
+ 
+ <activity label="exp-booleanReturn-comprehensionNegation"> 
+  <statement>
+    <p>
+      What is the negation of the following expression?
+    </p>
+    <program language="java">
+      <input>
+(isPeerReviewed &amp;&amp; hIndex > 3) || citation > 50
+
+      </input>  
+    </program>
+
+  	<p>
+      Select all that apply. 
+    </p> 
+  </statement>
+
+
+  <choices>
+  
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+(!isPeerReviewed &amp;&amp; hIndex &lt;= 3) || citation &lt;= 50 
+
+          </input>
+        </program>
+      </statement>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+(!isPeerReviewed || hIndex &lt;= 3) &amp;&amp; citation &lt;= 50 
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Correct! When applying negation, || will become &amp;&amp; and vice versa. Also &lt; will become >= and > will become &lt;=. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="no">
+      <statement> 
+       <program language="java">
+          <input>
+           <![CDATA[
+(!isPeerReviewed || hIndex > 3) && citation > 50 
+
+
+]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Read the feedback explanation for option 2.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</activity>
+
+
+
+<activity label="exp-booleanReturn-comprehensionIsHighImpact"> 
+  <statement>
+    <p>
+      Look at the first code block. Which of the following options have the same functionality as it (i.e., they produce the same output for the same inputs)?
+    </p>
+    <program language="java">
+      <input>
+public static boolean isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (isPeerReviewed) {  
+        if (isWellKnownJournal(journalName)) { 
+            if (citationCount > 50) { 
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+      </input>  
+    </program>
+    
+  
+  	<p>
+      Select all that apply. 
+    </p> 
+  </statement>
+
+
+  <choices>
+  
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public static boolean isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (!isPeerReviewed) {
+        return false;
+    }  
+    if (!isWellKnownJournal(journalName)) {
+        return false;
+    }
+    if (citationCount &lt;= 50) { 
+        return false;               
+    }               
+    return true;
+}
+
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+         Correct! This code is has the same functionality with the first code block. Use the truth table to verify. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+public static boolean isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (isPeerReviewed &amp;&amp; isWellKnownJournal(journalName) &amp;&amp; citationCount > 50) { 
+       return true;
+    }
+    return false;
+}
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+            Correct! This is the pattern for the first rule, nested <c>if</c> statements that can be conjoined with <c>&amp;&amp;</c>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+           <![CDATA[
+public static boolean isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    if (!isPeerReviewed || !isWellKnownJournal(journalName) || citationCount <= 50) { 
+        return false;               
+    } else {               
+        return true; 
+    }
+}
+
+
+]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+           Correct! The <c>if</c> condition returns <c>false</c>; therefore, we can negate the condition. This makes the <c>if</c> body return <c>true</c> and <c>else</c> return <c>false</c>, same as the code in option B.
+        </p>
+      </feedback>
+    </choice>
+
+ 
+ <choice correct="yes">
+      <statement> 
+       <program language="java">
+          <input>
+           <![CDATA[
+public static boolean isHighImpact(boolean isPeerReviewed, String journalName, int citationCount) {
+    return isPeerReviewed && isWellKnownJournal(journalName) && citationCount > 50;
+}
+
+
+]]>
+          </input>
+        </program>
+      </statement>
+      <feedback>
+        <p>
+ Correct! This code has the same functionality as option B but it is well-structured as it directly returns the condition. 
+        </p>
+      </feedback>
+    </choice>
+    
+  </choices>
+</activity>
+
+
+
+
+
+
+</section>
+

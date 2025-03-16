@@ -19,7 +19,7 @@ These code blocks are the same as the ones you saw in the previous question, and
       <statement> 
        <program language="java">
           <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
     if (hasBuiltRobot) {
         if (passedSafetyTest) {
             if (registeredOnTime) {
@@ -48,7 +48,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       <statement> 
        <program language="java">
           <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
    if (hasBuiltRobot &amp;&amp; passedSafetyTest &amp;&amp; registeredOnTime) {
       System.out.println("Eligible to join the competition!");
    } else {
@@ -71,7 +71,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
        <program language="java">
           <input>
        <![CDATA[
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
    if (!hasBuiltRobot) { 
       System.out.println("Not eligible.");
    } else if (!passedSafetyTest) {

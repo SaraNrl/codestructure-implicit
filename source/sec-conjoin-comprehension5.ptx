@@ -6,11 +6,11 @@
 <activity label= "imp-conjoin-comprehensionRoboticCompetition"> 
   <statement>
     <p>
-      Look at the first code block, which of the following options have the same functionality as it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
+      Look at the first code block. Which of the following options have the same functionality as it (i.e., they produce the same output for the same inputs)? You can check the Hint for some input examples.
     </p>
     <program language="java">
       <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
     if (hasBuiltRobot) {
         if (passedSafetyTest) {
             if (registeredOnTime) {
@@ -35,14 +35,14 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       Hint: You can use the following test cases to compare the functionality of the code blocks. 
       </p>
         <ul>
-		  <li><c>canJoinRoboticsCompetition(true, true,true)</c></li>
-		  <li><c>canJoinRoboticsCompetition(true, true, false)</c></li>
-		  <li><c>canJoinRoboticsCompetition(true, false, true)</c></li>
-		  <li><c>canJoinRoboticsCompetition(true, false, false)</c></li>
-		  <li><c>canJoinRoboticsCompetition(false, true,true)</c></li>
-		  <li><c>canJoinRoboticsCompetition(false, true, false)</c></li>
-		  <li><c>canJoinRoboticsCompetition(false, false, true)</c></li>
-		  <li><c>canJoinRoboticsCompetition(false, false, false)</c></li>
+		  <li><c>printCompetitionEligibility(true, true,true)</c></li>
+		  <li><c>printCompetitionEligibility(true, true, false)</c></li>
+		  <li><c>printCompetitionEligibility(true, false, true)</c></li>
+		  <li><c>printCompetitionEligibility(true, false, false)</c></li>
+		  <li><c>printCompetitionEligibility(false, true,true)</c></li>
+		  <li><c>printCompetitionEligibility(false, true, false)</c></li>
+		  <li><c>printCompetitionEligibility(false, false, true)</c></li>
+		  <li><c>printCompetitionEligibility(false, false, false)</c></li>
 
 		</ul>
       </hint>
@@ -62,7 +62,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       <statement> 
        <program language="java">
           <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
    if (!hasBuiltRobot) { 
       System.out.println("Not eligible.");
    } 
@@ -80,7 +80,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-Code block in option A does not alway have the same functionality as the first code block! Compare their outputs using canJoinRoboticsCompetition(false,false,false)
+Code block in option A does not alway have the same functionality as the first code block! Compare their outputs using printCompetitionEligibility(false,false,false)
         </p>
       </feedback>
     </choice>
@@ -89,7 +89,7 @@ Code block in option A does not alway have the same functionality as the first c
       <statement> 
        <program language="java">
           <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
    if (hasBuiltRobot &amp;&amp; passedSafetyTest &amp;&amp; registeredOnTime) {
       System.out.println("Eligible to join the competition!");
    } else {
@@ -110,7 +110,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       <statement> 
        <program language="java">
           <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
    if (hasBuiltRobot &amp;&amp; passedSafetyTest &amp;&amp; registeredOnTime) {
       System.out.println("Eligible to join the competition!");
    }
@@ -122,7 +122,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-            Code block in option C does not always have the same functionality as the first code block! Compare the outputs using canJoinRoboticsCompetition(true,true,true)
+            Code block in option C does not always have the same functionality as the first code block! Compare the outputs using printCompetitionEligibility(true,true,true)
         </p>
       </feedback>
     </choice>
@@ -132,7 +132,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
        <program language="java">
           <input>
        <![CDATA[
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
    if (!hasBuiltRobot) { 
       System.out.println("Not eligible.");
    } else if (!passedSafetyTest) {
@@ -158,7 +158,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       <statement>
         <program language="java">
           <input>
-public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
+public static void printCompetitionEligibility(boolean hasBuiltRobot, boolean passedSafetyTest, boolean registeredOnTime) {
     if (hasBuiltRobot) {
         if (passedSafetyTest) {
             if (registeredOnTime) {
@@ -174,7 +174,7 @@ public static void canJoinRoboticsCompetition(boolean hasBuiltRobot, boolean pas
       </statement>
       <feedback>
         <p>
-         Code block in option E does not always have the same functionality as the first code block! Compare the outputs for canJoinRoboticsCompetition(true,false,true);
+         Code block in option E does not always have the same functionality as the first code block! Compare the outputs for printCompetitionEligibility(true,false,true);
         </p>
       </feedback>
     </choice>

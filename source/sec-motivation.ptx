@@ -19,6 +19,8 @@ There are two key ways to achieve well-structured code:
 </ol>
 
 Refactoring is the process of improving software's internal structure to enhance readability and maintainability without altering its input-output behavior. This short book offers practice opportunities with feedback on various tasks related to writing and refactoring. Note that there is much more to refactoring than what you learn here.
+
+<term role="bold">Please follow the sections of this book in order using the Next button</term>.
 <p>&#160;</p>
  
   </p> 

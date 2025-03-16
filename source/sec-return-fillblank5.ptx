@@ -48,7 +48,7 @@
 		
 		 <condition case="sensitive" string="(\s*password\.length\(\)\s*&lt;\s*8\s*\|\|\s*password\.contains\(\s*&quot;\s&quot;\s*\)\s*$)|(\s*password\.contains\(\s*&quot;\s&quot;\s*\)\s*\|\|\s*password\.length\(\)\s*&lt;\s*8\s*$)">
 		  <feedback>
-		  <p>Wrong functionality! You may need to read the task description again.</p>
+		  <p>Wrong functionality! You may need to read the task description again. Note that when this condition holds the function should return false!</p>
 		  </feedback>
 	     </condition>
 		

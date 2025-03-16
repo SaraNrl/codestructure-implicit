@@ -11,7 +11,7 @@
       <program language="java">
         <input>
         public class DiscountChecker {
-          public static String eligibleForDiscount(int age, int membershipYears) {
+          public static String determineDiscountEligibility(int age, int membershipYears) {
             if (age > 18) { 
               if (membershipYears >= 5) {
                 return "Eligible";
@@ -28,7 +28,7 @@
     <program label="imp-conjoin-refactoringDiscountChecker-code" interactive="activecode" language="java" >
       <input>
         public class DiscountChecker {
-          public static String eligibleForDiscount(int age, int membershipYears) {
+          public static String determineDiscountEligibility(int age, int membershipYears) {
             if (age > 18) { 
               if (membershipYears >= 5) {
                 return "Eligible";
@@ -54,10 +54,10 @@
           @Test
           public void testEligible() throws IOException {
               Object[] args = {20, 6};  // Arguments for the method
-              String output = getMethodOutput("eligibleForDiscount", args);
+              String output = getMethodOutput("determineDiscountEligibility", args);
               String expect = "Eligible";
               
-              boolean passed = getResults(expect, output, "eligibleForDiscount(20, 6)");
+              boolean passed = getResults(expect, output, "determineDiscountEligibility(20, 6)");
               assertTrue(passed);
           }
 
@@ -65,10 +65,10 @@
           @Test
           public void testNotEligibleDueToAge() throws IOException {
               Object[] args = {17, 6};  // Arguments for the method
-              String output = getMethodOutput("eligibleForDiscount", args);
+              String output = getMethodOutput("determineDiscountEligibility", args);
               String expect = "Not eligible";
               
-              boolean passed = getResults(expect, output, "eligibleForDiscount(17, 6)");
+              boolean passed = getResults(expect, output, "determineDiscountEligibility(17, 6)");
               assertTrue(passed);
           }
 
@@ -76,10 +76,10 @@
           @Test
           public void testNotEligibleDueToMembershipYears() throws IOException {
               Object[] args = {25, 3};  // Arguments for the method
-              String output = getMethodOutput("eligibleForDiscount", args);
+              String output = getMethodOutput("determineDiscountEligibility", args);
               String expect = "Not eligible";
               
-              boolean passed = getResults(expect, output, "eligibleForDiscount(25, 3)");
+              boolean passed = getResults(expect, output, "determineDiscountEligibility(25, 3)");
               assertTrue(passed);
           }
 
@@ -87,10 +87,10 @@
           @Test
           public void testNotEligibleForBoth() throws IOException {
               Object[] args = {16, 2};  // Arguments for the method
-              String output = getMethodOutput("eligibleForDiscount", args);
+              String output = getMethodOutput("determineDiscountEligibility", args);
               String expect = "Not eligible";
               
-              boolean passed = getResults(expect, output, "eligibleForDiscount(16, 2)");
+              boolean passed = getResults(expect, output, "determineDiscountEligibility(16, 2)");
               assertTrue(passed);
           }
         }
@@ -115,7 +115,7 @@
        <program language="java">
           <input>
 public class DiscountChecker {
-   public static String eligibleForDiscount(int age, int membershipYears) {
+   public static String determineDiscountEligibility(int age, int membershipYears) {
       if (age > 18 &amp;&amp; membershipYears >= 5) {
             return "Eligible";	
       }  
@@ -137,7 +137,7 @@ public class DiscountChecker {
        <program language="java">
           <input>
 public class DiscountChecker {
-   public static String eligibleForDiscount(int age, int membershipYears) {
+   public static String determineDiscountEligibility(int age, int membershipYears) {
       if (age > 18 || membershipYears >= 5) {
             return "Eligible";	
       }  
@@ -159,7 +159,7 @@ public class DiscountChecker {
        <program language="java">
           <input>
 public class DiscountChecker {
-   public static String eligibleForDiscount(int age, int membershipYears) {
+   public static String determineDiscountEligibility(int age, int membershipYears) {
       if (age &lt;= 18 || membershipYears &lt; 5) {
             return "Not eligible";	
       }  

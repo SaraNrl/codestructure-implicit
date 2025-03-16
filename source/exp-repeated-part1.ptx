@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="uniqueRepeatedPart1" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <title>Rule 3) Remove repeated code and logic from conditional branches </title>
+  <p>
+Please watch the video to learn about the third rule (removing repeated code from conditional branches) and then answer the following questions. Enlarge the window to view the code examples clearly. If needed, click the settings icon in the video player and set the quality to 1080p for better clarity.
+  </p>
+  <figure>
+    <caption>Remove repeated code from branches part 1 </caption>
+    <video xml:id="uniqueRepeated1" youtube="leWATGkAWaU" width="90%" margins="5% 5%" preview="uniqueRepeated-part1"/>
+  </figure>
+
+
+
+
+
+
+<activity label="exp-uniqueRepeated1-videoCheckPoint"> 
+  <statement>
+    <p>
+     For the code example discussed in the video, applying which of the following rule(s) resulted in removing the repeated code from the conditional branches?
+    </p>
+    
+
+  
+  	<p>
+      Select all that apply. 
+    </p> 
+  </statement>
+
+
+  <choices>
+  
+    <choice correct="no">
+      <statement> 
+       Conjoining conditions with the &amp;&amp; operator
+      </statement>
+      <feedback>
+        <p>
+			No. Please watch the video carefully.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement> 
+       Conjoining conditions with the || operator
+      </statement>
+      <feedback>
+        <p>
+            Correct!
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="no">
+      <statement> 
+       Directly returning boolean conditions
+      </statement>
+      <feedback>
+        <p>
+			No. Please watch the video carefully.
+        </p>
+      </feedback>
+    </choice>
+
+ 
+ <choice correct="no">
+      <statement> 
+      None of the rules we've learned so far could be applied 
+      </statement>
+      <feedback>
+        <p>
+           No. Please watch the video carefully. 
+        </p>
+      </feedback>
+    </choice>
+    
+  </choices>
+</activity>
+
+
+</section>

@@ -45,9 +45,9 @@ public static double calculatePrice(double price, boolean isHoliday, boolean isC
             public static double calculatePrice(double price, boolean isHoliday, boolean isClearance) {
                 double discountRate = 0.0;
                 if (isHoliday) {
-                  discountRate = 0.10;
+                   discountRate = 0.10;
                 } else if (isClearance) {
-                  discountRate = 0.20;
+                   discountRate = 0.20;
                 }
                 return price * (1- discountRate);
             }
@@ -95,11 +95,11 @@ public static double calculatePrice(double price, boolean isHoliday, boolean isC
             public static double calculatePrice(double price, boolean isHoliday, boolean isClearance) {
                 double discountRate;
                 if (isHoliday) {
-                  discountRate = 0.10;
+                   discountRate = 0.10;
                 } else if (isClearance) {
-                  discountRate = 0.20;
+                   discountRate = 0.20;
                 } else {
-                  discountRate = 0.0;
+                   discountRate = 0.0;
                 }
                 return price * (1- discountRate);
             } 

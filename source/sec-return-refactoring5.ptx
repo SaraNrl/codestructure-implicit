@@ -262,11 +262,7 @@ public class CredentialCheck {
       </p>
     </statement>
     <choices>
-     <choice correct="yes"> <statement> Yes. Three functions required refactoring </statement> </choice>
-     <choice correct="no"> <statement> No   </statement> </choice>
-    </choices>
-
-	 <statement>
+     <choice correct="yes">  <statement>
        <program language="java">
           <input>
        <![CDATA[
@@ -298,14 +294,64 @@ public class CredentialCheck {
 				return password != null && isValidUsername() && !password.contains(username);
 			}
 		}
-
-
-			
+	
         ]]>
       </input>	
         </program>
+               
       </statement>
-      
+       <feedback> <p>You refactored correctly! </p></feedback>
+       </choice>
+     <choice correct="yes">  
+     <statement>
+       <program language="java">
+          <input>
+       <![CDATA[
+		public class CredentialCheck {
+			private String username;
+			private String password;
+			private int age;
+
+			// Constructor to initialize the fields
+			public CredentialCheck(String username, String password, int age) {
+				this.username = username;
+				this.password = password;
+				this.age = age;
+			}
+
+			// Check if the credentials are valid
+			public boolean hasValidCredentials() {
+				return isValidUsername() && isValidPassword() && age >= 18;
+			}
+
+			// Check if the username is valid
+			private boolean isValidUsername() {
+			     if (username == null) {
+			     	return false;
+			     }
+				 return username.length() >= 3 && username.length() < 10;
+			}			
+					
+
+			// Check if the password is valid
+			private boolean isValidPassword() {
+			    if (password == null) {
+			    	return false;
+			    }
+				return isValidUsername() && !password.contains(username);
+			}
+		}
+	
+        ]]>
+      </input>	
+        </program>
+        
+      </statement>
+      <feedback><p>You refactored correctly! </p></feedback>
+       </choice>
+    </choices>
+
+	
   </activity>
   
   

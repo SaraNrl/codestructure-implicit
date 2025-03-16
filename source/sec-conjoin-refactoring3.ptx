@@ -11,7 +11,7 @@
     <program language="java">
       <input>
 public class Scholarship {
-	public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+	public static String getScholarshipEligibility(int schoolYear, double GPA, boolean hasResearchExperience) {
 		if (schoolYear >= 4) {
 			if (GPA >= 3.5) {
 				if (hasResearchExperience == true) {
@@ -29,7 +29,7 @@ public class Scholarship {
   <program label="imp-conjoin-refactoringScholarship-code" interactive="activecode" language="java" >
     <input>
 public class Scholarship {
-	public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+	public static String getScholarshipEligibility(int schoolYear, double GPA, boolean hasResearchExperience) {
 		if (schoolYear >= 4) {
 			if (GPA >= 3.5) {
 				if (hasResearchExperience == true) {
@@ -57,7 +57,7 @@ public class Scholarship {
       @Test
       public void testEligibleBySchoolYear() throws IOException {
           Object[] args = {4, 3.5, true};  // Arguments for the method, year and gpa
-          String output = getMethodOutput("eligibleForScholarship", args);
+          String output = getMethodOutput("getScholarshipEligibility", args);
           String expect = "Eligible";
           
           boolean passed = getResults(expect, output, "eligibleForCampusHousing(4, 3.5, true)");
@@ -68,10 +68,10 @@ public class Scholarship {
       @Test
       public void testEligibleByGpa() throws IOException {
           Object[] args = {4, 2.5,true};  // Arguments for the method
-          String output = getMethodOutput("eligibleForScholarship", args);
+          String output = getMethodOutput("getScholarshipEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForScholarship(2, 3.5, true)");
+          boolean passed = getResults(expect, output, "getScholarshipEligibility(2, 3.5, true)");
           assertTrue(passed);
       }
 
@@ -79,10 +79,10 @@ public class Scholarship {
       @Test
       public void testNotEligible() throws IOException {
           Object[] args = {2, 3.5, true};  // Arguments for the method
-          String output = getMethodOutput("eligibleForScholarship", args);
+          String output = getMethodOutput("getScholarshipEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForScholarship(2, 3.5, true)");
+          boolean passed = getResults(expect, output, "getScholarshipEligibility(2, 3.5, true)");
           assertTrue(passed);
       }
 
@@ -90,10 +90,10 @@ public class Scholarship {
       @Test
       public void testNotEligibleByGpa() throws IOException {
           Object[] args = {5, 3.5, false};  // Arguments for the method
-          String output = getMethodOutput("eligibleForScholarship", args);
+          String output = getMethodOutput("getScholarshipEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForScholarship(4, 3.5, false)");
+          boolean passed = getResults(expect, output, "getScholarshipEligibility(4, 3.5, false)");
           assertTrue(passed);
       }
 
@@ -101,10 +101,10 @@ public class Scholarship {
       @Test
       public void testEligibleByGpaAndHighYear() throws IOException {
           Object[] args = {2, 3.2, true};  // Arguments for the method
-          String output = getMethodOutput("eligibleForScholarship", args);
+          String output = getMethodOutput("getScholarshipEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForScholarship(6, 3.2, true)");
+          boolean passed = getResults(expect, output, "getScholarshipEligibility(6, 3.2, true)");
           assertTrue(passed);
       }
 
@@ -133,7 +133,7 @@ public class Scholarship {
        <program language="java">
           <input>
 public class Scholarship {   
-  public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+  public static String getScholarshipEligibility(int schoolYear, double GPA, boolean hasResearchExperience) {
     if (schoolYear >= 4 &amp;&amp; GPA >= 3.5 &amp;&amp; hasResearchExperience == true) {
       return "Eligible";
     } 
@@ -155,7 +155,7 @@ public class Scholarship {
        <program language="java">
           <input>
 public class Scholarship {   
-  public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+  public static String getScholarshipEligibility(int schoolYear, double GPA, boolean hasResearchExperience) {
     if (schoolYear >= 4 || GPA >= 3.5 || hasResearchExperience == true) {
       return "Eligible";
     } 
@@ -178,7 +178,7 @@ public class Scholarship {
        <program language="java">
           <input>
 public class Scholarship {   
-  public static String eligibleForScholarship(int schoolYear, double GPA, boolean hasResearchExperience) {
+  public static String getScholarshipEligibility(int schoolYear, double GPA, boolean hasResearchExperience) {
     if (schoolYear >= 4 &amp;&amp; GPA >= 3.5 &amp;&amp; hasResearchExperience) {
       return "Eligible";
     } 

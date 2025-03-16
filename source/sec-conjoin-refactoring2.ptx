@@ -12,7 +12,7 @@
       <input>
         <![CDATA[
 public class CampusHousing {
-	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+	public static String getCampusHousingEligibility(int schoolYear, double GPA) {
     	if (schoolYear <= 3) { 
         	return "Not eligible";
     	} 
@@ -33,7 +33,7 @@ public class CampusHousing {
     <input>
     <![CDATA[
 public class CampusHousing {
-	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+	public static String getCampusHousingEligibility(int schoolYear, double GPA) {
     	if (schoolYear <= 3) { 
         	return "Not eligible";
     	}
@@ -62,10 +62,10 @@ public class CampusHousing {
       @Test
       public void testEligibleBySchoolYear() throws IOException {
           Object[] args = {4, 2.5};  // Arguments for the method, year and gpa
-          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String output = getMethodOutput("getCampusHousingEligibility", args);
           String expect = "Eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForCampusHousing(4, 2.5)");
+          boolean passed = getResults(expect, output, "getCampusHousingEligibility(4, 2.5)");
           assertTrue(passed);
       }
   
@@ -73,10 +73,10 @@ public class CampusHousing {
       @Test
       public void testEligibleByGpa() throws IOException {
           Object[] args = {2, 3.5};  // Arguments for the method
-          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String output = getMethodOutput("getCampusHousingEligibility", args);
           String expect = "Eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForCampusHousing(2, 3.5)");
+          boolean passed = getResults(expect, output, "getCampusHousingEligibility(2, 3.5)");
           assertTrue(passed);
       }***/
 
@@ -84,10 +84,10 @@ public class CampusHousing {
       @Test
       public void testNotEligible() throws IOException {
           Object[] args = {2, 3.0};  // Arguments for the method
-          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String output = getMethodOutput("getCampusHousingEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForCampusHousing(2, 3.0)");
+          boolean passed = getResults(expect, output, "getCampusHousingEligibility(2, 3.0)");
           assertTrue(passed);
       }
 
@@ -95,10 +95,10 @@ public class CampusHousing {
       @Test
       public void testNotEligibleByGpa() throws IOException {
           Object[] args = {4, 3.0};  // Arguments for the method
-          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String output = getMethodOutput("getCampusHousingEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForCampusHousing(4, 3.0)");
+          boolean passed = getResults(expect, output, "getCampusHousingEligibility(4, 3.0)");
           assertTrue(passed);
       }
 
@@ -106,20 +106,20 @@ public class CampusHousing {
       @Test
       public void testEligibleByGpaAndHighYear() throws IOException {
           Object[] args = {6, 3.2};  // Arguments for the method
-          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String output = getMethodOutput("getCampusHousingEligibility", args);
           String expect = "Not eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForCampusHousing(6, 3.2)");
+          boolean passed = getResults(expect, output, "getCampusHousingEligibility(6, 3.2)");
           assertTrue(passed);
       }
 
       @Test
       public void testEligibleByGpaAndLowYear() throws IOException {
           Object[] args = {6, 3.6};  // Arguments for the method
-          String output = getMethodOutput("eligibleForCampusHousing", args);
+          String output = getMethodOutput("getCampusHousingEligibility", args);
           String expect = "Eligible";
           
-          boolean passed = getResults(expect, output, "eligibleForCampusHousing(6, 3.6)");
+          boolean passed = getResults(expect, output, "getCampusHousingEligibility(6, 3.6)");
           assertTrue(passed);
       }
     }
@@ -143,7 +143,7 @@ public class CampusHousing {
        <program language="java">
           <input>
 public class CampusHousing {
-	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+	public static String getCampusHousingEligibility(int schoolYear, double GPA) {
 		if (schoolYear > 3 &amp;&amp; GPA > 3.4) {
 			return "Eligible";
 		} else {
@@ -166,7 +166,7 @@ public class CampusHousing {
        <program language="java">
           <input>
 public class CampusHousing {
-	public static String eligibleForCampusHousing(int schoolYear, double GPA) {
+	public static String getCampusHousingEligibility(int schoolYear, double GPA) {
 		if (schoolYear > 3 || GPA > 3.4) {
 			return "Eligible";
 		} 
@@ -189,7 +189,7 @@ public class CampusHousing {
        <program language="java">
           <input>
 public class CampusHousing {
-   public static String eligibleForCampusHousing(int schoolYear, double GPA)  {
+   public static String getCampusHousingEligibility(int schoolYear, double GPA)  {
       if (schoolYear &lt;= 3 || GPA &lt;= 3.4) {
             return "Not eligible";	
       }  
@@ -211,7 +211,7 @@ public class CampusHousing {
        <program language="java">
           <input>
 public class CampusHousing {
-   public static String eligibleForCampusHousing(int schoolYear, double GPA)  {
+   public static String getCampusHousingEligibility(int schoolYear, double GPA)  {
       if (schoolYear &lt;= 3 &amp;&amp; GPA &lt;= 3.4) {
             return "Not eligible";	
       } else {  
