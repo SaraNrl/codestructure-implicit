@@ -46,7 +46,7 @@ public static String whereToPlay(boolean isSunny, int temperature) {
    if (temperature <= 70) { 
       return "play inside";    
    } 
-      return "play outside";
+   return "play outside";
 } 
         ]]>
           </input>
