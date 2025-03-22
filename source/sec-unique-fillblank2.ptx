@@ -73,7 +73,7 @@ public static void printProductStatus(int quantity) {
 						</condition>
 						<condition string=".*">
 						  <feedback>
-					<p>Try again!</p>
+					<p>Try again! Make sure not to put "" around your response</p>
 		          </feedback>
 		        </condition>
           </var>
