@@ -3,7 +3,7 @@
 <section xml:id="imp-unique-refactoring2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Code Refactoring</title>
 
-  <activity label="imp-unique-refactoringPrintDiscount">
+  <exercise label="imp-unique-refactoringPrintDiscount">
     <statement>
       <p>
         You will see a copy of the <c>printDiscount()</c> function in an interactive mode where you can modify and compile it. We want you to improve the style of this function as an expert would view it without changing its behavior. To ensure this you can run your refactored code and compare the expected print messages with what your refactored method actually prints.
@@ -179,7 +179,7 @@ public class FinalPrice {
 
       </tests>
     </program>
-  </activity>
+  </exercise>
   
   
   

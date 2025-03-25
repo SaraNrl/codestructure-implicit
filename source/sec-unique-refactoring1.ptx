@@ -3,7 +3,7 @@
 <section xml:id="imp-unique-refactoring1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Code Refactoring</title>
 
-  <activity label="imp-unique-refactoringFinalPrice">
+  <exercise label="imp-unique-refactoringFinalPrice">
     <statement>
       <p>
         You will see a copy of the following code block in an interactive mode than you can modify and compile. We want you to improve the style of the code as an expert would view it. You must not change the code behavior. To ensure this you can run your refactored code and ensure that it passes all the test cases.
@@ -120,7 +120,7 @@
 
       </tests>
     </program>
-  </activity>
+  </exercise>
   
   
   
