@@ -69,7 +69,7 @@ public class FinalPrice {
     
   
     <program label="imp-unique-refactoringPrintDiscount-code" interactive="activecode" language="java" >
-      <input>  <![CDATA[
+      <input> 
         
 public class FinalPrice {
   public static void printDiscount(String itemType, double originalPrice, boolean hasSpecialOffer) {  
@@ -79,7 +79,7 @@ public class FinalPrice {
 	String introMessage = "Item: " + itemType + ", Original Price: $" + originalPrice + ". ";
 	String finalMessage = "Discounted Price: $";
 
-	if ("electronics".equals(itemType) && hasSpecialOffer) {
+	if ("electronics".equals(itemType) &amp;&amp; hasSpecialOffer) {
 		String message = introMessage;
 		message += "Special offer applied. " + finalMessage;
 		double discountedPrice = originalPrice * (1 - vipDiscount);
@@ -121,7 +121,7 @@ public class FinalPrice {
     }
 }
 		
-         ]]>
+        
       </input>
 
       <tests>

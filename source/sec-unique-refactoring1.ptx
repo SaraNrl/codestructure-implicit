@@ -35,7 +35,7 @@
     
   
     <program label="imp-unique-refactoringFinalPrice-code" interactive="activecode" language="java" >
-      <input>  <![CDATA[
+      <input>  
         
 		public class FinalPrice {
 			public static double calculateFinalPrice(double basePrice, boolean isMember) {
@@ -54,7 +54,7 @@
 		}
 		
 		
-         ]]>
+         
       </input>
 
       <tests>
