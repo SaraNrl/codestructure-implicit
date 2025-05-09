@@ -16,9 +16,9 @@ You should use the <c>equals()</c> method to compare String values.
 		<program  language="java">
 		    <input>
 public static void whereToPlay(String weather) {
-	if (.........blank1...............) {
+	if (.........Blank 1...............) {
         System.out.println("You can play outside!");
-    } ......blank2........ {
+    } ......Blank 2........ {
         System.out.println("You should play inside!");
     }
 }   

@@ -21,7 +21,7 @@
 		<program  language="java">
 		    <input>
 public static void shippingMessage(boolean isNotFragile, double weight, double length) {
-   if (...........blank1..............) { 
+   if (...........Blank 1..............) { 
       System.out.println("We can ship it!"); 
    }
    else {
